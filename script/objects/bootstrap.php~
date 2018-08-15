@@ -185,6 +185,55 @@ class PzkRadio extends PzkHtmlTag {
 
 /* Buttons */
 
+class PzkBtn extends PzkHtmlTag {
+	public $tag = 'button';
+	public $extendClass = 'btn';
+	public $context = 'default';
+	public $size = '';
+	public function init() {
+		$this->extendClass .= ' btn-' . $this->context;
+		if($this->size) {
+			$this->extendClass .= ' btn-' . $this->size;
+		}
+	}
+}
+
+class PzkBtnPrimary extends PzkBtn {
+	public $context = 'primary';
+}
+
+class PzkBtnSuccess extends PzkBtn {
+	public $context = 'success';
+}
+
+class PzkBtnInfo extends PzkBtn {
+	public $context = 'info';
+}
+
+class PzkBtnWarning extends PzkBtn {
+	public $context = 'warning';
+}
+
+class PzkBtnDanger extends PzkBtn {
+	public $context = 'đanger';
+}
+
+class PzkBtnLink extends PzkBtn {
+	public $context = 'link';
+}
+
+/* Images */
+class PzkImgResponsive extends PzkHtmlTag {
+	public $tag = 'img';
+	public $extendClass = 'img-responsive';
+	public $shape = '';
+	public function init() {
+		if($this->shape) {
+			$this->extendClass .= ' img-' . $this->shape;
+		}	
+	}
+}
+
 /* Glyphicons & FontAwesome */
 class PzkIcon extends PzkHtmlTag {
 	public $tag = 'span';

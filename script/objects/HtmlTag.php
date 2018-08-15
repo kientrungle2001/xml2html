@@ -3,7 +3,7 @@ class PzkHtmlTag extends PzkObject{
 	public static $excludes = ['tagName', 'className', 'pzkParentId', 'fullNames', 'children', '_excludes'];
 	public static $autoCloseds = ['hr', 'br', 'input', 'link', 'img'];
 	public $extendClass = '';
-	public $_excludes = ['tag', 'extendClass', 'xs', 'md', 'sm', 'lg', 'symbol', 'size'];
+	public $_excludes = ['tag', 'extendClass', 'xs', 'md', 'sm', 'lg', 'symbol', 'size', 'context', 'shape'];
 	public $class = '';
 	public function init() {
 		$this->tagName = isset($this->tag) ? $this->tag : $this->tagName;
