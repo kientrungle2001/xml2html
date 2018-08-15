@@ -17,3 +17,15 @@ class PzkObject {
 	}
 }
 
+class PzkRegion extends PzkObject {
+	public function html() {
+		$str = '';
+		foreach($this->children as $child) {
+			$str .= $child->html();
+		}
+		return $str;
+	}
+}
+
+class PzkRoot extends PzkRegion {
+}

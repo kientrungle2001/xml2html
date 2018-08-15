@@ -1,14 +1,24 @@
-<container.fluid>
+<root>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+	
 	<container>
 		<col lg="12">
-		<form.inline>
-			<text.center class="title" ng-repeat="row in rows">
-				<?php for($i = 1; $i < 2; $i++): ?>
-				<h<?php echo $i;?>><checkbox name="heading" /><icon symbol="user" /> Hello</h<?php echo $i;?>>
-				<?php endfor;?>
-			</text.center>
-			<input.form.control size="lg"/>
-		</form.inline>
+			<comment context="form">
+				<form.inline>
+					<comment.line context="Bg Success" />
+					<bg.success>
+						Hello
+					</bg.success>
+					<text.center class="title" ng-repeat="row in rows">
+						<h1><checkbox name="heading" /><icon symbol="user" /> Hello</h1>
+					</text.center>
+					<form.group>
+						<input.form.control size="lg"/>
+					</form.group>
+				</form.inline>
+			</comment>
 		</col>
 	</container>
-</container.fluid>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

@@ -236,6 +236,122 @@ class PzkImgResponsive extends PzkHtmlTag {
 
 /* Helpers */
 
+class PzkTextHelper extends PzkHtmlTag {
+	public $tag = 'p';
+}
+
+class PzkTextMuted extends PzkTextHelper {
+	public $extendClass = 'text-muted';
+}
+
+class PzkTextPrimary extends PzkTextHelper {
+	public $extendClass = 'text-primary';
+}
+
+class PzkTextSuccess extends PzkTextHelper {
+	public $extendClass = 'text-success';
+}
+
+class PzkTextInfo extends PzkTextHelper {
+	public $extendClass = 'text-info';
+}
+
+class PzkTextWarning extends PzkTextHelper {
+	public $extendClass = 'text-warning';
+}
+
+class PzkTextDanger extends PzkTextHelper {
+	public $extendClass = 'text-danger';
+}
+
+class PzkBgHelper extends PzkHtmlTag {
+	public $tag = 'p';
+}
+
+class PzkBgMuted extends PzkBgHelper {
+	public $extendClass = 'bg-muted';
+}
+
+class PzkBgPrimary extends PzkBgHelper {
+	public $extendClass = 'bg-primary';
+}
+
+class PzkBgSuccess extends PzkBgHelper {
+	public $extendClass = 'bg-success';
+}
+
+class PzkBgInfo extends PzkBgHelper {
+	public $extendClass = 'bg-info';
+}
+
+class PzkBgWarning extends PzkBgHelper {
+	public $extendClass = 'bg-warning';
+}
+
+class PzkBgDanger extends PzkBgHelper {
+	public $extendClass = 'bg-danger';
+}
+
+class PzkBtnClose extends PzkHtmlTag {
+	public $tag = 'button';
+	public $type = 'button';
+	public $extendClass = 'close';
+	public function init() {
+		$this->${'aria-label'} = 'Close';
+		parent::init();
+	}
+}
+
+class PzkBtnCloseSign extends PzkHtmlTag {
+	public function html() {
+		return '<span aria-hidden="true">&times;</span>';
+	}
+}
+
+class PzkCaret extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'caret';
+}
+
+class PzkPullLeft extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'pull-left';
+}
+
+class PzkPullRight extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'pull-right';
+}
+
+class PzkCenterBlock extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'center-block';
+}
+
+class PzkClearfix extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'clearfix';
+}
+
+class PzkComment extends PzkObject {
+	public $context = '';
+	public function html() {
+		$str = '<!-- '. $this->context . ' -->';
+		foreach($this->children as $child) {
+			$str .= $child->html();
+		}
+		$str .= '<!-- End '. $this->context . ' -->';
+		return $str;
+	}
+}
+
+class PzkCommentLine extends PzkObject {
+	public $context = '';
+	public function html() {
+		return '<!-- '. $this->context . ' -->';
+	}
+}
+
 /* Glyphicons & FontAwesome */
 class PzkIcon extends PzkHtmlTag {
 	public $tag = 'span';
