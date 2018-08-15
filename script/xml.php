@@ -52,7 +52,7 @@ class PzkParser {
             $pageDom->loadXML($source);
             return self::parseNode($pageDom->documentElement);
         } catch (Exception $err) {
-			echo htmlentities($source);
+			//echo htmlentities($source);
 			die($err->getMessage());
             return NULL;
         }
@@ -209,4 +209,4 @@ require __DIR__.'/vendor/autoload.php';
 $obj = pzk_parse(eval_file($argv[1] . '.xml'));
 $content = Mihaeu\HtmlFormatter::format($obj->html());
 file_put_contents($argv[1] . '.html', $content);
-echo $content;
+//echo $content;

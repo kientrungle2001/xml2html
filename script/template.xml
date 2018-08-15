@@ -16,6 +16,40 @@
 						<input.form.control size="lg"/>
 					</form.group>
 				</form.inline>
+				<dropdown>
+					<btn.dropdown>
+						Hello
+					</btn.dropdown>
+					<dropdown.menu>
+						<dropdown.menu.item>
+							<a href="#">
+							Hello 1
+							</a>
+						</dropdown.menu.item>
+						<dropdown.menu.item class="active">
+							<a href="#">
+							Hello 2
+							</a>
+						</dropdown.menu.item>
+					</dropdown.menu>
+				</dropdown>
+				<btn.toolbar>
+					<btn.group size="lg">
+						<btn.default>1</btn.default>
+						<btn.default>2</btn.default>
+						<btn.default>3</btn.default>
+					</btn.group>
+					<btn.group size="lg">
+						<btn.default>1</btn.default>
+						<btn.default>2</btn.default>
+						<btn.default>3</btn.default>
+					</btn.group>
+					<btn.group size="lg">
+						<btn.default>1</btn.default>
+						<btn.default>2</btn.default>
+						<btn.default>3</btn.default>
+					</btn.group>
+				</btn.toolbar>
 			</comment>
 		</col>
 	</container>

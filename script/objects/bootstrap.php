@@ -195,7 +195,11 @@ class PzkBtn extends PzkHtmlTag {
 		if($this->size) {
 			$this->extendClass .= ' btn-' . $this->size;
 		}
+		parent::init();
 	}
+}
+class PzkBtnDefault extends PzkBtn {
+	public $context = 'default';
 }
 
 class PzkBtnPrimary extends PzkBtn {
@@ -230,7 +234,8 @@ class PzkImgResponsive extends PzkHtmlTag {
 	public function init() {
 		if($this->shape) {
 			$this->extendClass .= ' img-' . $this->shape;
-		}	
+		}
+		parent::init();
 	}
 }
 
@@ -297,7 +302,7 @@ class PzkBtnClose extends PzkHtmlTag {
 	public $type = 'button';
 	public $extendClass = 'close';
 	public function init() {
-		$this->${'aria-label'} = 'Close';
+		$this->{'aria-label'} = 'Close';
 		parent::init();
 	}
 }
@@ -394,4 +399,70 @@ class PzkFa2x extends PzkFa {
 	public $size = '2x';
 }
 
-/*  */
+/**
+ * Components
+ */
+
+/* Dropdowns */
+class PzkDropdown extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'dropdown';
+}
+
+class PzkDropUp extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'dropup';
+}
+
+class PzkDropdownMenu extends PzkHtmlTag {
+	public $tag = 'ul';
+	public $extendClass = 'dropdown-menu';
+}
+class PzkDropdownMenuItem extends PzkHtmlTag {
+	public $tag = 'li';
+}
+
+class PzkDropdownMenuDivider extends PzkHtmlTag {
+	public $tag = 'li';
+	public $role = 'separator';
+	public $extendClass = 'divider';
+}
+
+
+class PzkBtnDropdown extends PzkBtn {
+	public function init() {
+		$this->extendClass .= ' dropdown-toggle';
+		$this->{'data-toggle'} = 'dropdown';
+		$this->{'aria-haspopup'} = 'true';
+		$this->{'aria-expanded'} = 'false';
+		parent::init();
+	}
+}
+
+/* Btn Group */
+
+class PzkBtnGroup extends PzkHtmlTag {
+	public $tag = 'div';
+	public $role = 'group';
+	public $extendClass = 'btn-group';
+	public $size = '';
+	public $align = '';
+	public function init() {
+		if($this->size) {
+			$this->extendClass .= ' btn-group-' . $this->size;
+		}
+		if($this->align) {
+			$this->extendClass .= ' btn-group-' . $this->align;
+		}
+		parent::init();
+	}
+}
+
+class PzkBtnGroupVertical extends PzkBtnGroup {
+	public $extendClass = 'btn-group-vertical';
+} 
+
+class PzkBtnToolbar extends PzkHtmlTag {
+	public $tag = 'div';
+	public $role = 'toolbar';
+}
