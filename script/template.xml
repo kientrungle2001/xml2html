@@ -1,0 +1,14 @@
+<container.fluid>
+	<container>
+		<col lg="12">
+		<form.inline>
+			<text.center class="title" ng-repeat="row in rows">
+				<?php for($i = 1; $i < 2; $i++): ?>
+				<h<?php echo $i;?>><checkbox name="heading" /><icon symbol="user" /> Hello</h<?php echo $i;?>>
+				<?php endfor;?>
+			</text.center>
+			<input.form.control size="lg"/>
+		</form.inline>
+		</col>
+	</container>
+</container.fluid>
