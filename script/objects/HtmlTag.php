@@ -1,13 +1,19 @@
 <?php
 class PzkHtmlTag extends PzkObject{
-	public static $excludes = ['tagName', 'className', 'pzkParentId', 'fullNames', 'children', '_excludes'];
+	public static $excludes = ['tagName', 'className', 'pzkParentId', 'fullNames', 'children', '_excludes', 'defaultAttributes'];
 	public static $autoCloseds = ['hr', 'br', 'input', 'link', 'img'];
 	public $extendClass = '';
 	public $_excludes = ['tag', 'extendClass', 'xs', 'md', 'sm', 'lg', 'symbol', 'size', 'context', 'shape'];
 	public $class = '';
+	public $defaultAttributes = [];
 	public function init() {
 		$this->tagName = isset($this->tag) ? $this->tag : $this->tagName;
 		$this->class .= ' ' . $this->extendClass;
+		foreach($this->defaultAttributes as $key => $value) {
+			if(!isset($this->$key) || !$this->$key) {
+				$this->$key = $value;
+			}
+		}
 	}
 	
 	public function html() {

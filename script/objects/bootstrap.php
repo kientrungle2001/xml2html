@@ -167,7 +167,7 @@ class PzkTextareaFormControl extends PzkFormControl {
 
 class PzkStaticFormControl extends PzkHtmlTag {
 	public $tag = 'p';
-	public $extendClass = 'static-form-control';
+	public $extendClass = 'form-control-static';
 }
 
 class PzkControlLabel extends PzkHtmlTag {
@@ -178,6 +178,9 @@ class PzkControlLabel extends PzkHtmlTag {
 class PzkFormInputHelp extends PzkHtmlTag {
 	public $tag = 'span';
 	public $extendClass = 'help-block';
+}
+
+class PzkHelpBlock extends PzkFormInputHelp {
 }
 
 class PzkCheckbox extends PzkHtmlTag {
@@ -226,7 +229,7 @@ class PzkBtnWarning extends PzkBtn {
 }
 
 class PzkBtnDanger extends PzkBtn {
-	public $context = 'đanger';
+	public $context = 'danger';
 }
 
 class PzkBtnLink extends PzkBtn {
@@ -252,6 +255,21 @@ class PzkImgResponsive extends PzkHtmlTag {
 		}
 		parent::init();
 	}
+}
+
+class PzkImgRounded extends PzkHtmlTag {
+	public $tag = 'img';
+	public $extendClass = 'img-rounded';
+}
+
+class PzkImgCircle extends PzkHtmlTag {
+	public $tag = 'img';
+	public $extendClass = 'img-circle';
+}
+
+class PzkImgThumbnail extends PzkHtmlTag {
+	public $tag = 'img';
+	public $extendClass = 'img-thumbnail';
 }
 
 /* Helpers */
@@ -393,6 +411,14 @@ class PzkIconUser extends PzkIcon {
 
 class PzkIconSearch extends PzkIcon {
 	public $symbol = 'search';
+}
+
+class PzkIconChevronLeft extends PzkIcon {
+	public $symbol = 'chevron-left';
+}
+
+class PzkIconChevronRight extends PzkIcon {
+	public $symbol = 'chevron-right';
 }
 
 class PzkFa extends PzkHtmlTag {
@@ -1033,12 +1059,81 @@ class PzkBtnTooltip extends PzkBtn {
 class PzkBtnPopover extends PzkBtn {
 	public $align = '';
 	public $title = 'tooltip';
+	public $defaultAttributes = [
+		'data-toggle'		=> 'popover',
+		'data-container'	=>	'body'
+	];
 	public function init() {
-		$this->{'data-toggle'} = 'popover';
-		$this->{'data-container'} = 'body';
 		if($this->align) {
 			$this->{'data-placement'} = $this->align;
 		}
 		parent::init();
 	}
 }
+
+/* Carousel */
+class PzkCarousel extends PzkHtmlTag {
+	public $tag = 'div';
+	public $defaultAttributes = [
+		'data-ride' => 'carousel'
+	];
+	public $extendClass = 'carousel slide';
+}
+
+class PzkCarouselIndicators extends PzkHtmlTag {
+	public $tag = 'ol';
+	public $extendClass = 'carousel-indicators';
+}
+
+class PzkCarouselIndicatorsItem extends PzkHtmlTag {
+	public $tag = 'li';
+}
+
+class PzkCarouselInner extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'carousel-inner';
+	public $role = 'listbox';
+}
+
+class PzkCarouselInnerItem extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'item';
+}
+
+class PzkCarouselInnerItemImg extends PzkHtmlTag {
+	public $tag = 'img';
+	public $extendClass = 'img-responsive';
+}
+
+class PzkCarouselInnerItemCaption extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'carousel-caption';
+}
+
+class PzkCarouselControl extends PzkHtmlTag {
+	public $tag = 'a';
+	public $extendClass = 'carousel-control';
+	public $direction = 'left'; // left, right
+	public $role = 'button';
+	public $defaultAttributes = [
+		'data-slide'	=> 	'prev'
+	];
+
+	public function init() {
+		if($this->direction) {
+			$this->extendClass .= ' ' . $this->direction;
+		}
+	}
+}
+
+class PzkCarouselControlPrev extends PzkCarouselControl {
+
+}
+
+class PzkCarouselControlNext extends PzkCarouselControl {
+	public $direction = 'right'; // left, right
+	public $defaultAttributes = [
+		'data-slide'	=> 	'next'
+	];
+}
+
