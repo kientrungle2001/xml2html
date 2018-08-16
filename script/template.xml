@@ -2,55 +2,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
 	
 	<container>
-		<col lg="12">
-			<comment context="form">
-				<form.inline>
-					<comment.line context="Bg Success" />
-					<bg.success>
-						Hello
-					</bg.success>
-					<text.center class="title" ng-repeat="row in rows">
-						<h1><checkbox name="heading" /><icon symbol="user" /> Hello</h1>
-					</text.center>
-					<form.group>
-						<input.form.control size="lg"/>
-					</form.group>
-				</form.inline>
-				<dropdown>
-					<btn.dropdown>
-						Hello
-					</btn.dropdown>
-					<dropdown.menu>
-						<dropdown.menu.item>
-							<a href="#">
-							Hello 1
-							</a>
-						</dropdown.menu.item>
-						<dropdown.menu.item class="active">
-							<a href="#">
-							Hello 2
-							</a>
-						</dropdown.menu.item>
-					</dropdown.menu>
-				</dropdown>
-				<btn.toolbar>
-					<btn.group size="lg">
-						<btn.default>1</btn.default>
-						<btn.default>2</btn.default>
-						<btn.default>3</btn.default>
-					</btn.group>
-					<btn.group size="lg">
-						<btn.default>1</btn.default>
-						<btn.default>2</btn.default>
-						<btn.default>3</btn.default>
-					</btn.group>
-					<btn.group size="lg">
-						<btn.default>1</btn.default>
-						<btn.default>2</btn.default>
-						<btn.default>3</btn.default>
-					</btn.group>
-				</btn.toolbar>
-			</comment>
+		<col lg="6">
+			<h1>Hello Left</h1>
+		</col>
+		<col lg="6">
+			<h1>Hello Right</h1>
 		</col>
 	</container>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
