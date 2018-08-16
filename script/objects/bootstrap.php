@@ -128,6 +128,13 @@ class PzkFormGroup extends PzkHtmlTag {
 class PzkInputGroup extends PzkHtmlTag {
 	public $tag = 'div';
 	public $extendClass = 'input-group';
+	public $size = '';
+	public function init() {
+		if($this->size) {
+			$this->extendClass .= ' input-group-' . $this->size;
+		}
+		parent::init();
+	}
 }
 
 class PzkInputGroupAddon extends PzkHtmlTag {
@@ -399,6 +406,11 @@ class PzkFa2x extends PzkFa {
 	public $size = '2x';
 }
 
+class PzkIconBar extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'icon-bar';
+}
+
 /**
  * Components
  */
@@ -439,6 +451,15 @@ class PzkBtnDropdown extends PzkBtn {
 	}
 }
 
+class PzkBtnCollapse extends PzkBtn {
+	public $extendClass = 'navbar-toggle collapsed';
+	public function init() {
+		$this->{'data-toggle'} = 'collapse';
+		$this->{'aria-expanded'} = 'false';
+		parent::init();
+	}
+}
+
 /* Btn Group */
 
 class PzkBtnGroup extends PzkHtmlTag {
@@ -465,4 +486,28 @@ class PzkBtnGroupVertical extends PzkBtnGroup {
 class PzkBtnToolbar extends PzkHtmlTag {
 	public $tag = 'div';
 	public $role = 'toolbar';
+}
+
+/* Navs */
+
+class PzkNavUl extends PzkHtmlTag {
+	public $tag = 'ul';
+	public $extendClass = 'nav';
+	public $type = 'tabs'; // tabs, pills
+	public $align = '';	// justified, stacked
+	public function init() {
+		if($this->type) {
+			$this->extendClass .= ' nav-' . $this->type;
+		}
+		if($this->align) {
+			$this->extendClass .= ' nav-' . $this->align;
+		}
+
+		parent::init();
+	}
+}
+
+class PzkNavLi extends PzkHtmlTag {
+	public $tag = 'li';
+	public $role = 'presentation';
 }
