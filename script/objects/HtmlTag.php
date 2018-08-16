@@ -1,10 +1,14 @@
 <?php
 class PzkHtmlTag extends PzkObject{
-	public static $excludes = ['tagName', 'className', 'pzkParentId', 'fullNames', 'children', '_excludes', 'defaultAttributes'];
+	public static $excludes = ['tagName', 'className', 'pzkParentId', 
+			'fullNames', 'children', '_excludes', 'defaultAttributes',
+			'/^p[dtlrb]$/', '/^m[gtlrb]$/', 'bg', 'cl', 'bd'
+	];
 	public static $autoCloseds = ['hr', 'br', 'input', 'link', 'img'];
 	public $extendClass = '';
 	public $_excludes = ['tag', 'extendClass', 'xs', 'md', 'sm', 'lg', 'symbol', 'size', 'context', 'shape'];
 	public $class = '';
+	public $style = '';
 	public $defaultAttributes = [];
 	public function init() {
 		$this->tagName = isset($this->tag) ? $this->tag : $this->tagName;
@@ -14,12 +18,21 @@ class PzkHtmlTag extends PzkObject{
 				$this->$key = $value;
 			}
 		}
+		foreach((array)$this as $key => $value) {
+			if(preg_match('/^(p[dtlrb]|m[gtlrb]|bg|bd|cl)$/', $key)) {
+				$this->class .= ' ' . $key . '-' . $value;
+			}
+		}
 	}
 	
 	public function html() {
 		$str = '<' . $this->tagName .' ';
 		foreach((array)$this as $key => $value) {
-			if(!in_array($key, self::$excludes) && !in_array($key, $this->_excludes) && '' !== trim($value)) {
+			if(!in_array($key, self::$excludes) 
+					&& !in_array($key, $this->_excludes) 
+					&& !self::match($key, self::$excludes) 
+					&& !self::match($key, $this->_excludes) 
+					&& '' !== trim($value)) {
 				$str .= $key.'="' . trim($value) . '" ';
 			}
 		}
@@ -34,5 +47,16 @@ class PzkHtmlTag extends PzkObject{
 		}
 		$str .= '</'.$this->tagName.'>';
 		return $str;
+	}
+
+	public static function match($key, $patterns) {
+		foreach($patterns as $pattern) {
+			if($pattern[0] === '/') {
+				if(preg_match($pattern, $key)) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 }

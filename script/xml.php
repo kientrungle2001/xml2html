@@ -96,7 +96,7 @@ class PzkParser {
 					echo '<pre>';
 					
 					echo ('object ' . $object . ' not found');
-					debug_print_backtrace();
+					// debug_print_backtrace();
 					die();
 				}
 				

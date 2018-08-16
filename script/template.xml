@@ -156,8 +156,35 @@
 				<img.thumbnail src="http://placehold.it/140x140" />
 			</clearfix>
 			<clearfix>
-				
+				<text.muted>This line of text is meant to be treated as an addition to the document.</text.muted>
+				<text.primary>This line of text is meant to be treated as an addition to the document.</text.primary>
+				<text.success>This line of text is meant to be treated as an addition to the document.</text.success>
+				<text.info>This line of text is meant to be treated as an addition to the document.</text.info>
+				<text.warning>This line of text is meant to be treated as an addition to the document.</text.warning>
+				<text.danger>This line of text is meant to be treated as an addition to the document.</text.danger>
 			</clearfix>
+			<clearfix>
+				<bg.primary>This line of text is meant to be treated as an addition to the document.</bg.primary>
+				<bg.success>This line of text is meant to be treated as an addition to the document.</bg.success>
+				<bg.info>This line of text is meant to be treated as an addition to the document.</bg.info>
+				<bg.warning>This line of text is meant to be treated as an addition to the document.</bg.warning>
+				<bg.danger>This line of text is meant to be treated as an addition to the document.</bg.danger>
+			</clearfix>
+			<clearfix>
+				<btn.close><span aria-hidden="true">&amp;times;</span></btn.close>
+			</clearfix>
+			<clearfix>
+				<dropup>
+					Up Button <caret />
+				</dropup>
+			</clearfix>
+			<clearfix>
+				<pull.left>Left</pull.left>
+				<pull.right>Right</pull.right>
+			</clearfix>
+			<center.block style="width: 300px; padding: 20px; border: 1px solid black">
+				<h1>Hello</h1>
+			</center.block>
 		</col>
 		<col lg="6">
 			<h1>Hello Right</h1>

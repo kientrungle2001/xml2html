@@ -1,0 +1,103 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+    <container>
+        <navbar bg="white">
+            <navbar.header>
+                <navbar.btn.collapse data-target="#top-menu">
+                    <icon.bar /> <icon.bar /> <icon.bar />
+                </navbar.btn.collapse>
+                <navbar.brand>
+                    <img src="http://placehold.it/20x20" />
+                </navbar.brand>
+            </navbar.header>
+            
+            <navbar.form align="left">
+                <form.group>
+                    <select.form.control>
+                        <option>Cong ty</option>
+                        <option>To doi</option>
+                    </select.form.control>
+                </form.group>
+                <form.group>
+                    <input.group>
+                        <input.form.control placeholder="Search"/>
+                        <input.group.btn tag="span">
+                            <btn.default style="height: 34px;"><icon.search /></btn.default>
+                        </input.group.btn>
+                    </input.group>
+                </form.group>
+                <form.group>
+                    <select.form.control>
+                        <option>TP HCM</option>
+                        <option>Ha Noi</option>
+                    </select.form.control>
+                </form.group>
+                <form.group>
+                    <btn.default>
+                        <icon symbol="phone" /> Tai App
+                    </btn.default>
+                </form.group>
+            </navbar.form>
+            
+            <navbar.nav align="right" id="top-menu" class="navbar-collapse collapse">
+                <navbar.nav.item>
+                    <a href="#">Login</a>
+                </navbar.nav.item>
+                <navbar.nav.item class="dropdown">
+                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                            href="#" onclick="return false;">
+                        <fa symbol="bell" size="1x" />
+                    </navbar.link>
+                    <dropdown.menu.div>
+                        Thong bao 1<br />
+                        Thong bao 2<br />
+                        Thong bao 3<br />
+                    </dropdown.menu.div>
+                </navbar.nav.item>
+                <navbar.nav.item class="dropdown">
+                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                            href="#" onclick="return false;">
+                        <fa symbol="shopping-cart" size="1x" />
+                        <badge bg="red" class="hidden">1</badge>
+                    </navbar.link>
+                    <dropdown.menu.div>
+                        Thong bao 1<br />
+                        Thong bao 2<br />
+                        Thong bao 3<br />
+                    </dropdown.menu.div>
+                </navbar.nav.item>
+                <navbar.nav.item class="dropdown">
+                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                            href="#" onclick="return false;">
+                        <icon symbol="plus-sign" />
+                    </navbar.link>
+                    <dropdown.menu.div>
+                        Thong bao 1<br />
+                        Thong bao 2<br />
+                        Thong bao 3<br />
+                    </dropdown.menu.div>
+                </navbar.nav.item>
+                <navbar.nav.item class="dropdown">
+                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                            href="#" onclick="return false;">
+                        Tieng Viet
+                    </navbar.link>
+                    <dropdown.menu.div>
+                        Tieng Viet<br />
+                        Tieng Anh<br />
+                    </dropdown.menu.div>
+                </navbar.nav.item>
+            </navbar.nav>
+        </navbar>
+        
+    </container>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

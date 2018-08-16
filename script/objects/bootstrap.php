@@ -142,6 +142,11 @@ class PzkInputGroupAddon extends PzkHtmlTag {
 	public $extendClass = 'input-group-addon';
 }
 
+class PzkInputGroupBtn extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'input-group-btn';
+}
+
 class PzkFormControl extends PzkHtmlTag {
 	public $extendClass = 'form-control';
 	public $size = '';
@@ -334,10 +339,9 @@ class PzkBtnClose extends PzkHtmlTag {
 	public $tag = 'button';
 	public $type = 'button';
 	public $extendClass = 'close';
-	public function init() {
-		$this->{'aria-label'} = 'Close';
-		parent::init();
-	}
+	public $defaultAttributes = [
+		'aria-label' => 'Close'
+	];
 }
 
 class PzkBtnCloseSign extends PzkHtmlTag {
@@ -474,6 +478,10 @@ class PzkDropdownMenuDivider extends PzkHtmlTag {
 	public $extendClass = 'divider';
 }
 
+class PzkDropdownMenuDiv extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'dropdown-menu';
+}
 
 class PzkBtnDropdown extends PzkBtn {
 	public function init() {
@@ -592,11 +600,15 @@ class PzkNavbar extends PzkHtmlTag {
 
 class PzkNavbarBtnCollapse extends PzkBtn {
 	public $extendClass = 'navbar-toggle collapsed';
-	public function init() {
-		$this->{'data-toggle'} = 'collapse';
-		$this->{'aria-expanded'} = 'false';
-		parent::init();
-	}
+	public $defaultAttributes = [
+		'data-toggle'	=>	'collapse',
+		'aria-expanded'	=>	'false'
+	];
+}
+
+class PzkNavbarCollapse extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'collapse navbar-collapse';
 }
 
 class PzkNavbarHeader extends PzkHtmlTag {
