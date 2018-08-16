@@ -155,6 +155,9 @@
 				<img.circle src="http://placehold.it/140x140" />
 				<img.thumbnail src="http://placehold.it/140x140" />
 			</clearfix>
+			<clearfix>
+				
+			</clearfix>
 		</col>
 		<col lg="6">
 			<h1>Hello Right</h1>
