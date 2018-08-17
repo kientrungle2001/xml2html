@@ -1,0 +1,4 @@
+<?php
+require 'xml.php';
+generate($argv[1]);
+//echo $content;

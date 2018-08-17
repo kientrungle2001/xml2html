@@ -229,7 +229,9 @@ function eval_file($file) {
 	return $content;
 }
 require __DIR__.'/vendor/autoload.php';
-$obj = pzk_parse(eval_file($argv[1] . '.xml'));
-$content = Mihaeu\HtmlFormatter::format($obj->html());
-file_put_contents($argv[1] . '.html', $content);
-//echo $content;
+
+function generate($file) {
+    $obj = pzk_parse(eval_file($file . '.xml'));
+    $content = Mihaeu\HtmlFormatter::format($obj->html());
+    file_put_contents($file . '.html', $content);
+}
