@@ -54,10 +54,7 @@
                         <fa symbol="bell" size="1x" />
                     </navbar.link>
                     <dropdown.menu.div>
-                        Thong bao 1<br />
-                        Thong bao 2<br />
-                        Thong bao 3<br />
-                        Thong bao 4<br />
+                        <?php require 'context/notification.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
                 <navbar.nav.item class="dropdown">
@@ -67,9 +64,7 @@
                         <badge bg="red" class="hidden">1</badge>
                     </navbar.link>
                     <dropdown.menu.div>
-                        Thong bao 1<br />
-                        Thong bao 2<br />
-                        Thong bao 3<br />
+                        <?php require 'context/shoppingcart.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
                 <navbar.nav.item class="dropdown">
@@ -78,10 +73,7 @@
                         <icon symbol="plus-sign" />
                     </navbar.link>
                     <dropdown.menu.div>
-                        Thong bao 1<br />
-                        Thong bao 2<br />
-                        Thong bao 3<br />
-                        Thong bao 4<br />
+                        <?php require 'context/blog.xml'; ?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
                 <navbar.nav.item class="dropdown">

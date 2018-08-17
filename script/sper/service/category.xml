@@ -1,0 +1,19 @@
+<root>
+    <list.group class="service-category">
+        <list.group.item class="heading">
+            <a href="#"><icon symbol="align-justify" /> Danh muc</a>
+        </list.group.item>
+        <list.group.item class="active">
+            <a href="#"><icon symbol="align-justify" /> Danh muc 1</a>
+        </list.group.item>
+        <list.group.item>
+            <a href="#"><icon symbol="align-justify" /> Danh muc 2</a>
+        </list.group.item>
+        <list.group.item>
+            <a href="#"><icon symbol="align-justify" /> Danh muc 3</a>
+        </list.group.item>
+        <list.group.item>
+            <a href="#"><icon symbol="align-justify" /> Danh muc 4</a>
+        </list.group.item>
+    </list.group>
+</root>

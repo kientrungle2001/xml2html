@@ -1,0 +1,15 @@
+<root>
+    <media.list.item>
+        <media.left>
+            <media.object src="http://placehold.it/80x80" />
+        </media.left>
+        <media.body>
+            <media.heading>
+                Top 5 hon dao moi noi dang den nhat mua he nay
+            </media.heading>
+            <clearfix>
+                Mua he nay ban da len ke hoach cho minh di dau choi chua? Du la len rung hay xuong bien..
+            </clearfix>
+        </media.body>
+    </media.list.item>
+</root>

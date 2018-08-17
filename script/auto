@@ -1,1 +1,1 @@
-while sleep 2; do php folder sper; done
+while sleep 10; do php folder sper; done

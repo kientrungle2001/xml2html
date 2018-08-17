@@ -1,0 +1,40 @@
+<root>
+    <panel>
+        <panel.heading pd="0">
+            <row>
+                <col md="3">
+                    <nav.tabs bd="none" class="text-uppercase">
+                        <nav.tabs.item><a href="#"><fa.1x symbol="tags" />Video Review</a></nav.tabs.item>
+                    </nav.tabs>
+                </col>
+                <col md="6">
+                    <nav.tabs bd="none">
+                        <nav.tabs.item><a href="#">Tat ca</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Gan nhat</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Moi nhat</a></nav.tabs.item>
+                    </nav.tabs>
+                </col>
+                <col md="3">
+                    <clearfix>
+                        <nav.tabs bd="none" class="pull-right">
+                            <nav.tabs.item class="dropdown">
+                                <a href="#" class="data-toggle" data-toggle="dropdown">Chu de <caret /></a>
+                                <dropdown.menu align="right">
+                                    <dropdown.menu.item>
+                                        <a href="#">Chu de 1</a>
+                                    </dropdown.menu.item>
+                                    <dropdown.menu.item>
+                                        <a href="#">Chu de 2</a>
+                                    </dropdown.menu.item>
+                                </dropdown.menu>
+                            </nav.tabs.item>
+                        </nav.tabs>
+                    </clearfix>
+                </col>
+            </row>
+        </panel.heading>
+        <panel.body pd="2">
+            <?php require 'items4.xml'; ?>
+        </panel.body>
+    </panel>
+</root>

@@ -1,0 +1,30 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <carousel id="slideshow">
+        <carousel.inner>
+            <carousel.inner.item class="active">
+                <carousel.inner.item.img src="http://placehold.it/1366x300" />
+            </carousel.inner.item>
+            <carousel.inner.item>
+                <carousel.inner.item.img src="http://placehold.it/1366x300" />
+            </carousel.inner.item>
+        </carousel.inner>
+        <carousel.control.prev href="#slideshow">
+            <icon.chevron.left />
+        </carousel.control.prev>
+        <carousel.control.next href="#slideshow">
+            <icon.chevron.right />
+        </carousel.control.next>
+    </carousel>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

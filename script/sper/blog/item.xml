@@ -1,0 +1,25 @@
+<root>
+    <media.list.item>
+        <media.left>
+            <media.object src="http://placehold.it/64x64" class="img-circle" />
+        </media.left>
+        <media.body>
+            <media.heading>
+                My Tran
+            </media.heading>
+            <clearfix>
+                <pull.left>
+                    Chia sẻ blog - 04/06/2018 - 19:03
+                </pull.left>
+                <pull.right>
+                    <btn.success>
+                        <icon symbol="bookmark" /> Luu bai blog
+                    </btn.success>
+                </pull.right>
+            </clearfix>
+        </media.body>
+        <strong>
+            Kham Pha khong gian doi vo chong da phong cach
+        </strong>
+    </media.list.item>
+</root>

@@ -1,0 +1,29 @@
+<root>
+    <col md="15">
+        <panel mb="2">
+            <panel.heading pd="0">
+                <img.responsive src="http://placehold.it/480x360" />
+            </panel.heading>
+            <panel.body>
+                <a href="#"><h4>Tran thach cao</h4></a>
+                <address>So 3 ngo 295 Bach Mai ...</address>
+                <clearfix>
+                    <pull.left><icon symbol="map-marker" /> 2 chi nhanh</pull.left>
+                    <pull.right>To doi</pull.right>
+                </clearfix>
+            </panel.body>
+            <panel.footer>
+                <clearfix>
+                    <pull.left>
+                        <fa.1x symbol="heart-o" /> 200
+                        <fa.1x symbol="comments-o" /> 200
+                        <fa.1x symbol="share-alt" /> 200
+                    </pull.left>
+                    <pull.right>
+                        <fa.1x symbol="bookmark" />
+                    </pull.right>
+                </clearfix>
+            </panel.footer>
+        </panel>
+    </col>
+</root>

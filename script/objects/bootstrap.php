@@ -467,6 +467,13 @@ class PzkDropUp extends PzkHtmlTag {
 class PzkDropdownMenu extends PzkHtmlTag {
 	public $tag = 'ul';
 	public $extendClass = 'dropdown-menu';
+	public $align = '';
+	public function init() {
+		if($this->align) {
+			$this->extendClass .= ' dropdown-menu-' . $this->align;
+		}
+		parent::init();
+	}
 }
 class PzkDropdownMenuItem extends PzkHtmlTag {
 	public $tag = 'li';
@@ -886,6 +893,10 @@ class PzkMediaBodyHeading extends PzkHtmlTag {
 	public $extendClass = 'media-heading';
 }
 
+class PzkMediaHeading extends PzkMediaBodyHeading {
+	
+}
+
 class PzkMediaList extends PzkHtmlTag {
 	public $tag = 'ul';
 	public $extendClass = 'media-list';
@@ -1135,6 +1146,7 @@ class PzkCarouselControl extends PzkHtmlTag {
 		if($this->direction) {
 			$this->extendClass .= ' ' . $this->direction;
 		}
+		parent::init();
 	}
 }
 
