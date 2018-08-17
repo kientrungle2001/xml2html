@@ -4,7 +4,7 @@ require 'xml.php';
 function generate_files($files) {
     foreach($files as $file) {
         $fileWithoutExt = str_replace('.xml', '', $file);
-        $genFile = 'generated/'. $fileWithoutExt . '.html';
+        $genFile = $fileWithoutExt . '.html';
         if(!file_exists($genFile) || filemtime($file) > filemtime($genFile)) {
             generate($fileWithoutExt);
         }

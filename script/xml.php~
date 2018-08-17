@@ -52,7 +52,7 @@ class PzkParser {
             $pageDom->loadXML($source);
             return self::parseNode($pageDom->documentElement);
         } catch (Exception $err) {
-			echo htmlentities($source);
+			//echo htmlentities($source);
 			die($err->getMessage());
             return NULL;
         }
@@ -96,7 +96,7 @@ class PzkParser {
 					echo '<pre>';
 					
 					echo ('object ' . $object . ' not found');
-					debug_print_backtrace();
+					// debug_print_backtrace();
 					die();
 				}
 				
@@ -153,7 +153,7 @@ class PzkParser {
     public static function getClass($fullNames) {
         $className = 'Pzk';
         foreach ($fullNames as $name) {
-            $className .= ($name);
+            $className .= str_ucfirst($name);
         }
         return $className;
     }
@@ -165,26 +165,49 @@ class PzkParser {
         static $tags = array(
             'h1' => true, 'h2' => true, 'h3' => true, 'h4' => true, 'h5' => true, 'h6' => true, 'h7' => true, 'marquee' => true, 'br' => true,
             'p' => true, 'em' => true, 'strong' => true, 'a' => true, 'style' => true, 'div' => true, 'span' => true, 'label' => true, 'b' => true,
+            'small' => true, 'mark' => true, 'del'  => true, 's'    => true, 'ins'  => true, 'u' => true, 'i' => true,
 			'hr' => true,
             'script' => true, 'link' => true,
             'form'	=> true,
             'select' => true, 'option' => true,
-            'ul' => true, 'li' => true,
-            'table' => true, 'tr' => true, 'td' => true, 'thead' => true, 'tbody' => true, 'caption' => true,
+            'ul' => true, 'li' => true, 'ol' => true, 'dl' => true, 'dd' => true, 'dt' => true,
+            'table' => true, 'tr' => true, 'th' => true, 'td' => true, 'thead' => true, 'tbody' => true, 'caption' => true,
             'input' => true, 'textarea' => true,
 			'img' => true, 'pre' => true, 'header' => true,
-			'nav' => true,
+            'nav' => true,
+            'address' => true, 'blockquote' => true,
+            'footer' => true,
+            'header' => true,
+            'cite' => true,
+            'code' => true,
+            'section' => true,
+            'kbd' => true,
+            'pre' => true,
+            'var' => true,
+            'samp' => true,
 			'H1' => true, 'H2' => true, 'H3' => true, 'H4' => true, 'H5' => true, 'H6' => true, 'H7' => true, 'Marquee' => true, 'Br' => true,
             'P' => true, 'Em' => true, 'Strong' => true, 'A' => true, 'Style' => true, 'Div' => true, 'Span' => true, 'Label' => true, 'B' => true,
-			'Hr' => true,
+            'Small' => true, 'Mark' => true, 'Del'  => true,    'S' => true, 'Ins'  => true, 'U' => true, 'I' => true, 
+            'Hr' => true,
             'Script' => true, 'Link' => true,
             'Form'	=> true,
             'Select' => true, 'Option' => true,
-            'Ul' => true, 'Li' => true,
-            'Table' => true, 'Tr' => true, 'Td' => true, 'Thead' => true, 'Tbody' => true, 'Caption' => true,
+            'Ul' => true, 'Li' => true, 'Ol' => true, 'Dl' => true, 'Dd' => true, 'Dt' => true,
+            'Table' => true, 'Tr' => true, 'Th' => true, 'Td' => true, 'Thead' => true, 'Tbody' => true, 'Caption' => true,
             'Input' => true, 'Textarea' => true,
 			'Img' => true, 'Pre' => true, 'Header' => true,
-			'Nav'	=> true
+            'Nav'	=> true,
+            'Address' => true,
+            'Blockquote' => true,
+            'Footer' => true,
+            'Header' => true,
+            'Cite' => true,
+            'Code' => true,
+            'Section' => true,
+            'Kbd' => true,
+            'Pre' => true,
+            'Var' => true,
+            'Samp' => true,
         );
         return isset($tags[$tagName])?$tags[$tagName]: FALSE;
     }
@@ -206,7 +229,10 @@ function eval_file($file) {
 	return $content;
 }
 require __DIR__.'/vendor/autoload.php';
-$obj = pzk_parse(eval_file($argv[1] . '.xml'));
-$content = Mihaeu\HtmlFormatter::format($obj->html());
-file_put_contents($argv[1] . '.html', $content);
-echo $content;
+
+function generate($file) {
+    echo $file . ' is generated!'. "\r\n";
+    $obj = pzk_parse(eval_file($file . '.xml'));
+    $content = Mihaeu\HtmlFormatter::format($obj->html());
+    file_put_contents($file . '.html', $content);
+}
