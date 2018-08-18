@@ -1,0 +1,60 @@
+<root>
+    <panel>
+        <panel.heading pd="0">
+            <row>
+                
+                <col md="8">
+                    <nav.tabs bd="none">
+                        <nav.tabs.item><a href="#">Tat ca</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Moi nhat</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Xem nhieu</a></nav.tabs.item>
+                    </nav.tabs>
+                </col>
+                <col md="4">
+                    <clearfix>
+                        
+                        <nav.tabs bd="none" class="pull-right">
+                            <nav.tabs.item class="dropdown">
+                                <a href="#" class="data-toggle" data-toggle="dropdown">Cong ty <caret /></a>
+                                <dropdown.menu align="right">
+                                    <dropdown.menu.item>
+                                        <a href="#">Cong ty</a>
+                                    </dropdown.menu.item>
+                                    <dropdown.menu.item>
+                                        <a href="#">To doi</a>
+                                    </dropdown.menu.item>
+                                </dropdown.menu>
+                            </nav.tabs.item>
+                        </nav.tabs>
+
+                        <nav.tabs bd="none" class="pull-right">
+                            <nav.tabs.item class="dropdown">
+                                <a href="#" class="data-toggle" data-toggle="dropdown">Ha Noi <caret /></a>
+                                <dropdown.menu align="right">
+                                    <dropdown.menu.item>
+                                        <a href="#">Ha Noi</a>
+                                    </dropdown.menu.item>
+                                    <dropdown.menu.item>
+                                        <a href="#">TP HCM</a>
+                                    </dropdown.menu.item>
+                                </dropdown.menu>
+                            </nav.tabs.item>
+                        </nav.tabs>
+                    </clearfix>
+                </col>
+            </row>
+        </panel.heading>
+        <panel.body pd="2">
+            <?php require 'items4.xml'; ?>
+        </panel.body>
+        <panel.footer class="text-center">
+            <pagination mg="0">
+                <pagination.item class="active"><a href="#">1</a></pagination.item>
+                <pagination.item><a href="#">2</a></pagination.item>
+                <pagination.item><a href="#">3</a></pagination.item>
+                <pagination.item><a href="#">4</a></pagination.item>
+                <pagination.item><a href="#">5</a></pagination.item>
+            </pagination>
+        </panel.footer>
+    </panel>
+</root>

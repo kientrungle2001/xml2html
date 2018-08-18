@@ -21,8 +21,8 @@
                                         <btn.success class="btn-flex"><fa.1x symbol="bookmark" /> Luu bai viet</btn.success>
                                     </pull.right>
                                 </clearfix>
-                                <div class="news-body">
-                                    aaaa
+                                <div class="news-body clearfix text-justify">
+                                    <?php require BASE_DIR . '/sper/static/content.xml';?>
                                 </div>
                             </list.group.item>
                             <list.group.item bd="none" bb="2">
