@@ -1,0 +1,23 @@
+<root>
+    <col md="3">
+        <panel mb="2">
+            <panel.heading pd="0">
+                <img.responsive src="http://placehold.it/480x360" />
+            </panel.heading>
+            <panel.body>
+                <small>5 quan binh dan vit quay ngon nuc tieng cho mua..</small>
+            </panel.body>
+            <panel.footer>
+                <media>
+                    <media.left>
+                        <media.object src="http://placehold.it/36x36" class="img-circle" />
+                    </media.left>
+                    <media.body>
+                        <strong>Thu Phuong</strong>
+                        <small>15/06/2018</small>
+                    </media.body>
+                </media>
+            </panel.footer>
+        </panel>
+    </col>
+</root>

@@ -1,0 +1,19 @@
+<root>
+    <col md="3">
+        <panel mb="2">
+            <panel.heading pd="0">
+                <img.responsive src="http://placehold.it/480x360" />
+            </panel.heading>
+            <panel.body>
+                <strong>Nhung cach thiet ke noi that khien trong nha rong rai hon</strong>
+            </panel.body>
+            <panel.footer>
+                <clearfix>
+                    <fa.1x symbol="bookmark" /> 200
+                    <fa.1x symbol="comments-o" /> 200
+                    500 views
+                </clearfix>
+            </panel.footer>
+        </panel>
+    </col>
+</root>

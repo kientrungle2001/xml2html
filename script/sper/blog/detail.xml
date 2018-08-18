@@ -1,0 +1,92 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <container>
+        <breadcrumb>
+            <breadcrumb.item>
+                <a href="/">Trang chu</a>
+            </breadcrumb.item>
+            <breadcrumb.item class="active">
+                Blog
+            </breadcrumb.item>
+        </breadcrumb>
+    </container>
+
+    <container pt="5" pb="5">
+        <row>
+            <col md="8">
+                <panel>
+                    <panel.body pd="0">
+                        <list.group>
+                            <list.group.item bd="none" bb="2">
+                                <row>
+                                    <col md="9">
+                                        <media>
+                                            <media.left>
+                                                <media.object src="http://placehold.it/48x48" class="img-circle" />
+                                            </media.left>
+                                            <media.body>
+                                                <media.heading>
+                                                    Khanh Huyen
+                                                </media.heading>
+                                                <small>22/12/2019 - 11:05</small>
+                                            </media.body>
+                                        </media>
+                                    </col>
+                                    <col md="3" class="text-right">
+                                        <btn.success class="btn-flex"><fa.1x symbol="bookmark" /> Luu bai viet</btn.success>
+                                    </col>
+                                </row>
+                            </list.group.item>
+                            <list.group.item bd="none" bb="2">
+                                <div class="blog-body">
+                                    aaaa
+                                </div>
+                            </list.group.item>
+                            <list.group.item bd="none" bb="2">
+                                <clearfix>
+                                    <pull.left>
+                                        Like | Share
+                                    </pull.left>
+                                    <pull.right>
+                                        Danh gia <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
+                                    </pull.right>
+                                </clearfix>
+                                <clearfix>
+                                    Binh luan
+                                </clearfix>
+                            </list.group.item>
+                            <list.group.item bd="none">
+                                <h2>Bai viet khac</h2>
+                                <?php require 'others.xml';?>
+                            </list.group.item>
+                        </list.group>
+                    </panel.body>
+                </panel>
+            </col>
+            <col md="4">
+                <panel>
+                    <panel.heading pd="0">
+                        <nav.tabs class="nav-justified">
+                            <nav.tabs.item class="active"><a href="#"><h4 class="pd-1 mg-0">Moi Nhat</h4></a></nav.tabs.item>
+                            <nav.tabs.item><a href="#"><h4 class="pd-1 mg-0">Xem Nhieu Nhat</h4></a></nav.tabs.item>
+                        </nav.tabs>
+                    </panel.heading>
+                    <panel.body>
+                        <?php require 'items2.xml'; ?>
+                    </panel.body>
+                </panel>
+            </col>
+        </row>
+    </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

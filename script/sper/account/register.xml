@@ -1,0 +1,79 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <btn.primary data-toggle="modal" data-target="#registerModal">Register</btn.primary>
+    <modal id="registerModal">
+        <modal.dialog size="sm">
+            <modal.content>
+                <modal.header pd="0">
+                    <modal.title class="clearfix relative">
+                        <p class="text-center mg-0 pd-1 w-100-p">Dang ky</p>
+                        <btn.close data-dismiss="modal" class="absolute p-top-5 p-right-5">
+                            <icon symbol="remove-circle" />
+                        </btn.close>
+                    </modal.title>
+                </modal.header>
+                <modal.body>
+                    <form>
+                        <form.group>
+                            <input.form.control placeholder="Ten dang nhap" />
+                        </form.group>
+                        <form.group>
+                            <input.form.control placeholder="Ten hien thi" />
+                        </form.group>
+                        <form.group>
+                            <input.form.control placeholder="Mat khau" />
+                        </form.group>
+                        <form.group>
+                            <input.form.control placeholder="Nhap lai mat khau" />
+                        </form.group>
+                        <form.group>
+                            <input.form.control placeholder="So dien thoai" />
+                        </form.group>
+                        <form.group>
+                            <input.form.control placeholder="Email" />
+                        </form.group>
+                        <form.group>
+                            <row>
+                                <col sm="6">
+                                    <input.form.control placeholder="Captcha" />
+                                </col>
+                                <col sm="6">
+                                    <static.form.control>Captcha</static.form.control>
+                                </col>
+                            </row>
+                        </form.group>
+                        <form.group>
+                            <btn.success class="btn-block">Dang ky</btn.success>
+                        </form.group>
+                        <form.group>
+                            <p class="text-center">
+                                <small>
+                                Bang viec dang ky ban da dong y voi sper ve<br />
+                                Dieu khoan dich vu va chinh sach bao mat
+                                </small>
+                            </p>
+                        </form.group>
+                    </form>
+                </modal.body>
+                <modal.footer>
+                    <p class="text-center">
+                        <small>
+                        Ban da co tai khoan? Vui long <a href="#">Dang nhap</a>
+                        </small>
+                    </p>
+                </modal.footer>
+            </modal.content>
+        </modal.dialog>
+    </modal>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

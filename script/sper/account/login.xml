@@ -1,0 +1,84 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <btn.primary data-toggle="modal" data-target="#loginModal">Login</btn.primary>
+    <modal id="loginModal">
+        <modal.dialog size="sm">
+            <modal.content>
+                <modal.header pd="0">
+                    <modal.title class="clearfix relative">
+                        <p class="text-center mg-0 pd-1 w-100-p">Dang nhap</p>
+                        <btn.close data-dismiss="modal" class="absolute p-top-5 p-right-5">
+                            <icon symbol="remove-circle" />
+                        </btn.close>
+                    </modal.title>
+                </modal.header>
+                <modal.body>
+                    <form>
+                        <form.group>
+                            <input.form.control placeholder="username" />
+                        </form.group>
+                        <form.group>
+                            <input.form.control placeholder="password" />
+                        </form.group>
+                        <form.group>
+                            <clearfix>
+                                <pull.left>
+                                    <checkbox /> Luu Mat Khau
+                                </pull.left>
+                                <pull.right>
+                                    <a href="#">Quen mat khau</a>
+                                </pull.right>
+                            </clearfix>
+                        </form.group>
+                        <form.group>
+                            <btn.success class="btn-block">Dang nhap</btn.success>
+                        </form.group>
+                        <form.group>
+                            <p class="text-center" pd="3">Dang nhap bang</p>
+                        </form.group>
+                        <form.group>
+                            <input.group>
+                                <input.group.addon class="login-icon bg-google-phone"><fa.1x symbol="phone" /></input.group.addon>
+                                <btn.success class="btn-block">
+                                Dang nhap bang Phone
+                                </btn.success>
+                            </input.group>
+                        </form.group>
+                        <form.group>
+                            <input.group>
+                                <input.group.addon class="login-icon bg-google-facebook"><fa.1x symbol="facebook" /></input.group.addon>
+                                <btn.primary class="btn-block">
+                                Dang nhap bang facebook
+                                </btn.primary>
+                            </input.group>
+                        </form.group>
+                        <form.group>
+                            <input.group>
+                                <input.group.addon class="login-icon bg-google-plus"><fa.1x symbol="google-plus" /></input.group.addon>
+                                <btn.danger class="btn-block">
+                                Dang nhap bang Google Plus
+                                </btn.danger>
+                            </input.group>
+                        </form.group>
+                        <form.group>
+                            <p class="text-center">
+                                Ban chua co tai khoan? <a href="#">Dang ky</a>
+                            </p>
+                        </form.group>
+                    </form>
+                </modal.body>
+            </modal.content>
+        </modal.dialog>
+    </modal>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

@@ -1,0 +1,57 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <container>
+        <breadcrumb>
+            <breadcrumb.item>
+                <a href="/">Trang chu</a>
+            </breadcrumb.item>
+            <breadcrumb.item class="active">
+                Blog
+            </breadcrumb.item>
+        </breadcrumb>
+        <panel>
+            <panel.heading pd="0">
+                <row>
+                    <col md="6">
+                        <nav.tabs.justified bd="none">
+                            <nav.tabs.item class="active"><a href="#">Moi nhat</a></nav.tabs.item>
+                            <nav.tabs.item><a href="#">Xem nhieu nhat</a></nav.tabs.item>
+                            <nav.tabs.item><a href="#">Kinh nghiem</a></nav.tabs.item>
+                        </nav.tabs.justified>
+                    </col>
+                    <col md="6">
+                        <clearfix>
+                            <nav.tabs bd="none" class="pull-right">
+                                <nav.tabs.item class="dropdown">
+                                    <a href="#" class="data-toggle" data-toggle="dropdown">Chu de <caret /></a>
+                                    <dropdown.menu align="right">
+                                        <dropdown.menu.item>
+                                            <a href="#">Chu de 1</a>
+                                        </dropdown.menu.item>
+                                        <dropdown.menu.item>
+                                            <a href="#">Chu de 2</a>
+                                        </dropdown.menu.item>
+                                    </dropdown.menu>
+                                </nav.tabs.item>
+                            </nav.tabs>
+                        </clearfix>
+                    </col>
+                </row>
+            </panel.heading>
+            <panel.body pd="0">
+                <?php require 'items-thumbnail.xml'; ?>
+            </panel.body>
+        </panel>
+    </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>
