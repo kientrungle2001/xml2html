@@ -2,7 +2,7 @@
 class PzkHtmlTag extends PzkObject{
 	public static $excludes = ['tagName', 'className', 'pzkParentId', 
 			'fullNames', 'children', '_excludes', 'defaultAttributes',
-			'/^p[dtlrb]$/', '/^m[gtlrb]$/', 'bg', 'cl', 'bd'
+			'/^p[dtlrb]$/', '/^m[gtlrb]$/', '/^b[gdbtlr]$/', 'cl'
 	];
 	public static $autoCloseds = ['hr', 'br', 'input', 'link', 'img'];
 	public $extendClass = '';
@@ -19,7 +19,7 @@ class PzkHtmlTag extends PzkObject{
 			}
 		}
 		foreach((array)$this as $key => $value) {
-			if(preg_match('/^(p[dtlrb]|m[gtlrb]|bg|bd|cl)$/', $key)) {
+			if(preg_match('/^(p[dtlrb]|m[gtlrb]|b[gdbtlr]|cl)$/', $key)) {
 				$this->class .= ' ' . $key . '-' . $value;
 			}
 		}

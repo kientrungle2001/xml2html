@@ -1,5 +1,5 @@
 <style type="text/css">
-
+    body {background: #eee;}
     .col-xs-15,
     .col-sm-15,
     .col-md-15,
@@ -41,6 +41,8 @@
     .pd-5 {padding: 25px;}
     .pl-5 {padding-left: 25px;}
     .pr-5 {padding-right: 25px;}
+    .pt-5 {padding-top: 25px;}
+    .pb-5 {padding-bottom: 25px;}
     .pl-20 {padding-left: 100px;}
     .pr-20 {padding-right: 100px;}
     
@@ -53,12 +55,32 @@
 
     .w-5-p {width: 5%;}
     .w-50-p {width: 50%;}
+    .w-100-p {width: 100%;}
     
     .bg-black {background: black;}
     .bg-white {background: white;}
     .bd-none{border: none;}
+    .bd-1{border:1px solid #ddd;}
+    .bd-2{border:2px solid #ddd;}
+    .bb-1{border-bottom:1px solid #ddd;}
+    .bb-2{border-bottom:2px solid #ddd;}
     
-    
+    .b-r-3 {border-radius: 15px;}
+    .d-table {display:table;}
+    .d-table-cell {display:table-cell;}
+    .d-flex {display:flex;}
+    .v-middle {vertical-align: middle;}
+
+    .relative {position: relative;}
+    .absolute {position: absolute;}
+    .p-top-0 {top: 0;}
+    .p-bottom-0 {bottom: 0;}
+
+    .btn-flex {
+        display: inline-flex;
+        align-items: flex-end; 
+    }
+
     input,select,textarea,button {
         border-radius: 0 !important;
     }

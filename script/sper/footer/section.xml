@@ -1,0 +1,69 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+    <footer>
+		<container>
+			<row>
+				<col md="4">
+					<h4>CÔNG TY TNHH TM VÀ DV SPER</h4>
+				</col>
+				<col md="4">
+					<row>
+						<col md="4">
+							<h5>CÔNG TY</h5>
+							<ul class="no-padding no-list-style">
+								<li class="padding-top-5">Về chúng tôi</li>
+								<li class="padding-top-5">Liên hệ</li>
+								<li class="padding-top-5">Hợp tác</li>
+							</ul>
+						</col>
+						<col md="4">
+							<h5>DỊCH VỤ</h5>
+							<ul class="no-padding no-list-style">
+								<li class="padding-top-5">Về chúng tôi</li>
+								<li class="padding-top-5">Liên hệ</li>
+								<li class="padding-top-5">Hợp tác</li>
+							</ul>
+						</col>
+						<col md="4">
+							<h5>DANH MỤC</h5>
+							<ul class="no-padding no-list-style">
+								<li class="padding-top-5">Về chúng tôi</li>
+								<li class="padding-top-5">Liên hệ</li>
+								<li class="padding-top-5">Hợp tác</li>
+							</ul>
+						</col>
+					</row>
+				</col>
+				<col md="4">
+					<row>
+						<col md="6">
+							<h5>SPER BUILDER</h5>
+							<ul class="no-padding no-list-style">
+								<li class="padding-top-5">Về chúng tôi</li>
+								<li class="padding-top-5">Liên hệ</li>
+								<li class="padding-top-5">Hợp tác</li>
+							</ul>
+						</col>
+						<col md="6">
+							<h5>HỖ TRỢ KHÁCH HÀNG</h5>
+							<ul class="no-padding no-list-style">
+								<li class="padding-top-5">Về chúng tôi</li>
+								<li class="padding-top-5">Liên hệ</li>
+								<li class="padding-top-5">Hợp tác</li>
+							</ul>
+						</col>
+					</row>
+				</col>
+			</row>
+		</container>
+	</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

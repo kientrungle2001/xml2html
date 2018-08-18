@@ -1,0 +1,10 @@
+<root>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+    <?php require 'featured.xml';?>
+</root>

@@ -1,0 +1,12 @@
+<root>
+    <row class="row-pd-5">
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+        <?php require 'thumbnail-detail.xml'; ?>
+    </row>
+</root>

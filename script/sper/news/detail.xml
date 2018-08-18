@@ -1,0 +1,82 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <img.responsive src="http://placehold.it/1366x200" />
+
+    <container pt="5" pb="5">
+        <row>
+            <col md="8">
+                <panel>
+                    <panel.body>
+                        <list.group>
+                            <list.group.item bd="none" bb="2">
+                                <h1 class="heading news-heading">7 loai vat lieu moi se thay doi tuong lai cua nganh xay dung day roi</h1>
+                                <clearfix>
+                                    <pull.right>
+                                        <btn.success class="btn-flex"><fa.1x symbol="bookmark" /> Luu bai viet</btn.success>
+                                    </pull.right>
+                                </clearfix>
+                                <div class="news-body">
+                                    aaaa
+                                </div>
+                            </list.group.item>
+                            <list.group.item bd="none" bb="2">
+                                <clearfix>
+                                    <pull.left>
+                                        Like | Share
+                                    </pull.left>
+                                    <pull.right>
+                                        Danh gia <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
+                                    </pull.right>
+                                </clearfix>
+                                <clearfix>
+                                    Binh luan
+                                </clearfix>
+                            </list.group.item>
+                            <list.group.item bd="none">
+                                <h2>Bai viet khac</h2>
+                                <?php require 'others.xml';?>
+                            </list.group.item>
+                        </list.group>
+                    </panel.body>
+                </panel>
+            </col>
+            <col md="4">
+                <list.group>
+                    <list.group.item class="text-center">
+                        <h2>Tai ve app Sper</h2>
+                        <div>App Store | Google Play</div>
+                    </list.group.item>
+                    <list.group.item class="text-center">
+                        <h2>Lien he truyen thong</h2>
+                        <btn.success class="btn-block">
+                            <icon symbol="download" /> Lien he doi ngu truyen thong Sper
+                        </btn.success>
+                    </list.group.item>
+                    <list.group.item class="text-center">
+                        <h2>Theo doi cac kenh truyen thong khac cua Sper</h2>
+                        <clearfix>
+                            <fa size="4x" symbol="facebook-square" /> 
+                            <fa size="4x" symbol="linkedin-square" /> 
+                            <fa size="4x" symbol="twitter-square" />
+                            <fa size="4x" symbol="instagram" />
+                        </clearfix>
+                    </list.group.item>
+                    <list.group.item>
+                        <?php require 'featureds.xml'; ?>
+                    </list.group.item>
+                </list.group>
+            </col>
+        </row>
+    </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>
