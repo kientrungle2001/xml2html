@@ -1,0 +1,31 @@
+<root>
+    <div bd="1" mb="3">
+        <nav.tabs bd="none">
+            <nav.tabs.item><a href="#">Tất cả</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Dịch vụ</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Sản phẩm</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Video</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Blog</a></nav.tabs.item>
+        </nav.tabs>
+        
+    </div>
+
+    <row>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+        <?php require 'collection/item.xml';?>
+    </row>
+</root>

@@ -1,0 +1,85 @@
+<root>
+    <panel>
+        <panel.heading pd="0">
+            <img.responsive src="http://placehold.it/480x360" />
+        </panel.heading>
+        <panel.body>
+            <form>
+                <form.group>
+                    <p>Chi nhánh 1</p>
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Nhập tên công ty" />
+                </form.group>
+                <form.group>
+                    <select.form.control placeholder="Chọn lĩnh vực">
+                        <option value="1">Chọn lĩnh vực</option>
+                    </select.form.control>
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Chi nhánh - tên chi nhánh" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Chọn định vị" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Tên đăng nhập" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Mật khẩu" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Nhập lại mật khẩu" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Nhập số điện thoại" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="Nhập Email" />
+                </form.group>
+                <form.group>
+                    <input.form.control placeholder="http://sper.vn/..." />
+                </form.group>
+                <form.group>
+                    <row class="row-pd-5">
+                        <col md="4">
+                        <static.form.control>Giờ mở cửa</static.form.control>
+                        </col>
+                        <col md="4">
+                            <input.form.control placeholder="8h:30" />
+                        </col>
+                        <col md="4">
+                            <input.form.control placeholder="12h" />
+                        </col>
+                    </row>
+                </form.group>
+                <form.group>
+                    <row class="row-pd-5">
+                        <col md="4">
+                        <static.form.control>Giờ đóng cửa</static.form.control>
+                        </col>
+                        <col md="4">
+                            <input.form.control placeholder="8h:30" />
+                        </col>
+                        <col md="4">
+                            <input.form.control placeholder="12h" />
+                        </col>
+                    </row>
+                </form.group>
+                <form.group>
+                    <textarea.form.control placeholder="Mô tả" rows="5" />
+                </form.group>
+                <form.group>
+                    <row>
+                        <col md="6">
+                            <btn.success class="btn-block">Hoàn thành</btn.success>
+                        </col>
+                        <col md="6">
+                            <btn.default class="btn-block">Chỉnh sửa</btn.default>
+                        </col>
+                    </row>
+                </form.group>
+            </form>
+        </panel.body>
+    </panel>
+</root>

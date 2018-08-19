@@ -1,0 +1,22 @@
+<root>
+    <panel>
+        <panel.heading pd="0">
+            <thumbnail mg="0">
+                <thumbnail.img src="http://placehold.it/64x64" class="img-circle" />
+                <thumbnail.caption class="text-center">
+                    Dinh Nhat Nam<br />
+                    <small>dinhnhatnam@gmail.com</small>
+                </thumbnail.caption>
+            </thumbnail>
+        </panel.heading>
+        <listgroup>
+            <listgroup.item><a href="#"><fa symbol="user" /> Thong tin tai khoan</a></listgroup.item>
+            <listgroup.item><a href="#"><fa symbol="user" /> Doi mat khau</a></listgroup.item>
+        </listgroup>
+        <panel.footer pd="0">
+        <btn.success class="btn-block">
+            Tạo dịch vụ
+        </btn.success>
+        </panel.footer>
+    </panel>
+</root>

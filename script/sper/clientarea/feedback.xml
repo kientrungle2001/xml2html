@@ -1,0 +1,122 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <container>
+        <breadcrumb>
+            <breadcrumb.item>
+                <a href="/">Trang chu</a>
+            </breadcrumb.item>
+            <breadcrumb.item class="active">
+                Tai khoan
+            </breadcrumb.item>
+        </breadcrumb>
+    </container>
+
+    <container>
+        <row class="row-pd-5">
+            <col md="3">
+                <?php require 'menu.xml';?>
+            </col>
+            <col md="9">
+                <panel>
+                    <panel.heading>
+                        Góp ý xây dựng dịch vụ
+                    </panel.heading>
+                    <panel.body>
+                        <p>Tại sper chúng tôi tin rằng dịch vụ này sẽ mang lại nhiều lợi ích cho cộng đồng. 
+                        Chúng tôi rất quan tâm đến việc tạo ra...</p>
+                        
+                        <form.horizontal>
+                        <row class="row-pd-5">
+                            <col md="9">
+                            <form.group>
+                                <control.label class="col-md-3">Tiêu đề</control.label>
+                                <col md="9">
+                                    <input.form.control />
+                                </col>
+                            </form.group>
+                            <form.group>
+                                <control.label class="col-md-3">Nội dung góp ý</control.label>
+                                <col md="9">
+                                    <textarea.form.control rows="8" />
+                                </col>
+                            </form.group>
+                            <form.group>
+                                <control.label class="col-md-3">Email</control.label>
+                                <col md="9">
+                                    <input.form.control />
+                                </col>
+                            </form.group>
+                            <form.group>
+                                <control.label class="col-md-3">Danh mục thiết kế</control.label>
+                                <col md="9">
+                                    <select.form.control>
+                                        <option value="1">Danh mục 1</option>
+                                        <option value="2">Danh mục 2</option>
+                                    </select.form.control>
+                                </col>
+                            </form.group>
+                            <form.group>
+                                <col md="9" mdo="3">
+                                    <btn.success>Gửi góp ý</btn.success>
+                                </col>
+                            </form.group>
+                            </col>
+                            <col md="3">
+                            Bạn biết đến sper từ đâu?
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option1" checked="checked" />
+                                Search từ google
+                            </label>
+                            </div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2" />
+                                Báo chí
+                            </label>
+                            </div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2" />
+                                Bạn bè
+                            </label>
+                            </div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2" />
+                                Facebook
+                            </label>
+                            </div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2" />
+                                Mạng xã hội
+                            </label>
+                            </div>
+                            <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" value="option2" />
+                                Nguồn khác
+                            </label>
+                            </div>
+                            </col>
+                        </row>
+                        </form.horizontal>
+                        
+                    </panel.body>
+                </panel>
+            </col>
+        </row>
+    </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

@@ -1,0 +1,22 @@
+<root>
+
+    <img.responsive src="http://placehold.it/1366x300" />
+    <row mt="3" class="row-pd-5">
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+    </row>
+</root>
