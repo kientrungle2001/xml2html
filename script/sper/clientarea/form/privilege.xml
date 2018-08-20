@@ -1,59 +1,59 @@
 <root>
     <col md="6">
         <panel>
-        <panel.body>
-        <form>
-            <h2>Chi nhánh 1</h2>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+            <panel.body>
+                <form>
+                    <h2>Chi nhánh 1</h2>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Đổi ảnh đại diện
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Đổi mật khẩu
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Gửi tin nhắn trả lời Support SPER
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Thêm sửa xóa sản phẩm ở chi nhánh 1
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Đặt hàng
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Tạo / Sửa / Xóa Chi nhánh
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Đánh giá / Lưu / Share / Call / Viết blog
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="" />
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="" />
                     Thanh toán
-                </label>
-            </div>
-        </form>
-        </panel.body>
+                        </label>
+                    </div>
+                </form>
+            </panel.body>
         </panel>
     </col>
 </root>
