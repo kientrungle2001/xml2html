@@ -1,11 +1,15 @@
 <?php
 require 'xml.php';
-
+if(isset($argv[2]) && $argv[2] == 'rebuild') {
+    define('REBUILD_MODE', 1);
+} else {
+    define('REBUILD_MODE', 0);
+}
 function generate_files($files) {
     foreach($files as $file) {
         $fileWithoutExt = str_replace('.xml', '', $file);
         $genFile = 'generated/'. $fileWithoutExt . '.html';
-        if(1 || !file_exists($genFile) || filemtime($file) > filemtime($genFile)) {
+        if(REBUILD_MODE || !file_exists($genFile) || filemtime($file) > filemtime($genFile)) {
             generate($fileWithoutExt);
         }
         
@@ -21,4 +25,7 @@ $files = glob($folder. '/*/*.xml');
 generate_files($files);
 
 $files = glob($folder. '/*/*/*.xml');
+generate_files($files);
+
+$files = glob($folder. '/*/*/*/*.xml');
 generate_files($files);
