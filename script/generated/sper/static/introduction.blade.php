@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+<style type="text/css">
+     body {background: #eee;} .col-xs-15, .col-sm-15, .col-md-15, .col-lg-15 { position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; } .col-xs-15 { width: 20%; float: left; } @media (min-width: 768px) { .col-sm-15 { width: 20%; float: left; } } @media (min-width: 992px) { .col-md-15 { width: 20%; float: left; } } @media (min-width: 1200px) { .col-lg-15 { width: 20%; float: left; } } .pd-0 {padding: 0;} .pd-1 {padding: 5px;} .pd-2 {padding: 10px;} .pd-3 {padding: 15px;} .pd-4 {padding: 20px;} .pd-5 {padding: 25px;} .pl-5 {padding-left: 25px;} .pr-5 {padding-right: 25px;} .pt-5 {padding-top: 25px;} .pb-5 {padding-bottom: 25px;} .pl-20 {padding-left: 100px;} .pr-20 {padding-right: 100px;} .pl-5-p {padding-left: 5%;} .pr-5-p {padding-right: 5%;} .mg-0 {margin: 0;} .mb-1 {margin-bottom: 5px;} .mb-2 {margin-bottom: 10px;} .mb-3 {margin-bottom: 15px;} .mt-2 {margin-top: 10px;} .mt-3 {margin-top: 15px;} .w-5-p {width: 5%;} .w-50-p {width: 50%;} .w-100-p {width: 100%;} .bg-black {background: black;} .bg-white {background: white;} .bd-none{border: none;} .bd-1{border:1px solid #ddd;} .bd-2{border:2px solid #ddd;} .bb-1{border-bottom:1px solid #ddd;} .bb-2{border-bottom:2px solid #ddd;} .b-r-3 {border-radius: 15px;} .d-block {display:block;} .d-table {display:table;} .d-table-cell {display:table-cell;} .d-flex {display:flex;} .v-middle {vertical-align: middle;} .relative {position: relative;} .absolute {position: absolute;} .p-top-0 {top: 0;} .p-top-5 {top: 5px;} .p-bottom-0 {bottom: 0;} .p-right-0 {right: 0;} .p-right-5 {right: 5px;} .p-left-0 {left: 0;} .pointer {cursor: pointer;} .login-icon-2 {width: 40px;} .btn-cart-page, .btn-common {width: 160px;} #shopping-cart-section table td {vertical-align: middle;} .btn-flex { display: inline-flex; align-items: flex-end; } .btn-success { background: #00A73A; } a { color: #333; } .account-menu .active a{ color: #007037; } .account-menu .active { background: #fff; } .account-menu > li { border: none; } input,select,textarea,button { border-radius: 0 !important; } .row-pd-0 { margin-left: 0px; margin-right: 0px; } .row-pd-0 > [class*="col-"] { padding-left: 0px; padding-right: 0px; } .row-pd-5 { margin-left: -5px; margin-right: -5px; } .row-pd-5 > [class*="col-"] { padding-left: 5px; padding-right: 5px; } .row-pd-10 { margin-left: -10px; margin-right: -10px; } .row-pd-10 > [class*="col-"] { padding-left: 10px; padding-right: 10px; } .active a { color:white; } .service-category .glyphicon { visibility: hidden; } .service-category .heading { text-transform: uppercase; } .service-category .heading .glyphicon { visibility: visible; } 
+</style>
+<div class="container">
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">
+                Trang chu
+            </a>
+        </li>
+        <li class="active">
+             Gioi thieu 
+        </li>
+    </ol>
+</div>
+<div class="container">
+    <div class="row-pd-5 row">
+        <div class="col-md-3">
+            <ul class="list-group">
+                <li class="active list-group-item">
+                    <a>
+                        Ve Sper
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        Dieu khoan dich vu
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a>
+                        Chinh sach bao mat
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix">
+                <img class="img-responsive" src="http://placehold.it/480x600" />
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h1 class="mg-0">
+                        Gioi thieu
+                    </h1>
+                    <div class="text-justify clearfix">
+                        <p>
+                            <strong>
+                                The standard Lorem Ipsum passage, used since the 1500s
+                            </strong>
+                        </p>
+                        <p>
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </p>
+                        <p>
+                            <strong>
+                                Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                            </strong>
+                        </p>
+                        <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        </p>
+                        <p>
+                            <strong>
+                                1914 translation by H. Rackham
+                            </strong>
+                        </p>
+                        <p>
+                            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
+                        </p>
+                        <p>
+                            <strong>
+                                Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+                            </strong>
+                        </p>
+                        <p>
+                            "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                        </p>
+                        <p>
+                            <strong>
+                                1914 translation by H. Rackham
+                            </strong>
+                        </p>
+                        <p>
+                            "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>

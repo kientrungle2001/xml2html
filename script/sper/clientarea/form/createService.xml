@@ -1,0 +1,43 @@
+<root>
+    <form>
+        <form.group>
+            <img.responsive src="http://placehold.it/1366x300" />
+        </form.group>
+        <form.group>
+            <h2>Mô tả dịch vụ</h2>
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập tên công ty / cửa hàng / đội nhóm" />
+        </form.group>
+        <form.group>
+            <select.form.control placeholder="Chọn lĩnh vực">
+                <option value="1">Chọn lĩnh vực</option>
+            </select.form.control>
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập địa chỉ chính" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Chọn định vị" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Số chi nhánh" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập số điện thoại" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập Email" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập Website" />
+        </form.group>
+        <form.group>
+            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" />
+        </form.group>
+        <form.group>
+            <btn.success>Hoàn thành</btn.success>
+            <btn.default>Chỉnh sửa</btn.default>
+        </form.group>
+    </form>
+</root>

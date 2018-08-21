@@ -8,7 +8,7 @@ if(isset($argv[2]) && $argv[2] == 'rebuild') {
 function generate_files($files) {
     foreach($files as $file) {
         $fileWithoutExt = str_replace('.xml', '', $file);
-        $genFile = 'generated/'. $fileWithoutExt . '.html';
+        $genFile = 'generated/'. $fileWithoutExt . '.blade.php';
         if(REBUILD_MODE || !file_exists($genFile) || filemtime($file) > filemtime($genFile)) {
             generate($fileWithoutExt);
         }

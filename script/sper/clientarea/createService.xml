@@ -9,10 +9,10 @@
     <container>
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
-                Tai khoan
+                Tài khoản
             </breadcrumb.item>
         </breadcrumb>
     </container>
@@ -25,10 +25,10 @@
             <col md="9">
                 <panel>
                     <panel.heading>
-                        Dịch vụ của bạn
+                        Tạo dịch vụ
                     </panel.heading>
                     <panel.body>
-                        <?php require 'form/service.xml'; ?>
+                        <?php require 'form/createService.xml'; ?>
                     </panel.body>
                 </panel>
             </col>

@@ -1,0 +1,51 @@
+<root>
+
+    <img.responsive src="http://placehold.it/1366x300" />
+    <panel bd="none">
+        <panel.body bd="none">
+            <h2>Trần Thạch Cao Bảo Vy</h2>
+            <div>
+                <strong>Công ty</strong> Độ uy tín: <strong>345</strong>
+            </div>
+            <div>
+                Số 3 ngõ 295 Bạch Mai
+            </div>
+            <div>
+                Đã cam kết dịch vụ
+            </div>
+            <div>
+                2 chi nhánh <icon symbol="heart-o" /> 200 Đang mở cửa (Thời gian mở cửa: 7h - 17h)
+            </div>
+        </panel.body>
+        <panel.footer bd="none">
+            Số điện thoại Chát Bình luận Lưu vào bộ sưu tập Hình ảnh Chia sẻ
+        </panel.footer>
+    </panel>
+
+    <div bd="1">
+        <nav.tabs>
+            <nav.tabs.item class="active"><a href="#">Tất cả</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Mới nhất</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Xem nhiều</a></nav.tabs.item>
+        </nav.tabs>
+    </div>
+
+    <row mt="3" class="row-pd-5">
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+        <?php require 'service/item.xml';?>
+    </row>
+</root>

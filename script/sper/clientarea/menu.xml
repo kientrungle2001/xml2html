@@ -9,9 +9,9 @@
                 </thumbnail.caption>
             </thumbnail>
         </panel.heading>
-        <listgroup>
-            <listgroup.item><a href="#"><fa symbol="user" /> Thong tin tai khoan</a></listgroup.item>
-            <listgroup.item><a href="#"><fa symbol="user" /> Doi mat khau</a></listgroup.item>
+        <listgroup class="account-menu">
+            <listgroup.item class="active"><a href="#"><fa symbol="user" /> Thông tin tài khoản</a></listgroup.item>
+            <listgroup.item><a href="#"><fa symbol="user" /> Đổi mật khẩu</a></listgroup.item>
         </listgroup>
         <panel.footer pd="0">
         <btn.success class="btn-block">

@@ -234,5 +234,5 @@ function generate($file) {
     echo $file . ' is generated!'. "\r\n";
     $obj = pzk_parse(eval_file($file . '.xml'));
     $content = Mihaeu\HtmlFormatter::format($obj->html());
-    file_put_contents('generated/'. $file . '.html', $content);
+    file_put_contents('generated/'. $file . '.blade.php', $content);
 }

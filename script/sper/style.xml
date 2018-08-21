@@ -94,6 +94,24 @@
         display: inline-flex;
         align-items: flex-end; 
     }
+    .btn-success {
+        background: #00A73A;
+    }
+    a {
+        color: #333;
+    }
+
+    .account-menu .active a{
+        color: #007037;
+    }
+
+    .account-menu .active {
+        background: #fff;
+    }
+
+    .account-menu > li {
+        border: none;
+    }
 
     input,select,textarea,button {
         border-radius: 0 !important;
