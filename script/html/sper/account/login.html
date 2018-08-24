@@ -14,7 +14,7 @@
             <div class="modal-body">
                 <form ng-submit="login()">
                     <div class="form-group">
-                        <p class="bg-danger pd-3 form-control-static" ng-show="error.message">
+                        <p class="bg-danger pd-3 text-white form-control-static" ng-show="error.message">
                             %%error.message%%
                         </p>
                     </div>

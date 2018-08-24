@@ -5,14 +5,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
+    <div class="bg-white">
     <container ng-controller="Sper.Header">
         <navbar bg="white" mb="0">
             <navbar.header>
                 <navbar.btn.collapse data-target="#top-menu">
                     <icon.bar /> <icon.bar /> <icon.bar />
                 </navbar.btn.collapse>
-                <navbar.brand>
-                    <img src="http://placehold.it/20x20" />
+                <navbar.brand class="relative" style="width: 50px" href="/">
+                    <img src="/images/logo/2.jpeg" style="width: 50px; height: 50px" class="absolute p-top-0 p-left-0" />
                 </navbar.brand>
             </navbar.header>
             
@@ -23,9 +24,9 @@
                 </form.group>
                 <form.group>
                     <input.group>
-                        <input.form.control placeholder="Search" style="width:300px"/>
+                        <input.form.control placeholder="Search" style="width:280px"/>
                         <input.group.btn tag="span">
-                            <btn.default style="height: 34px;"><icon.search /></btn.default>
+                            <btn.default style="height: 34px;"><icon.search  class="fs-20"/></btn.default>
                         </input.group.btn>
                     </input.group>
                 </form.group>
@@ -35,19 +36,19 @@
                 </form.group>
                 <form.group>
                     <btn.default>
-                        <icon symbol="phone" /> Tai App
+                        <icon symbol="phone" class="fs-20" /> Tải App
                     </btn.default>
                 </form.group>
             </navbar.form>
             
             <navbar.nav align="right" id="top-menu" class="navbar-collapse collapse">
                 <navbar.nav.item>
-                    <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                    <a href="#" data-toggle="modal" data-target="#loginModal">Đăng nhập</a>
                 </navbar.nav.item>
                 <navbar.nav.item class="dropdown">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
-                        <fa symbol="bell" size="1x" />
+                        <fa symbol="bell" size="1x" class="fs-20" />
                     </navbar.link>
                     <dropdown.menu.div>
                         <?php require 'context/notification.xml';?>
@@ -56,7 +57,7 @@
                 <navbar.nav.item class="dropdown">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
-                        <fa symbol="shopping-cart" size="1x" />
+                        <fa symbol="shopping-cart" size="1x" class="fs-20" />
                         <badge bg="red" class="hidden">1</badge>
                     </navbar.link>
                     <dropdown.menu.div>
@@ -66,7 +67,7 @@
                 <navbar.nav.item class="dropdown">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
-                        <icon symbol="plus-sign" />
+                        <icon symbol="plus-sign" class="fs-20" />
                     </navbar.link>
                     <dropdown.menu.div>
                         <?php require 'context/blog.xml'; ?>
@@ -75,17 +76,27 @@
                 <navbar.nav.item class="dropdown">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
-                        Tieng Viet
+                        <img src="/images/flag/vn.png" style="width: 20px; height: 20px;" />
                     </navbar.link>
-                    <dropdown.menu.div>
-                        Tieng Viet<br />
-                        Tieng Anh<br />
-                    </dropdown.menu.div>
+                    <dropdown.menu>
+                        <dropdown.menu.item>
+                            <a href="#">
+                                <img src="/images/flag/vn.png" style="width: 20px; height: 20px;" /> Tiếng Việt
+                            </a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="#">
+                                <img src="/images/flag/en.png" style="width: 20px; height: 20px;" />
+                                English
+                            </a>
+                        </dropdown.menu.item>
+                    </dropdown.menu>
                 </navbar.nav.item>
             </navbar.nav>
         </navbar>
         
     </container>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
         integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 

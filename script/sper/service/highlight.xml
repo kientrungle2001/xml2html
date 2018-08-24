@@ -7,40 +7,45 @@
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
     <container mt="3" ng-controller="Sper.Service.Highlight">
-        <panel>
-            <panel.heading pd="0">
+        <panel class="bg-none-i">
+            <panel.heading pd="0" class="bg-white-i">
                 <row>
                     <col md="3">
-                        <nav.tabs bd="none" class="text-uppercase">
+                        <nav.tabs bd="none" class="text-uppercase tabs-no-border tabs-no-bg">
                             <nav.tabs.item>
-                                <a href="#"><icon.star /> Dịch vụ nổi bật nhất</a>
+                                <a href="#" class="text-service relative" onclick="return false;"><icon.star class="fs-25 absolute p-top-5 p-left-5" /> <span class="d-inline-block pl-5 text-service-highlight text-bold">Dịch vụ nổi bật nhất</span></a>
                             </nav.tabs.item>
                         </nav.tabs>
                     </col>
                     <col md="9">
-                        <nav.tabs bd="none" class="text-uppercase">
+                        <nav.tabs bd="none" class="text-uppercase tabs-no-border tabs-service tabs-no-bg">
                             <nav.tabs.item ng-repeat="category in categories | orderBy: 'position'" ng-class="{'active': (selectedCategory === category)}" ng-click="selectCategory(category)"><a href="#" onclick="return false;">%%category.categoryname%%</a></nav.tabs.item>
                         </nav.tabs>
                     </col>
                 </row>
             </panel.heading>
             <panel.body pd="0">
-                <panel mg="0" bd="none" context="success">
-                    <panel.heading pd="0">
+                <panel mg="0" bd="none" context="success" class="bg-none-i">
+                    <panel.heading pd="0" class="bg-black-i">
                         <row>
                             <col mdo="3" md="6">
-                                <nav.tabs bd="none">
+                                <nav.tabs bd="none" class="tabs-no-border tabs-no-bg tabs-black">
                                     <nav.tabs.item ng-repeat="orderBy in orderBys" ng-class="{'active': selectedOrderBy === orderBy}"><a href="#" onclick="return false;" ng-click="selectOrderBy(orderBy)" >%%orderBy.label%%</a></nav.tabs.item>
                                 </nav.tabs>
                             </col>
                             <col md="3">
                                 <clearfix>
-                                    <nav.tabs bd="none" class="pull-right">
+                                    <nav.tabs bd="none" class="pull-right tabs-black tabs-no-bg">
                                         <nav.tabs.item class="dropdown">
                                             <a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
                                             <dropdown.menu align="right">
-                                                <dropdown.menu.item ng-repeat="subCategory in selectedCategory.children" ng-class="{'active': selectedSubCategory === subCategory}">
-                                                    <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategory)">%%subCategory.categoryname%%</a>
+                                                <dropdown.menu.item ng-repeat="subCategory in selectedCategory.children" ng-class="{'active': selectedSubCategory === subCategory}" class="dropdown-submenu dropdown-submenu-left">
+                                                    <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategory)" class="test relative">%%subCategory.categoryname%% <caret class="absolute" style="left: 90%; top: 45%;" /></a>
+                                                    <dropdown.menu>
+                                                        <dropdown.menu.item ng-repeat="subCategoryLevel2 in subCategory.children" ng-class="{'active': selectedSubCategory === subCategoryLevel2}">
+                                                            <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategoryLevel2)">%%subCategoryLevel2.categoryname%%</a>
+                                                        </dropdown.menu.item>
+                                                    </dropdown.menu>
                                                 </dropdown.menu.item>
                                             </dropdown.menu>
                                         </nav.tabs.item>
@@ -49,8 +54,9 @@
                             </col>
                         </row>
                     </panel.heading>
-                    <panel.body pd="2">
+                    <panel.body pd="2" class="bg-none-i">
                         <?php require 'items.xml'; ?>
+                        <p class="text-center"><a href="#" class="text-service text-underline">Xem thêm</a></p>
                     </panel.body>
                 </panel>
             </panel.body>

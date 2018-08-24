@@ -20,7 +20,7 @@
                 <modal.body>
                     <form ng-submit="login()">
                         <form.group>
-                            <static.form.control ng-show="error.message" class="bg-danger pd-3">%%error.message%%</static.form.control>
+                            <static.form.control ng-show="error.message" class="bg-danger pd-3 text-white">%%error.message%%</static.form.control>
                         </form.group>
                         <form.group ng-class="{'has-error': error.username}">
                             <input.form.control placeholder="Tên đăng nhập" ng-model="username" />
