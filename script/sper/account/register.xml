@@ -6,42 +6,41 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <btn.primary data-toggle="modal" data-target="#registerModal">Register</btn.primary>
-    <modal id="registerModal">
+    <modal id="registerModal" ng-controller="Sper.Account.Register">
         <modal.dialog size="sm">
             <modal.content>
                 <modal.header pd="0">
                     <modal.title class="clearfix relative">
-                        <p class="text-center mg-0 pd-1 w-100-p">Dang ky</p>
+                        <p class="text-center mg-0 pd-1 w-100-p">Đăng ký</p>
                         <btn.close data-dismiss="modal" class="absolute p-top-5 p-right-5">
                             <icon symbol="remove-circle" />
                         </btn.close>
                     </modal.title>
                 </modal.header>
                 <modal.body>
-                    <form>
+                    <form ng-submit="register()">
                         <form.group>
-                            <input.form.control placeholder="Ten dang nhap" />
+                            <input.form.control placeholder="Tên đăng nhập" ng-model="username" />
                         </form.group>
                         <form.group>
-                            <input.form.control placeholder="Ten hien thi" />
+                            <input.form.control placeholder="Tên hiển thị" ng-model="name" />
                         </form.group>
                         <form.group>
-                            <input.form.control placeholder="Mat khau" />
+                            <input.form.control placeholder="Mật khẩu" ng-model="password" />
                         </form.group>
                         <form.group>
-                            <input.form.control placeholder="Nhap lai mat khau" />
+                            <input.form.control placeholder="Nhập lại mật khẩu" ng-model="confirmPassword" />
                         </form.group>
                         <form.group>
-                            <input.form.control placeholder="So dien thoai" />
+                            <input.form.control placeholder="Số điện thoại" ng-model="phone" />
                         </form.group>
                         <form.group>
-                            <input.form.control placeholder="Email" />
+                            <input.form.control placeholder="Email" ng-model="email" />
                         </form.group>
                         <form.group>
                             <row>
                                 <col sm="6">
-                                    <input.form.control placeholder="Captcha" />
+                                    <input.form.control placeholder="Captcha" ng-model="captcha" />
                                 </col>
                                 <col sm="6">
                                     <static.form.control>Captcha</static.form.control>
@@ -49,13 +48,13 @@
                             </row>
                         </form.group>
                         <form.group>
-                            <btn.success class="btn-block">Dang ky</btn.success>
+                            <btn.success class="btn-block">Đăng ký</btn.success>
                         </form.group>
                         <form.group>
                             <p class="text-center">
                                 <small>
-                                Bang viec dang ky ban da dong y voi sper ve<br />
-                                Dieu khoan dich vu va chinh sach bao mat
+                                Bằng việc đăng ký bạn đã đồng ý với Sper về<br />
+                                <a href="#">Điều khoản dịch vụ</a> và <a href="#">chính sách bảo mật</a>
                                 </small>
                             </p>
                         </form.group>
@@ -64,7 +63,7 @@
                 <modal.footer>
                     <p class="text-center">
                         <small>
-                        Ban da co tai khoan? Vui long <a href="#">Dang nhap</a>
+                        Bạn đã có tài khoản? Vui lòng <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Đăng nhập</a>
                         </small>
                     </p>
                 </modal.footer>

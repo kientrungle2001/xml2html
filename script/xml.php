@@ -6,6 +6,7 @@ function str_ucfirst($str) {
 	return strtoupper($str[0]) . substr($str, 1);
 }
 define('BASE_DIR', dirname(__FILE__));
+define('NO_SCRIPTS', 1);
 require_once 'object.php';
 require_once 'objects/HtmlTag.php';
 require_once 'objects/bootstrap.php';
@@ -45,6 +46,7 @@ class PzkParser {
     }
 
     public static function parseDocument($source) {
+        $source = str_replace('&', '&amp;', $source);
 		$pageDom = new DOMDocument('1.0', 'utf-8');
         $pageDom->preserveWhiteSpace = false;
         $pageDom->formatOutput = true;

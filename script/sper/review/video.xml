@@ -9,9 +9,9 @@
                 </col>
                 <col md="6">
                     <nav.tabs bd="none">
-                        <nav.tabs.item><a href="#">Tat ca</a></nav.tabs.item>
-                        <nav.tabs.item><a href="#">Gan nhat</a></nav.tabs.item>
-                        <nav.tabs.item><a href="#">Moi nhat</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Tất cả</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Gần nhất</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Mới nhất</a></nav.tabs.item>
                     </nav.tabs>
                 </col>
                 <col md="3">

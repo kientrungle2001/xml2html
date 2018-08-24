@@ -3,19 +3,10 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
         integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
-    <container.fluid pd="3" bg="black">
+    <container.fluid pd="3" bg="black" ng-controller="Sper.Banner.Top">
         <row>
-            <col sm="3">
-                <img.responsive src="http://placehold.it/480x120" />
-            </col>
-            <col sm="3">
-                <img.responsive src="http://placehold.it/480x120" />
-            </col>
-            <col sm="3">
-                <img.responsive src="http://placehold.it/480x120" />
-            </col>
-            <col sm="3">
-                <img.responsive src="http://placehold.it/480x120" />
+            <col sm="3" ng-repeat="banner in banners">
+                <a href="%%banner.bannerlink%%"><img.responsive src="%%banner.bannerimg%%" /></a>
             </col>
         </row>
     </container.fluid>

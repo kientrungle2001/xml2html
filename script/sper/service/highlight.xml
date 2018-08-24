@@ -6,22 +6,20 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container>
+    <container mt="3" ng-controller="Sper.Service.Highlight">
         <panel>
             <panel.heading pd="0">
                 <row>
                     <col md="3">
                         <nav.tabs bd="none" class="text-uppercase">
                             <nav.tabs.item>
-                                <a href="#"><icon.star /> Dich vu noi bat nhat</a>
+                                <a href="#"><icon.star /> Dịch vụ nổi bật nhất</a>
                             </nav.tabs.item>
                         </nav.tabs>
                     </col>
                     <col md="9">
                         <nav.tabs bd="none" class="text-uppercase">
-                            <nav.tabs.item><a href="#">Cong ty</a></nav.tabs.item>
-                            <nav.tabs.item><a href="#">To doi</a></nav.tabs.item>
-                            <nav.tabs.item><a href="#">Ca nhan</a></nav.tabs.item>
+                            <nav.tabs.item ng-repeat="category in categories | orderBy: 'position'" ng-class="{'active': (selectedCategory === category)}" ng-click="selectCategory(category)"><a href="#" onclick="return false;">%%category.categoryname%%</a></nav.tabs.item>
                         </nav.tabs>
                     </col>
                 </row>
@@ -32,23 +30,17 @@
                         <row>
                             <col mdo="3" md="6">
                                 <nav.tabs bd="none">
-                                    <nav.tabs.item><a href="#">Tat ca</a></nav.tabs.item>
-                                    <nav.tabs.item><a href="#">Gan nhat</a></nav.tabs.item>
-                                    <nav.tabs.item><a href="#">Moi nhat</a></nav.tabs.item>
-                                    <nav.tabs.item><a href="#">Khuyen mai</a></nav.tabs.item>
+                                    <nav.tabs.item ng-repeat="orderBy in orderBys" ng-class="{'active': selectedOrderBy === orderBy}"><a href="#" onclick="return false;" ng-click="selectOrderBy(orderBy)" >%%orderBy.label%%</a></nav.tabs.item>
                                 </nav.tabs>
                             </col>
                             <col md="3">
                                 <clearfix>
                                     <nav.tabs bd="none" class="pull-right">
                                         <nav.tabs.item class="dropdown">
-                                            <a href="#" class="data-toggle" data-toggle="dropdown">Chu de <caret /></a>
+                                            <a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
                                             <dropdown.menu align="right">
-                                                <dropdown.menu.item>
-                                                    <a href="#">Chu de 1</a>
-                                                </dropdown.menu.item>
-                                                <dropdown.menu.item>
-                                                    <a href="#">Chu de 2</a>
+                                                <dropdown.menu.item ng-repeat="subCategory in selectedCategory.children" ng-class="{'active': selectedSubCategory === subCategory}">
+                                                    <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategory)">%%subCategory.categoryname%%</a>
                                                 </dropdown.menu.item>
                                             </dropdown.menu>
                                         </nav.tabs.item>

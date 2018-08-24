@@ -7,13 +7,13 @@
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
 
-    <container>
+    <container mt="3">
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
-                Gioi thieu
+                Giới thiệu
             </breadcrumb.item>
         </breadcrumb>
     </container>

@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
-    <container>
-        <navbar bg="white">
+    <container ng-controller="Sper.Header">
+        <navbar bg="white" mb="0">
             <navbar.header>
                 <navbar.btn.collapse data-target="#top-menu">
                     <icon.bar /> <icon.bar /> <icon.bar />
@@ -18,23 +18,19 @@
             
             <navbar.form align="left">
                 <form.group>
-                    <select.form.control>
-                        <option>Cong ty</option>
-                        <option>To doi</option>
+                    <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()">
                     </select.form.control>
                 </form.group>
                 <form.group>
                     <input.group>
-                        <input.form.control placeholder="Search"/>
+                        <input.form.control placeholder="Search" style="width:300px"/>
                         <input.group.btn tag="span">
                             <btn.default style="height: 34px;"><icon.search /></btn.default>
                         </input.group.btn>
                     </input.group>
                 </form.group>
                 <form.group>
-                    <select.form.control>
-                        <option>TP HCM</option>
-                        <option>Ha Noi</option>
+                    <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()">
                     </select.form.control>
                 </form.group>
                 <form.group>
@@ -46,7 +42,7 @@
             
             <navbar.nav align="right" id="top-menu" class="navbar-collapse collapse">
                 <navbar.nav.item>
-                    <a href="#">Login</a>
+                    <a href="#" data-toggle="modal" data-target="#loginModal">Login</a>
                 </navbar.nav.item>
                 <navbar.nav.item class="dropdown">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 

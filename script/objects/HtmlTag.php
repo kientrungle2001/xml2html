@@ -26,6 +26,11 @@ class PzkHtmlTag extends PzkObject{
 	}
 	
 	public function html() {
+		if(NO_SCRIPTS) {
+			if(in_array($this->tagName, ['script', 'link', 'style'])) {
+				return '';
+			}
+		}
 		$str = '<' . $this->tagName .' ';
 		foreach((array)$this as $key => $value) {
 			if(!in_array($key, self::$excludes) 

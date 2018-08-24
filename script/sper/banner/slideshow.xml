@@ -6,13 +6,17 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <carousel id="slideshow">
+    <carousel id="slideshow" ng-controller="Sper.Banner.Slideshow">
         <carousel.inner>
-            <carousel.inner.item class="active">
-                <carousel.inner.item.img src="http://placehold.it/1366x300" />
-            </carousel.inner.item>
-            <carousel.inner.item>
-                <carousel.inner.item.img src="http://placehold.it/1366x300" />
+            <carousel.inner.item class="text-center" ng-class="{'active': $index === 0}" ng-repeat="banner in banners">
+                <row class="row-pd-0">
+                    <col xs="6">
+                        <carousel.inner.item.img src="%%banner.bannerimg%%" />
+                    </col>
+                    <col xs="6">
+                        <carousel.inner.item.img src="%%banner.bannerimg%%" />
+                    </col>
+                </row>
             </carousel.inner.item>
         </carousel.inner>
         <carousel.control.prev href="#slideshow">

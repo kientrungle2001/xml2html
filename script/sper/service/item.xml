@@ -1,15 +1,17 @@
 <root>
-    <col md="15">
+    <col md="15" ng-repeat="service in services" class="service-item">
         <panel mb="2">
             <panel.heading pd="0">
-                <img.responsive src="http://placehold.it/480x360" />
+                <embed.responsive size="4by3" style="overflow:hidden;">
+                <img.responsive ng-src="%%service.serviceimg%%" />
+                </embed.responsive>
             </panel.heading>
             <panel.body>
-                <a href="#"><h4>Tran thach cao</h4></a>
-                <address>So 3 ngo 295 Bach Mai ...</address>
+                <a href="#" class="service-heading"><h4>%%service.servicename%%</h4></a>
+                <address class="service-address">%%service.address_identifier.addressname%%</address>
                 <clearfix>
                     <pull.left><icon symbol="map-marker" /> 2 chi nhanh</pull.left>
-                    <pull.right>To doi</pull.right>
+                    <pull.right>%%selectedCategory.categoryname%%</pull.right>
                 </clearfix>
             </panel.body>
             <panel.footer>
