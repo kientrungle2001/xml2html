@@ -1,12 +1,5 @@
 <root>
     <row class="row-pd-5">
         <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
-        <?php require 'item4.xml'; ?>
     </row>
 </root>

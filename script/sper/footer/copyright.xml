@@ -5,20 +5,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
+    <div class="bg-copyright pb-3 pt-3 text-white">
     <container>
         <row>
             <col md="4">
-                Quy che hoat dong va dieu khoan dich vu<br />
-                Chinh sach bao mat
+                <a href="#">Quy chế hoạt động và điều khoản dịch vụ</a><br />
+                <a href="#">Chính sách bảo mật</a>
             </col>
-            <col md="4">
+            <col md="4" class="text-center">
                 Sper @ 2018
             </col>
-            <col md="4">
-                App Google Play
+            <col md="4" class="copyright-apps">
+                <img src="/images/app/google-play.png" />
+                <img src="/images/app/ios-store.png" />
             </col>
         </row>
     </container>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
         integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 

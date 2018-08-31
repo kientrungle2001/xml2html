@@ -1,14 +1,14 @@
 <root>
-    <media.list.item>
+    <media.list.item ng-repeat="blog in items">
         <media.left>
             <media.object src="http://placehold.it/80x80" />
         </media.left>
         <media.body>
-            <media.heading>
-                Top 5 hon dao moi noi dang den nhat mua he nay
+            <media.heading style="height: 20px; overflow: hidden;">
+                %%blog.blog_title%%
             </media.heading>
-            <clearfix>
-                Mua he nay ban da len ke hoach cho minh di dau choi chua? Du la len rung hay xuong bien..
+            <clearfix style="height: 60px; overflow: hidden;">
+                %%blog.blog_content%%
             </clearfix>
         </media.body>
     </media.list.item>

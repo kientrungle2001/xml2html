@@ -19,31 +19,65 @@
             
             <navbar.form align="left">
                 <form.group>
-                    <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()">
+                    <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()" class="input-sm">
                     </select.form.control>
                 </form.group>
                 <form.group>
                     <input.group>
-                        <input.form.control placeholder="Search" style="width:280px"/>
+                        <input.form.control placeholder="Search" style="width:280px"  class="input-sm"/>
                         <input.group.btn tag="span">
-                            <btn.default style="height: 34px;"><icon.search  class="fs-20"/></btn.default>
+                            <btn.default style="height: 30px;" size="xs"><icon.search  class="fs-14"/></btn.default>
                         </input.group.btn>
                     </input.group>
                 </form.group>
                 <form.group>
-                    <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()">
+                    <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()" class="input-sm">
                     </select.form.control>
                 </form.group>
                 <form.group>
-                    <btn.default>
-                        <icon symbol="phone" class="fs-20" /> Tải App
+                    <btn.default size="xs" style="height: 30px;">
+                        <icon symbol="phone" class="fs-14" /> Tải App
                     </btn.default>
                 </form.group>
             </navbar.form>
             
             <navbar.nav align="right" id="top-menu" class="navbar-collapse collapse">
                 <navbar.nav.item>
-                    <a href="#" data-toggle="modal" data-target="#loginModal">Đăng nhập</a>
+                    <a href="#" data-toggle="modal" data-target="#loginModal" ng-hide="user">Đăng nhập</a>
+                </navbar.nav.item>
+                <navbar.nav.item ng-show="user" class="dropdown">
+                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                            href="#" onclick="return false;">
+                        <fa symbol="user" size="1x" class="fs-20" />
+                        %%user.fullname%% <caret />
+                    </navbar.link>
+                    <dropdown.menu>
+                        <dropdown.menu.item>
+                            <a href="/clientarea/service"><fa.1x symbol="cubes"/> Dịch vụ của bạn</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="#"><fa.1x symbol="credit-card"/> Thanh toán</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="#"><fa.1x symbol="history"/> Lịch sử</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="/clientarea/collection"><fa.1x symbol="bookmark"/> Bộ sưu tập</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="#"><fa.1x symbol="trophy"/> Điểm thưởng</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="/clientarea/feedback"><fa.1x symbol="inbox"/> Góp ý</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="/clientarea/info"><fa.1x symbol="user"/> Cài đặt tài khoản</a>
+                        </dropdown.menu.item>
+                        <dropdown.menu.item>
+                            <a href="/clientarea/logout"><fa.1x symbol="power-off"/> Đăng xuất</a>
+                        </dropdown.menu.item>
+                    </dropdown.menu>
+
                 </navbar.nav.item>
                 <navbar.nav.item class="dropdown">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 

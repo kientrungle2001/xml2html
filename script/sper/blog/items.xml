@@ -1,14 +1,5 @@
 <root>
     <media.list>
         <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
-        <?php require 'item.xml'; ?>
     </media.list>
 </root>

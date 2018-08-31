@@ -9,7 +9,7 @@
         <list.group.item class="active">
             <a href="#"><icon symbol="align-justify" /> Chủ đề</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Dịch vụ của bạn</a>
         </list.group.item>
         <list.group.item>
@@ -30,16 +30,16 @@
         <list.group.item>
             <a href="#"><icon symbol="align-justify" /> Blog Sper</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Ví Sper</a>
         </list.group.item>
         <list.group.item>
-            <a href="#"><icon symbol="align-justify" /> Bảng tin Sper</a>
+            <a href="#"><icon symbol="align-justify" /> Tin tức về Sper</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Diễn đàn Sper</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Tìm việc làm</a>
         </list.group.item>
     </list.group>

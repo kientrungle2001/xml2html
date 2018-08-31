@@ -1,0 +1,33 @@
+<root>
+    <panel ng-controller="Sper.Service.Section">
+        <panel.heading pd="0">
+            <row>
+                <col md="3">
+                    <nav.tabs bd="none" class="text-uppercase">
+                        <nav.tabs.item><a href="#"><fa.1x symbol="tags" />Khuyến mại</a></nav.tabs.item>
+                    </nav.tabs>
+                </col>
+                <col md="6">
+                    <nav.tabs bd="none" class="tabs-service tabs-no-border">
+                        <nav.tabs.item class="active"><a href="#">Tất cả</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Gần nhất</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Mới nhất</a></nav.tabs.item>
+                    </nav.tabs>
+                </col>
+                <col md="3">
+                    <clearfix>
+                        <nav.tabs bd="none" class="pull-right tabs-no-bg">
+                        	<nav.tabs.item class="dropdown">
+                            	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
+                              <?php require 'section/div.xml'; ?>
+                        	</nav.tabs.item>
+                       	</nav.tabs>
+                    </clearfix>
+                </col>
+            </row>
+        </panel.heading>
+        <panel.body pd="2">
+            <?php require 'items4.xml'; ?>
+        </panel.body>
+    </panel>
+</root>

@@ -1,5 +1,5 @@
 <root>
-    <panel>
+    <panel ng-controller="Sper.Video.Review">
         <panel.heading pd="0">
             <row>
                 <col md="3">
@@ -7,28 +7,29 @@
                         <nav.tabs.item><a href="#"><fa.1x symbol="tags" />Video Review</a></nav.tabs.item>
                     </nav.tabs>
                 </col>
-                <col md="6">
-                    <nav.tabs bd="none">
-                        <nav.tabs.item><a href="#">Tất cả</a></nav.tabs.item>
+                <col md="5">
+                    <nav.tabs bd="none" class="tabs-no-border tabs-service tabs-no-bg">
+                        <nav.tabs.item class="active"><a href="#">Tất cả</a></nav.tabs.item>
+                        <nav.tabs.item><a href="#">Nổi bật</a></nav.tabs.item>
                         <nav.tabs.item><a href="#">Gần nhất</a></nav.tabs.item>
                         <nav.tabs.item><a href="#">Mới nhất</a></nav.tabs.item>
                     </nav.tabs>
                 </col>
-                <col md="3">
+                <col md="4">
                     <clearfix>
-                        <nav.tabs bd="none" class="pull-right">
-                            <nav.tabs.item class="dropdown">
-                                <a href="#" class="data-toggle" data-toggle="dropdown">Chu de <caret /></a>
-                                <dropdown.menu align="right">
-                                    <dropdown.menu.item>
-                                        <a href="#">Chu de 1</a>
-                                    </dropdown.menu.item>
-                                    <dropdown.menu.item>
-                                        <a href="#">Chu de 2</a>
-                                    </dropdown.menu.item>
-                                </dropdown.menu>
-                            </nav.tabs.item>
-                        </nav.tabs>
+                        <nav.tabs bd="none" class="pull-right tabs-no-bg">
+                        	<nav.tabs.item class="dropdown">
+                            	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
+                              <?php require 'video/div.xml'; ?>
+                        	</nav.tabs.item>
+                       	</nav.tabs>
+                        <nav.tabs bd="none" class="pull-right tabs-no-bg">
+                        	<nav.tabs.item class="dropdown">
+                            	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedCity.addcityname || 'Địa điểm'%% <caret /></a>
+                              <?php require 'video/add.xml'; ?>
+                        	</nav.tabs.item>
+                       	</nav.tabs>
+                        
                     </clearfix>
                 </col>
             </row>

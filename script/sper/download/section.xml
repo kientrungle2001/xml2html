@@ -6,15 +6,18 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container.fluid class="text-center">
-        <h2>Tai ung dung sper</h2>
+    <container.fluid class="text-center bg-download text-white pb-5">
+        <h2>Tải ứng dụng Sper</h2>
         <row>
             <col md="6" class="text-right">
-                Quet ma QR
+                <span class="text-left">
+                Quét mã QR <br />
+                <img src="/images/app/qr.png" style="width: 70px; height: auto;" />
+                </span>
             </col>
-            <col md="6" class="text-left">
-                App Store<br />
-                Google Play
+            <col md="6" class="text-left download-apps">
+                <img src="/images/app/google-play.png" />
+                <img src="/images/app/ios-store.png" />
             </col>
         </row>
     </container.fluid>

@@ -13,7 +13,7 @@
                     <col md="3">
                         <nav.tabs bd="none" class="text-uppercase tabs-no-border tabs-no-bg">
                             <nav.tabs.item>
-                                <a href="#" class="text-service relative" onclick="return false;"><icon.star class="fs-25 absolute p-top-5 p-left-5" /> <span class="d-inline-block pl-5 text-service-highlight text-bold">Dịch vụ nổi bật nhất</span></a>
+                                <a href="#" class="text-service relative" onclick="return false;"><icon.star class="fs-25 absolute p-top-5 p-left-5" /> <span class="d-inline-block pl-5 text-service-highlight text-bold">Dịch vụ nổi bật</span></a>
                             </nav.tabs.item>
                         </nav.tabs>
                     </col>
@@ -38,16 +38,7 @@
                                     <nav.tabs bd="none" class="pull-right tabs-black tabs-no-bg">
                                         <nav.tabs.item class="dropdown">
                                             <a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
-                                            <dropdown.menu align="right">
-                                                <dropdown.menu.item ng-repeat="subCategory in selectedCategory.children" ng-class="{'active': selectedSubCategory === subCategory}" class="dropdown-submenu dropdown-submenu-left">
-                                                    <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategory)" class="test relative">%%subCategory.categoryname%% <caret class="absolute" style="left: 90%; top: 45%;" /></a>
-                                                    <dropdown.menu>
-                                                        <dropdown.menu.item ng-repeat="subCategoryLevel2 in subCategory.children" ng-class="{'active': selectedSubCategory === subCategoryLevel2}">
-                                                            <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategoryLevel2)">%%subCategoryLevel2.categoryname%%</a>
-                                                        </dropdown.menu.item>
-                                                    </dropdown.menu>
-                                                </dropdown.menu.item>
-                                            </dropdown.menu>
+                                            <?php require 'highlight/div.xml'; ?>
                                         </nav.tabs.item>
                                     </nav.tabs>
                                 </clearfix>

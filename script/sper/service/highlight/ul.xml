@@ -1,0 +1,12 @@
+<root>
+    <dropdown.menu align="right">
+        <dropdown.menu.item ng-repeat="subCategory in selectedCategory.children" ng-class="{'active': selectedSubCategory === subCategory}" class="dropdown-submenu dropdown-submenu-left">
+            <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategory)" class="test relative">%%subCategory.categoryname%% <caret class="absolute" style="left: 90%; top: 45%;" /></a>
+            <dropdown.menu>
+                <dropdown.menu.item ng-repeat="subCategoryLevel2 in subCategory.children" ng-class="{'active': selectedSubCategory === subCategoryLevel2}">
+                    <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategoryLevel2)">%%subCategoryLevel2.categoryname%%</a>
+                </dropdown.menu.item>
+            </dropdown.menu>
+        </dropdown.menu.item>
+    </dropdown.menu>
+</root>

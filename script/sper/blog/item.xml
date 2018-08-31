@@ -1,5 +1,5 @@
 <root>
-    <media.list.item>
+    <media.list.item ng-repeat="blog in blogs" class="d-table w-100-p">
         <media.left>
             <media.object src="http://placehold.it/64x64" class="img-circle" />
         </media.left>
@@ -13,13 +13,14 @@
                 </pull.left>
                 <pull.right>
                     <btn.success>
-                        <icon symbol="bookmark" /> Luu bai blog
+                        <icon symbol="bookmark" /> Lưu bài blog
                     </btn.success>
                 </pull.right>
             </clearfix>
+            <strong>
+                %%blog.blog_title%%
+            </strong>
         </media.body>
-        <strong>
-            Kham Pha khong gian doi vo chong da phong cach
-        </strong>
+        
     </media.list.item>
 </root>

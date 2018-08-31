@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default" ng-controller="Sper.Service.Section">
     <div class="panel-heading pd-0">
         <div class="row">
             <div class="col-md-3">
@@ -12,8 +12,8 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <ul type="tabs" class="nav nav-tabs bd-none">
-                    <li role="presentation">
+                <ul type="tabs" class="tabs-service tabs-no-border tabs-no-bg nav nav-tabs bd-none">
+                    <li role="presentation" class="active">
                         <a href="#">
                             Tất cả
                         </a>
@@ -32,24 +32,44 @@
             </div>
             <div class="col-md-3">
                 <div class="clearfix">
-                    <ul type="tabs" class="pull-right nav nav-tabs bd-none">
+                    <ul type="tabs" class="pull-right tabs-no-bg nav nav-tabs bd-none">
                         <li role="presentation" class="dropdown">
                             <a class="data-toggle" href="#" data-toggle="dropdown">
-                                Chủ đề 
+                                %%selectedSubCategory.categoryname || 'Chủ đề'%% 
                                 <span class="caret"></span>
                             </a>
-                            <ul align="right" class="dropdown-menu dropdown-menu-right">
-                                <li>
-                                    <a href="#">
-                                        Chủ đề 1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Chủ đề 2
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="dropdown-menu-right dropdown-menu-category dropdown-menu" style="width: 300px">
+                                <div class="panel panel-default mg-0 pd-0" ng-repeat="category in categories" ng-class="{'panel-success': selectedSubCategory === category}">
+                                    <div class="panel-heading mg-0">
+                                        <a class="test relative d-block collapsed" onclick="return false;" ng-click="selectSubCategory(category)" data-toggle="collapse" href="#sub-category-%%category.categoryid%%">
+                                            <input type="checkbox" />
+                                             %%category.categoryname%% 
+                                            <span class="absolute caret" style="left: 90%; top: 45%;"></span>
+                                        </a>
+                                    </div>
+                                    <div class="panel-body pd-0" id="sub-category-%%category.categoryid%%">
+                                        <div class="panel panel-default mg-0 pd-0" ng-repeat="subCategory in category.children" ng-class="{'panel-success': selectedSubCategory === subCategory}">
+                                            <div class="panel-heading mg-0">
+                                                <a class="test relative d-block collapsed" onclick="return false;" ng-click="selectSubCategory(subCategory)" data-toggle="collapse" href="#sub-category-%%subCategory.categoryid%%">
+                                                    <input type="checkbox" />
+                                                     %%subCategory.categoryname%% 
+                                                    <span class="absolute caret" style="left: 90%; top: 45%;"></span>
+                                                </a>
+                                            </div>
+                                            <div class="panel-body pd-0" id="sub-category-%%subCategory.categoryid%%">
+                                                <ul class="list-group mg-0">
+                                                    <li class="list-group-item" ng-repeat="subCategoryLevel2 in subCategory.children" ng-class="{'active': selectedSubCategory === subCategoryLevel2}">
+                                                        <a href="#" onclick="return false;" ng-click="selectSubCategory(subCategoryLevel2)">
+                                                            <input type="checkbox" />
+                                                             %%subCategoryLevel2.categoryname%%
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -58,326 +78,36 @@
     </div>
     <div class="panel-body pd-2">
         <div class="row-pd-5 row">
-            <div class="col-md-3">
+            <div class="service-item col-md-15" ng-repeat="service in services">
                 <div class="panel panel-default mb-2">
                     <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
+                        <div class="embed-responsive embed-responsive-4by3" style="overflow:hidden;">
+                            <img class="img-responsive" ng-src="%%service.serviceimg%%" />
+                        </div>
                     </div>
                     <div class="panel-body">
-                        <a href="#">
+                        <a class="service-heading text-service-highlight" href="#">
                             <h4>
-                                Tran thach cao
+                                %%service.servicename%%
                             </h4>
                         </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
+                        <address class="service-address mb-1">
+                            %%service.address_identifier.addressname%%
                         </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
+                        <div class="fs-13 clearfix">
+                            <div class="text-service pull-left">
                                 <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
+                                 2 chi nhánh
                             </div>
                             <div class="pull-right">
-                                To doi
+                                %%selectedCategory.categoryname%%
                             </div>
                         </div>
                     </div>
-                    <div class="panel-footer">
+                    <div class="bg-white-i panel-footer">
                         <div class="clearfix">
                             <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
-                            </div>
-                            <div class="pull-right">
-                                <span class="fa fa-bookmark fa-1x"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default mb-2">
-                    <div class="panel-heading pd-0">
-                        <img class="img-responsive" src="http://placehold.it/480x360" />
-                    </div>
-                    <div class="panel-body">
-                        <a href="#">
-                            <h4>
-                                Tran thach cao
-                            </h4>
-                        </a>
-                        <address>
-                            So 3 ngo 295 Bach Mai ...
-                        </address>
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="glyphicon glyphicon-map-marker"></span>
-                                 2 chi nhanh
-                            </div>
-                            <div class="pull-right">
-                                To doi
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="clearfix">
-                            <div class="pull-left">
-                                <span class="fa fa-heart-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-comments-o fa-1x"></span>
-                                 200 
-                                <span class="fa fa-share-alt fa-1x"></span>
-                                 200 
+                                 
                             </div>
                             <div class="pull-right">
                                 <span class="fa fa-bookmark fa-1x"></span>

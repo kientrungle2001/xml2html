@@ -6,12 +6,12 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container>
+    <container ng-controller="Sper.Blog.Section">
         <row>
             <col md="7">
                 <panel>
                     <panel.heading pd="0">
-                        <h2 mg="0" pd="3">Blog &amp;gt; <small>Lua chon ngoi nha ngoai o cho gia dinh tre</small></h2>
+                        <h2 mg="0" pd="3">Blog &gt; <small>Lựa chọn ngôi nhà ngoại ô cho gia đình trẻ</small></h2>
                     </panel.heading>
                     <panel.body>
                         <?php require 'items.xml'; ?>
@@ -22,8 +22,12 @@
                 <panel>
                     <panel.heading pd="0">
                         <nav.tabs class="nav-justified">
-                            <nav.tabs.item class="active"><a href="#"><h4 class="pd-2 mg-0">Moi Nhat</h4></a></nav.tabs.item>
-                            <nav.tabs.item><a href="#"><h4 class="pd-2 mg-0">Xem Nhieu Nhat</h4></a></nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy == 'newest'}">
+                                <a href="#" onclick="return false;" ng-click="selectOrderBy('newest')"><h4 class="pd-2 mg-0">Mới nhất</h4></a>
+                            </nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy == 'mostview'}">
+                                <a href="#" onclick="return false;" ng-click="selectOrderBy('mostview')"><h4 class="pd-2 mg-0">Xem nhiều nhất</h4></a>
+                            </nav.tabs.item>
                         </nav.tabs>
                     </panel.heading>
                     <panel.body>

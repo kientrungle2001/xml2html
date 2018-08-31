@@ -3,13 +3,32 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
         integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
-    <container.fluid pd="3" bg="black" ng-controller="Sper.Banner.Top">
-        <row>
-            <col sm="3" ng-repeat="banner in banners">
-                <a href="%%banner.bannerlink%%"><img.responsive src="%%banner.bannerimg%%" /></a>
-            </col>
-        </row>
-    </container.fluid>
+    <section ng-controller="Sper.Banner.Top">
+        <container.fluid pd="3" ng-show="registerId">
+            <row>
+                <col xs="12">
+                    <form.inline ng-submit="authenticate()">
+                        <form.group>
+                            <static.form.control>Một email đã được gửi tới <strong>%%email%%</strong> có chứa mã xác thực. Xác thực tại đây: </static.form.control>
+                        </form.group>
+                        <form.group>
+                            <input.form.control ng-model="codeAuthen" placeholder="Mã xác thực" />
+                        </form.group>
+                        <form.group>
+                            <btn.primary>Xác thực</btn.primary>
+                        </form.group>
+                    </form.inline>
+                </col>
+            </row>
+        </container.fluid>
+        <container.fluid pd="3" bg="black">
+            <row>
+                <col sm="3" ng-repeat="banner in banners">
+                    <a href="%%banner.bannerlink%%"><img.responsive src="%%banner.bannerimg%%" /></a>
+                </col>
+            </row>
+        </container.fluid>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
         integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
