@@ -1,12 +1,14 @@
-<div class="panel panel-default" ng-controller="Sper.Service.Section">
-    <div class="panel-heading pd-0">
+<div class="bg-none-i panel panel-default" ng-controller="Sper.Service.Section">
+    <div class="bg-white-i panel-heading pd-0">
         <div class="row">
             <div class="col-md-3">
-                <ul type="tabs" class="text-uppercase nav nav-tabs bd-none">
+                <ul type="tabs" class="text-uppercase tabs-no-border tabs-no-bg nav nav-tabs bd-none">
                     <li role="presentation">
-                        <a href="#">
-                            <span class="fa fa-tags fa-1x"></span>
-                            Khuyến mại
+                        <a class="text-service-promotion relative" href="#" onclick="return false;">
+                            <span class="fs-20 absolute p-top-9 p-left-5 glyphicon glyphicon-tags"></span>
+                            <span class="d-inline-block pl-7 text-service-highlight text-bold">
+                                Khuyến mại
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -33,7 +35,7 @@
             <div class="col-md-3">
                 <div class="clearfix">
                     <ul type="tabs" class="pull-right tabs-no-bg nav nav-tabs bd-none">
-                        <li role="presentation" class="dropdown">
+                        <li role="presentation" class="dropdown dropdown-no-close">
                             <a class="data-toggle" href="#" data-toggle="dropdown">
                                 %%selectedSubCategory.categoryname || 'Chủ đề'%% 
                                 <span class="caret"></span>
@@ -76,7 +78,7 @@
             </div>
         </div>
     </div>
-    <div class="panel-body pd-2">
+    <div class="bg-none-i panel-body pd-2">
         <div class="row-pd-5 row">
             <div class="service-item col-md-15" ng-repeat="service in services">
                 <div class="panel panel-default mb-2">
@@ -117,5 +119,10 @@
                 </div>
             </div>
         </div>
+        <p class="text-center">
+            <a class="text-service text-underline" href="/service">
+                Xem thêm
+            </a>
+        </p>
     </div>
 </div>

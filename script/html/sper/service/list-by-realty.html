@@ -27,7 +27,7 @@
                             Moi nhat
                         </a>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown dropdown-no-close">
                         <a class="data-toggle" href="#" data-toggle="dropdown">
                             Dien tich 
                             <span class="caret"></span>
@@ -45,7 +45,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li role="presentation" class="dropdown">
+                    <li role="presentation" class="dropdown dropdown-no-close">
                         <a class="data-toggle" href="#" data-toggle="dropdown">
                             Muc gia 
                             <span class="caret"></span>
@@ -68,7 +68,7 @@
             <div class="col-md-2">
                 <div class="clearfix">
                     <ul type="tabs" class="pull-right nav nav-tabs bd-none">
-                        <li role="presentation" class="dropdown">
+                        <li role="presentation" class="dropdown dropdown-no-close">
                             <a class="data-toggle" href="#" data-toggle="dropdown">
                                 Chu de 
                                 <span class="caret"></span>

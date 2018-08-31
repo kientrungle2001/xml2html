@@ -1,4 +1,7 @@
 <style type="text/css">
+    * {
+        font-family: Arial;
+    }
     /* Grid 5*/
     body {background: #eee;}
     .col-xs-15,
@@ -71,6 +74,7 @@
     .pd-5 {padding: 25px;}
     .pl-3 {padding-left: 15px;}
     .pl-5 {padding-left: 25px;}
+    .pl-7 {padding-left: 35px;}
     .pr-5 {padding-right: 25px;}
     .pt-3 {padding-top: 15px;}
     .pt-5 {padding-top: 25px;}
@@ -132,6 +136,8 @@
     .fixed {position: fixed;}
     .p-top-0 {top: 0;}
     .p-top-5 {top: 5px;}
+    .p-top-7 {top: 7px;}
+    .p-top-9 {top: 9px;}
     .p-bottom-0 {bottom: 0;}
     .p-right-0 {right: 0;}
     .p-right-5 {right: 5px;}
@@ -249,6 +255,10 @@
 
     .text-service {
         color: #00C338 !important;
+    }
+
+    .text-service-promotion {
+        color: red;
     }
 
     .text-white {

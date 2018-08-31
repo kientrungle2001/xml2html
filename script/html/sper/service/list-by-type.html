@@ -37,7 +37,7 @@
             <div class="col-md-3">
                 <div class="clearfix">
                     <ul type="tabs" class="pull-right nav nav-tabs bd-none">
-                        <li role="presentation" class="dropdown">
+                        <li role="presentation" class="dropdown dropdown-no-close">
                             <a class="data-toggle" href="#" data-toggle="dropdown">
                                 Chu de 
                                 <span class="caret"></span>

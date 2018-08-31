@@ -45,7 +45,7 @@
                         Đăng nhập
                     </a>
                 </li>
-                <li class="dropdown" ng-show="user">
+                <li class="dropdown dropdown-no-close" ng-show="user">
                     <a class="dropdown-toggle navbar-link" data-toggle="dropdown" href="#" onclick="return false;">
                         <span class="fs-20 fa fa-user fa-1x"></span>
                          %%user.fullname%% 
@@ -103,7 +103,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown dropdown-no-close">
                     <a class="dropdown-toggle navbar-link" data-toggle="dropdown" href="#" onclick="return false;">
                         <span class="fs-20 fa fa-bell fa-1x"></span>
                     </a>
@@ -119,7 +119,7 @@
                          
                     </div>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown dropdown-no-close">
                     <a class="dropdown-toggle navbar-link" data-toggle="dropdown" href="#" onclick="return false;">
                         <span class="fs-20 fa fa-shopping-cart fa-1x"></span>
                         <span class="hidden badge bg-red">
@@ -138,15 +138,26 @@
                          
                     </div>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown dropdown-no-close">
                     <a class="dropdown-toggle navbar-link" data-toggle="dropdown" href="#" onclick="return false;">
                         <span class="fs-20 glyphicon glyphicon-plus-sign"></span>
                     </a>
-                    <div class="dropdown-menu">
-                         Viet bai blog 
-                    </div>
+                    <ul class="dropdown-menu">
+                        <li style="width: 250px;">
+                            <div class="media">
+                                <div class="media-left pd-3">
+                                    <span class="fa fa-star-o fa-2x"></span>
+                                </div>
+                                <div class="media-body">
+                                    <a style="white-space: normal;line-height: 25px;" href="#">
+                                         Viết blog chia sẻ trải nghiệm cho cộng đồng
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
-                <li class="dropdown">
+                <li class="dropdown dropdown-no-close">
                     <a class="dropdown-toggle navbar-link" data-toggle="dropdown" href="#" onclick="return false;">
                         <img style="width: 20px; height: 20px;" src="/images/flag/vn.png" />
                     </a>

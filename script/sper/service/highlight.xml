@@ -13,7 +13,7 @@
                     <col md="3">
                         <nav.tabs bd="none" class="text-uppercase tabs-no-border tabs-no-bg">
                             <nav.tabs.item>
-                                <a href="#" class="text-service relative" onclick="return false;"><icon.star class="fs-25 absolute p-top-5 p-left-5" /> <span class="d-inline-block pl-5 text-service-highlight text-bold">Dịch vụ nổi bật</span></a>
+                                <a href="#" class="text-service relative" onclick="return false;"><icon.star class="fs-25 absolute p-top-7 p-left-5" /> <span class="d-inline-block pl-7 text-service-highlight text-bold">Dịch vụ nổi bật</span></a>
                             </nav.tabs.item>
                         </nav.tabs>
                     </col>
@@ -36,7 +36,7 @@
                             <col md="3">
                                 <clearfix>
                                     <nav.tabs bd="none" class="pull-right tabs-black tabs-no-bg">
-                                        <nav.tabs.item class="dropdown">
+                                        <nav.tabs.item class="dropdown dropdown-no-close">
                                             <a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
                                             <?php require 'highlight/div.xml'; ?>
                                         </nav.tabs.item>
@@ -47,7 +47,7 @@
                     </panel.heading>
                     <panel.body pd="2" class="bg-none-i">
                         <?php require 'items.xml'; ?>
-                        <p class="text-center"><a href="#" class="text-service text-underline">Xem thêm</a></p>
+                        <p class="text-center"><a href="/service" class="text-service text-underline">Xem thêm</a></p>
                     </panel.body>
                 </panel>
             </panel.body>

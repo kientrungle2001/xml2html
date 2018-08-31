@@ -10,13 +10,13 @@
             <a href="#"><icon symbol="align-justify" /> Chủ đề</a>
         </list.group.item>
         <list.group.item class="hide">
-            <a href="#"><icon symbol="align-justify" /> Dịch vụ của bạn</a>
+            <a href="/clientarea/service"><icon symbol="align-justify" /> Dịch vụ của bạn</a>
         </list.group.item>
         <list.group.item>
             <a href="#"><icon symbol="align-justify" /> Danh bạ sper</a>
         </list.group.item>
         <list.group.item>
-            <a href="#"><icon symbol="align-justify" /> Bộ sưu tập</a>
+            <a href="/clientarea/collection"><icon symbol="align-justify" /> Bộ sưu tập</a>
         </list.group.item>
         <list.group.item>
             <a href="#"><icon symbol="align-justify" /> Video Review</a>
@@ -28,13 +28,13 @@
             <a href="#"><icon symbol="align-justify" /> Khuyến mại</a>
         </list.group.item>
         <list.group.item>
-            <a href="#"><icon symbol="align-justify" /> Blog Sper</a>
+            <a href="/blog"><icon symbol="align-justify" /> Blog Sper</a>
         </list.group.item>
         <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Ví Sper</a>
         </list.group.item>
         <list.group.item>
-            <a href="#"><icon symbol="align-justify" /> Tin tức về Sper</a>
+            <a href="/news"><icon symbol="align-justify" /> Tin tức về Sper</a>
         </list.group.item>
         <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Diễn đàn Sper</a>

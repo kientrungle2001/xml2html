@@ -6,8 +6,8 @@
                     <ul type="tabs" class="text-uppercase tabs-no-border tabs-no-bg nav nav-tabs bd-none">
                         <li role="presentation">
                             <a class="text-service relative" href="#" onclick="return false;">
-                                <span class="fs-25 absolute p-top-5 p-left-5 glyphicon glyphicon-star"></span>
-                                <span class="d-inline-block pl-5 text-service-highlight text-bold">
+                                <span class="fs-25 absolute p-top-7 p-left-5 glyphicon glyphicon-star"></span>
+                                <span class="d-inline-block pl-7 text-service-highlight text-bold">
                                     Dịch vụ nổi bật
                                 </span>
                             </a>
@@ -41,7 +41,7 @@
                         <div class="col-md-3">
                             <div class="clearfix">
                                 <ul type="tabs" class="pull-right tabs-black tabs-no-bg nav nav-tabs bd-none">
-                                    <li role="presentation" class="dropdown">
+                                    <li role="presentation" class="dropdown dropdown-no-close">
                                         <a class="data-toggle" href="#" data-toggle="dropdown">
                                             %%selectedSubCategory.categoryname || 'Chủ đề'%% 
                                             <span class="caret"></span>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <p class="text-center">
-                        <a class="text-service text-underline" href="#">
+                        <a class="text-service text-underline" href="/service">
                             Xem thêm
                         </a>
                     </p>

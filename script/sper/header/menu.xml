@@ -45,7 +45,7 @@
                 <navbar.nav.item>
                     <a href="#" data-toggle="modal" data-target="#loginModal" ng-hide="user">Đăng nhập</a>
                 </navbar.nav.item>
-                <navbar.nav.item ng-show="user" class="dropdown">
+                <navbar.nav.item ng-show="user" class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <fa symbol="user" size="1x" class="fs-20" />
@@ -79,7 +79,7 @@
                     </dropdown.menu>
 
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown">
+                <navbar.nav.item class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <fa symbol="bell" size="1x" class="fs-20" />
@@ -88,7 +88,7 @@
                         <?php require 'context/notification.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown">
+                <navbar.nav.item class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <fa symbol="shopping-cart" size="1x" class="fs-20" />
@@ -98,16 +98,25 @@
                         <?php require 'context/shoppingcart.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown">
+                <navbar.nav.item class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <icon symbol="plus-sign" class="fs-20" />
                     </navbar.link>
-                    <dropdown.menu.div>
-                        <?php require 'context/blog.xml'; ?>
-                    </dropdown.menu.div>
+                    <dropdown.menu>
+                        <dropdown.menu.item style="width: 250px;">
+                            <media>
+                                <media.left pd="3">
+                                    <fa symbol="star-o" />
+                                </media.left>
+                                <media.body>
+                                    <a href="#" style="white-space: normal;line-height: 25px;"> Viết blog chia sẻ trải nghiệm cho cộng đồng</a>
+                                </media.body>
+                            </media>
+                        </dropdown.menu.item>
+                    </dropdown.menu>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown">
+                <navbar.nav.item class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <img src="/images/flag/vn.png" style="width: 20px; height: 20px;" />

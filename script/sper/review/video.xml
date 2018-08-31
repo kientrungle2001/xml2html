@@ -1,10 +1,12 @@
 <root>
-    <panel ng-controller="Sper.Video.Review">
-        <panel.heading pd="0">
+    <panel ng-controller="Sper.Video.Review" class="bg-none-i">
+        <panel.heading pd="0" class="bg-white-i">
             <row>
                 <col md="3">
-                    <nav.tabs bd="none" class="text-uppercase">
-                        <nav.tabs.item><a href="#"><fa.1x symbol="tags" />Video Review</a></nav.tabs.item>
+                    <nav.tabs bd="none" class="text-uppercase tabs-no-border tabs-no-bg">
+                        <nav.tabs.item>
+                            <a href="#" class="text-service-promotion relative" onclick="return false;"><fa symbol="youtube-play" class="fs-26 absolute p-top-7 p-left-5" /> <span class="d-inline-block pl-7 text-service-highlight text-bold">Video Review</span></a>
+                        </nav.tabs.item>
                     </nav.tabs>
                 </col>
                 <col md="5">
@@ -18,13 +20,13 @@
                 <col md="4">
                     <clearfix>
                         <nav.tabs bd="none" class="pull-right tabs-no-bg">
-                        	<nav.tabs.item class="dropdown">
+                        	<nav.tabs.item class="dropdown dropdown-no-close">
                             	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
                               <?php require 'video/div.xml'; ?>
                         	</nav.tabs.item>
                        	</nav.tabs>
                         <nav.tabs bd="none" class="pull-right tabs-no-bg">
-                        	<nav.tabs.item class="dropdown">
+                        	<nav.tabs.item class="dropdown dropdown-no-close">
                             	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedCity.addcityname || 'Địa điểm'%% <caret /></a>
                               <?php require 'video/add.xml'; ?>
                         	</nav.tabs.item>
@@ -34,7 +36,7 @@
                 </col>
             </row>
         </panel.heading>
-        <panel.body pd="2">
+        <panel.body pd="2" class="bg-none-i">
             <?php require 'items4.xml'; ?>
         </panel.body>
     </panel>

@@ -23,7 +23,7 @@
             <div class="col-md-4">
                 <div class="clearfix">
                     <ul type="tabs" class="pull-right nav nav-tabs bd-none">
-                        <li role="presentation" class="dropdown">
+                        <li role="presentation" class="dropdown dropdown-no-close">
                             <a class="data-toggle" href="#" data-toggle="dropdown">
                                 Cong ty 
                                 <span class="caret"></span>
@@ -43,7 +43,7 @@
                         </li>
                     </ul>
                     <ul type="tabs" class="pull-right nav nav-tabs bd-none">
-                        <li role="presentation" class="dropdown">
+                        <li role="presentation" class="dropdown dropdown-no-close">
                             <a class="data-toggle" href="#" data-toggle="dropdown">
                                 Ha Noi 
                                 <span class="caret"></span>

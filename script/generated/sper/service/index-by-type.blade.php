@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li class="hide list-group-item">
-                        <a href="#">
+                        <a href="/clientarea/service">
                             <span class="glyphicon glyphicon-align-justify"></span>
                              Dịch vụ của bạn
                         </a>
@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="#">
+                        <a href="/clientarea/collection">
                             <span class="glyphicon glyphicon-align-justify"></span>
                              Bộ sưu tập
                         </a>
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="#">
+                        <a href="/blog">
                             <span class="glyphicon glyphicon-align-justify"></span>
                              Blog Sper
                         </a>
@@ -70,7 +70,7 @@
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="#">
+                        <a href="/news">
                             <span class="glyphicon glyphicon-align-justify"></span>
                              Tin tức về Sper
                         </a>
@@ -133,7 +133,7 @@
                         <div class="col-md-3">
                             <div class="clearfix">
                                 <ul type="tabs" class="pull-right nav nav-tabs bd-none">
-                                    <li role="presentation" class="dropdown">
+                                    <li role="presentation" class="dropdown dropdown-no-close">
                                         <a class="data-toggle" href="#" data-toggle="dropdown">
                                             Chu de 
                                             <span class="caret"></span>

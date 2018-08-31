@@ -14,7 +14,7 @@
                     <clearfix>
                         
                         <nav.tabs bd="none" class="pull-right">
-                            <nav.tabs.item class="dropdown">
+                            <nav.tabs.item class="dropdown dropdown-no-close">
                                 <a href="#" class="data-toggle" data-toggle="dropdown">Cong ty <caret /></a>
                                 <dropdown.menu align="right">
                                     <dropdown.menu.item>
@@ -28,7 +28,7 @@
                         </nav.tabs>
 
                         <nav.tabs bd="none" class="pull-right">
-                            <nav.tabs.item class="dropdown">
+                            <nav.tabs.item class="dropdown dropdown-no-close">
                                 <a href="#" class="data-toggle" data-toggle="dropdown">Ha Noi <caret /></a>
                                 <dropdown.menu align="right">
                                     <dropdown.menu.item>
