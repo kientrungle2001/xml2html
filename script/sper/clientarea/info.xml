@@ -32,35 +32,39 @@
                             <form.group>
                                 <control.label class="col-md-3">Ảnh đại diện</control.label>
                                 <col md="9">
-                                    <img src="http://placehold.it/64x64" class="img-circle" />
+                                    <img id="userAvatar" src="%% user.avatar || 'http://placehold.it/64x64'%%" class="img-circle" />
+                                    <div mt="3">
+                                        <btn.primary onclick="jQuery('#avatarSelector').click();">Đổi ảnh đại diện</btn.primary>
+                                        <input type="file" id="avatarSelector" class="hide" onchange="handleUploadInfo(event)" />
+                                    </div>
                                 </col>
                             </form.group>
                             <form.group>
                                 <control.label class="col-md-3">Tên đăng nhập</control.label>
                                 <col md="9">
-                                    <input.form.control />
+                                    <input.form.control ng-model="user.user_identifier.username" />
                                 </col>
                             </form.group>
                             <form.group>
                                 <control.label class="col-md-3">Tên hiển thị</control.label>
                                 <col md="9">
-                                    <input.form.control />
+                                    <input.form.control ng-model="user.fullname" />
                                 </col>
                             </form.group>
                             <form.group>
                                 <control.label class="col-md-3">Số điện thoại</control.label>
                                 <col md="9">
-                                    <input.form.control />
+                                    <input.form.control ng-model="user.phone"/>
                                 </col>
                             </form.group>
                             <form.group>
                                 <control.label class="col-md-3">Email</control.label>
                                 <col md="9">
-                                    <input.form.control />
+                                    <input.form.control ng-model="user.email" />
                                 </col>
                             </form.group>
                             <form.group>
-                                <control.label class="col-md-3">Địa chỉ</control.label>
+                                <control.label class="col-md-3" ng-model="user.address_identifier.addressname">Địa chỉ</control.label>
                                 <col md="9">
                                     <input.form.control />
                                 </col>
@@ -68,7 +72,7 @@
                             <form.group>
                                 <control.label class="col-md-3">Thành phố</control.label>
                                 <col md="9">
-                                    <input.form.control />
+                                    <input.form.control  ng-model="user.address_identifier.city" />
                                 </col>
                             </form.group>
                             <form.group>

@@ -82,7 +82,7 @@
                 <navbar.nav.item class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
-                        <fa symbol="bell" size="1x" class="fs-20" />
+                        <far symbol="bell" size="1x" class="fs-20" />
                     </navbar.link>
                     <dropdown.menu.div>
                         <?php require 'context/notification.xml';?>

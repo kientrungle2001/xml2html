@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="text-right col-md-1">
-                <img style="width: 70px; height: 70px" src="/images/logo/2.jpeg" />
+                <img style="width: 70px; height: 70px" src="/images/logo/3.png" />
             </div>
             <div class="col-md-3">
                 <h5 class="text-bold">
@@ -208,9 +208,9 @@
         <span class="fa fa-chevron-up fa-2x"></span>
     </div>
     <div class="float-icon">
-        <span class="fa fa-android fa-2x"></span>
+        <span class="fab fa-android fa-2x"></span>
     </div>
     <div class="float-icon">
-        <span class="fa fa-apple fa-2x"></span>
+        <span class="fab fa-apple fa-2x"></span>
     </div>
 </div>

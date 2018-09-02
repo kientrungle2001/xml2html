@@ -9,7 +9,7 @@
 		<container>
 			<row>
 				<col md="1" class="text-right">
-					<img style="width: 70px; height: 70px" src="/images/logo/2.jpeg" />
+					<img style="width: 70px; height: 70px" src="/images/logo/3.png" />
 				</col>
 				<col md="3">
 					<h5 class="text-bold">CÔNG TY TNHH TM VÀ DV SPER</h5>
@@ -90,8 +90,8 @@
 	</footer>
 	<div class="float-bar">
 		<div class="float-icon"><fa symbol="chevron-up" /></div>
-		<div class="float-icon"><fa symbol="android" /></div>
-		<div class="float-icon"><fa symbol="apple" /></div>
+		<div class="float-icon"><fab symbol="android" /></div>
+		<div class="float-icon"><fab symbol="apple" /></div>
 	</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
         integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>

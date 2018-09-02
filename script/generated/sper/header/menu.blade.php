@@ -105,7 +105,7 @@
                 </li>
                 <li class="dropdown dropdown-no-close">
                     <a class="dropdown-toggle navbar-link" data-toggle="dropdown" href="#" onclick="return false;">
-                        <span class="fs-20 fa fa-bell fa-1x"></span>
+                        <span class="fs-20 far fa-bell fa-1x"></span>
                     </a>
                     <div class="dropdown-menu">
                          Thong bao 1

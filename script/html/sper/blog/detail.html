@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container mt-3">
     <ol class="breadcrumb">
         <li>
             <a href="/">
-                Trang chu
+                Trang chủ
             </a>
         </li>
         <li class="active">
@@ -34,16 +34,16 @@
                                     </div>
                                 </div>
                                 <div class="text-right col-md-3">
-                                    <button class="btn-flex btn btn-success">
+                                    <button class="btn btn-success">
                                         <span class="fa fa-bookmark fa-1x"></span>
-                                         Luu bai viet
+                                         Lưu bài viết
                                     </button>
                                 </div>
                             </div>
                         </li>
                         <li class="list-group-item bd-none bb-2">
                             <div class="blog-body">
-                                 aaaa 
+                                 Nội dung 
                             </div>
                         </li>
                         <li class="list-group-item bd-none bb-2">
@@ -52,7 +52,7 @@
                                      Like | Share 
                                 </div>
                                 <div class="pull-right">
-                                     Danh gia 
+                                     Đánh giá 
                                     <span class="glyphicon glyphicon-star"></span>
                                      
                                     <span class="glyphicon glyphicon-star"></span>
@@ -66,12 +66,12 @@
                                 </div>
                             </div>
                             <div class="clearfix">
-                                 Binh luan 
+                                 Bình luận 
                             </div>
                         </li>
                         <li class="list-group-item bd-none">
                             <h2>
-                                Bai viet khac
+                                Bài viết khác
                             </h2>
                             <div class="row-pd-5 row">
                                 <div class="col-md-3">
@@ -303,14 +303,14 @@
                         <li role="presentation" class="active">
                             <a href="#">
                                 <h4 class="pd-1 mg-0">
-                                    Moi Nhat
+                                    Mới nhất
                                 </h4>
                             </a>
                         </li>
                         <li role="presentation">
                             <a href="#">
                                 <h4 class="pd-1 mg-0">
-                                    Xem Nhieu Nhat
+                                    Xem nhiều nhất
                                 </h4>
                             </a>
                         </li>
@@ -318,13 +318,17 @@
                 </div>
                 <div class="panel-body">
                     <ul class="media-list">
-                        <li class="media" ng-repeat="blog in items">
+                        <li class="media bb-1 pb-3" ng-repeat="blog in items">
                             <div class="media-left">
-                                <img class="media-object" src="http://placehold.it/80x80" />
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <img class="media-object" style="max-width: 120px;" src="%%blog.blog_img%%" />
+                                </div>
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading" style="height: 20px; overflow: hidden;">
-                                     %%blog.blog_title%% 
+                                    <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">
+                                        %%blog.blog_title%%
+                                    </a>
                                 </h4>
                                 <div class="clearfix" style="height: 60px; overflow: hidden;">
                                      %%blog.blog_content%% 

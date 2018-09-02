@@ -435,6 +435,17 @@ class PzkFa extends PzkHtmlTag {
 		return parent::init();
 	}
 }
+class PzkFar extends PzkFa {
+	public $extendClass = 'far';
+}
+
+class PzkFab extends PzkFa {
+	public $extendClass = 'fab';
+}
+
+class PzkFas extends PzkFa {
+	public $extendClass = 'fas';
+}
 
 class PzkFa1x extends PzkFa {
 	public $size = '1x';

@@ -12,6 +12,9 @@
                 <panel>
                     <?php require 'category.xml';?>
                     <panel.body>
+                        <div>
+                            <h2></h2>
+                        </div>
                         <img.responsive src="http://placehold.it/480x900" />
                     </panel.body>
                 </panel>

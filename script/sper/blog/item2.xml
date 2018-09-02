@@ -1,11 +1,13 @@
 <root>
-    <media.list.item ng-repeat="blog in items">
+    <media.list.item ng-repeat="blog in items" bb="1" pb="3">
         <media.left>
-            <media.object src="http://placehold.it/80x80" />
+            <embed.responsive size="4by3">
+                <media.object src="%%blog.blog_img%%" style="max-width: 120px;" />
+            </embed.responsive>
         </media.left>
         <media.body>
             <media.heading style="height: 20px; overflow: hidden;">
-                %%blog.blog_title%%
+                <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">%%blog.blog_title%%</a>
             </media.heading>
             <clearfix style="height: 60px; overflow: hidden;">
                 %%blog.blog_content%%

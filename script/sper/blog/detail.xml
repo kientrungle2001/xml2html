@@ -6,10 +6,10 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container>
+    <container mt="3">
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
                 Blog
@@ -39,13 +39,13 @@
                                         </media>
                                     </col>
                                     <col md="3" class="text-right">
-                                        <btn.success class="btn-flex"><fa.1x symbol="bookmark" /> Luu bai viet</btn.success>
+                                        <btn.success><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
                                     </col>
                                 </row>
                             </list.group.item>
                             <list.group.item bd="none" bb="2">
                                 <div class="blog-body">
-                                    aaaa
+                                    Nội dung
                                 </div>
                             </list.group.item>
                             <list.group.item bd="none" bb="2">
@@ -54,15 +54,15 @@
                                         Like | Share
                                     </pull.left>
                                     <pull.right>
-                                        Danh gia <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
+                                        Đánh giá <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
                                     </pull.right>
                                 </clearfix>
                                 <clearfix>
-                                    Binh luan
+                                    Bình luận
                                 </clearfix>
                             </list.group.item>
                             <list.group.item bd="none">
-                                <h2>Bai viet khac</h2>
+                                <h2>Bài viết khác</h2>
                                 <?php require 'others.xml';?>
                             </list.group.item>
                         </list.group>
@@ -73,8 +73,8 @@
                 <panel>
                     <panel.heading pd="0">
                         <nav.tabs class="nav-justified">
-                            <nav.tabs.item class="active"><a href="#"><h4 class="pd-1 mg-0">Moi Nhat</h4></a></nav.tabs.item>
-                            <nav.tabs.item><a href="#"><h4 class="pd-1 mg-0">Xem Nhieu Nhat</h4></a></nav.tabs.item>
+                            <nav.tabs.item class="active"><a href="#"><h4 class="pd-1 mg-0">Mới nhất</h4></a></nav.tabs.item>
+                            <nav.tabs.item><a href="#"><h4 class="pd-1 mg-0">Xem nhiều nhất</h4></a></nav.tabs.item>
                         </nav.tabs>
                     </panel.heading>
                     <panel.body>

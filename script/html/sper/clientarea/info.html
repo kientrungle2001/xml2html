@@ -109,7 +109,13 @@
                                 Ảnh đại diện
                             </label>
                             <div class="col-md-9">
-                                <img class="img-circle" src="http://placehold.it/64x64" />
+                                <img class="img-circle" id="userAvatar" src="%% user.avatar || 'http://placehold.it/64x64'%%" />
+                                <div class="mt-3">
+                                    <button class="btn btn-primary" onclick="jQuery('#avatarSelector').click();">
+                                        Đổi ảnh đại diện
+                                    </button>
+                                    <input class="hide" type="file" id="avatarSelector" onchange="handleUploadInfo(event)" />
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -117,7 +123,7 @@
                                 Tên đăng nhập
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" />
+                                <input class="form-control" ng-model="user.user_identifier.username" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -125,7 +131,7 @@
                                 Tên hiển thị
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" />
+                                <input class="form-control" ng-model="user.fullname" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -133,7 +139,7 @@
                                 Số điện thoại
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" />
+                                <input class="form-control" ng-model="user.phone" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -141,11 +147,11 @@
                                 Email
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" />
+                                <input class="form-control" ng-model="user.email" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-3 control-label">
+                            <label class="col-md-3 control-label" ng-model="user.address_identifier.addressname">
                                 Địa chỉ
                             </label>
                             <div class="col-md-9">
@@ -157,7 +163,7 @@
                                 Thành phố
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" />
+                                <input class="form-control" ng-model="user.address_identifier.city" />
                             </div>
                         </div>
                         <div class="form-group">

@@ -293,6 +293,12 @@
         right: 100%;
         margin-top: -1px;
     }
+
+    .dropdown-no-close .dropdown-menu {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
     /* Footer */
     .no-padding {
         padding-left: 0;

@@ -1,13 +1,14 @@
 <root>
-    <col md="3">
+    <col md="3" ng-repeat="item in items">
         <panel mb="2">
             <panel.heading pd="0">
-                <img.responsive src="http://placehold.it/480x360" />
+                <embed.responsive size="4by3">
+                <img.responsive src="%%item.review_img%%" />
+                </embed.responsive>
             </panel.heading>
-            <panel.body>
-                <a href="#"><h4>Tran thach cao</h4></a>
-                <address>So 3 ngo 295 Bach Mai ...</address>
-                <clearfix>
+            <panel.body style="height: 80px; overflow: hidden;">
+                <a href="#"><small>%%item.review_title%%</small></a>
+                <clearfix class="hide">
                     <pull.left><icon symbol="map-marker" /> 2 chi nhanh</pull.left>
                     <pull.right>To doi</pull.right>
                 </clearfix>
@@ -15,9 +16,9 @@
             <panel.footer>
                 <clearfix>
                     <pull.left>
-                        <fa.1x symbol="heart-o" /> 200
-                        <fa.1x symbol="comments-o" /> 200
-                        <fa.1x symbol="share-alt" /> 200
+                        <fa.1x symbol="heart-o" /> %%item.review_likes%%
+                        <fa.1x symbol="comments-o" /> %%item.review_comments%%
+                        <fa.1x symbol="share-alt" /> %%item.review_shares%%
                     </pull.left>
                     <pull.right>
                         <fa.1x symbol="bookmark" />
