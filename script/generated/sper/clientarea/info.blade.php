@@ -123,7 +123,7 @@
                                 Tên đăng nhập
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" ng-model="user.user_identifier.username" />
+                                <input class="form-control" ng-model="user.user_identifier.username" readonly="readonly" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -151,11 +151,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-3 control-label" ng-model="user.address_identifier.addressname">
+                            <label class="col-md-3 control-label">
                                 Địa chỉ
                             </label>
                             <div class="col-md-9">
-                                <input class="form-control" />
+                                <input class="form-control" ng-model="user.address_identifier.addressname" />
                             </div>
                         </div>
                         <div class="form-group">
@@ -168,7 +168,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-9 col-md-offset-3" mdo="3">
-                                <button class="btn-block btn btn-success">
+                                <button class="btn-block btn btn-success" ng-click="update()">
                                     Cập nhật thông tin cá nhân
                                 </button>
                             </div>

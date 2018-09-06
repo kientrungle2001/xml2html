@@ -27,7 +27,7 @@
                              Dịch vụ của bạn
                         </a>
                     </li>
-                    <li class="list-group-item">
+                    <li class="hide list-group-item">
                         <a href="#">
                             <span class="glyphicon glyphicon-align-justify"></span>
                              Danh bạ sper
@@ -211,7 +211,7 @@
                                              
                                         </div>
                                         <div class="pull-right">
-                                            <span class="fa fa-bookmark fa-1x"></span>
+                                            <span class="pointer fa fa-bookmark fa-1x" ng-click="bookmark(service)"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@
                             <ul type="tabs" class="text-uppercase tabs-no-border tabs-no-bg nav nav-tabs bd-none">
                                 <li role="presentation">
                                     <a class="text-service-promotion relative" href="#" onclick="return false;">
-                                        <span class="fs-26 absolute p-top-7 p-left-5 fa fa-youtube-play fa-2x"></span>
+                                        <span class="fs-26 absolute p-top-7 p-left-5 fab fa-youtube fa-2x"></span>
                                         <span class="d-inline-block pl-7 text-service-highlight text-bold">
                                             Video Review
                                         </span>
@@ -348,7 +348,7 @@
                         <div class="col-md-3" ng-repeat="item in items">
                             <div class="panel panel-default mb-2">
                                 <div class="panel-heading pd-0">
-                                    <div class="embed-responsive embed-responsive-4by3">
+                                    <div class="embed-responsive embed-responsive-16by9">
                                         <img class="img-responsive" src="%%item.review_img%%" />
                                     </div>
                                 </div>
@@ -371,15 +371,15 @@
                                 <div class="panel-footer">
                                     <div class="clearfix">
                                         <div class="pull-left">
-                                            <span class="fa fa-heart-o fa-1x"></span>
+                                            <span class="far fa-heart fa-1x"></span>
                                              %%item.review_likes%% 
-                                            <span class="fa fa-comments-o fa-1x"></span>
+                                            <span class="far fa-comments fa-1x"></span>
                                              %%item.review_comments%% 
-                                            <span class="fa fa-share-alt fa-1x"></span>
+                                            <span class="fas fa-share-alt fa-1x"></span>
                                              %%item.review_shares%% 
                                         </div>
                                         <div class="pull-right">
-                                            <span class="fa fa-bookmark fa-1x"></span>
+                                            <span class="pointer fa fa-bookmark fa-1x" ng-click="bookmark(item)"></span>
                                         </div>
                                     </div>
                                 </div>

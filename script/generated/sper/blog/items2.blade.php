@@ -7,7 +7,7 @@
         </div>
         <div class="media-body">
             <h4 class="media-heading" style="height: 20px; overflow: hidden;">
-                <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">
+                <a href="/blog/detail?blog_id=%%blog.id%%">
                     %%blog.blog_title%%
                 </a>
             </h4>

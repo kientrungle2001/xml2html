@@ -1,7 +1,7 @@
 <div class="col-md-3" ng-repeat="item in items">
     <div class="panel panel-default mb-2">
         <div class="panel-heading pd-0">
-            <div class="embed-responsive embed-responsive-4by3">
+            <div class="embed-responsive embed-responsive-16by9">
                 <img class="img-responsive" src="%%item.review_img%%" />
             </div>
         </div>
@@ -24,15 +24,15 @@
         <div class="panel-footer">
             <div class="clearfix">
                 <div class="pull-left">
-                    <span class="fa fa-heart-o fa-1x"></span>
+                    <span class="far fa-heart fa-1x"></span>
                      %%item.review_likes%% 
-                    <span class="fa fa-comments-o fa-1x"></span>
+                    <span class="far fa-comments fa-1x"></span>
                      %%item.review_comments%% 
-                    <span class="fa fa-share-alt fa-1x"></span>
+                    <span class="fas fa-share-alt fa-1x"></span>
                      %%item.review_shares%% 
                 </div>
                 <div class="pull-right">
-                    <span class="fa fa-bookmark fa-1x"></span>
+                    <span class="pointer fa fa-bookmark fa-1x" ng-click="bookmark(item)"></span>
                 </div>
             </div>
         </div>

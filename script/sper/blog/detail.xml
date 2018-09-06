@@ -20,7 +20,7 @@
     <container pt="5" pb="5">
         <row>
             <col md="8">
-                <panel>
+                <panel ng-controller="Sper.Blog.Detail">
                     <panel.body pd="0">
                         <list.group>
                             <list.group.item bd="none" bb="2">
@@ -34,18 +34,21 @@
                                                 <media.heading>
                                                     Khanh Huyen
                                                 </media.heading>
-                                                <small>22/12/2019 - 11:05</small>
+                                                <small>%%blog.created_at%%</small>
                                             </media.body>
                                         </media>
                                     </col>
                                     <col md="3" class="text-right">
-                                        <btn.success><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
+                                        <btn.success ng-click="bookmark(blog)"><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
                                     </col>
                                 </row>
                             </list.group.item>
                             <list.group.item bd="none" bb="2">
-                                <div class="blog-body">
-                                    Nội dung
+                            	<h1>%%blog.blog_title%%</h1>
+                            	<embed.responsive size="16by9">
+                            		<img.responsive src="%%blog.blog_img%%" />
+                            	</embed.responsive>
+                                <div class="blog-body" ng-bind-html="blog.blog_content">
                                 </div>
                             </list.group.item>
                             <list.group.item bd="none" bb="2">
@@ -61,7 +64,7 @@
                                     Bình luận
                                 </clearfix>
                             </list.group.item>
-                            <list.group.item bd="none">
+                            <list.group.item bd="none" ng-controller="Sper.Blog.Others">
                                 <h2>Bài viết khác</h2>
                                 <?php require 'others.xml';?>
                             </list.group.item>
@@ -70,11 +73,11 @@
                 </panel>
             </col>
             <col md="4">
-                <panel>
+                <panel ng-controller="Sper.Blog.Lastest">
                     <panel.heading pd="0">
                         <nav.tabs class="nav-justified">
-                            <nav.tabs.item class="active"><a href="#"><h4 class="pd-1 mg-0">Mới nhất</h4></a></nav.tabs.item>
-                            <nav.tabs.item><a href="#"><h4 class="pd-1 mg-0">Xem nhiều nhất</h4></a></nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy=='newest'}"><a href="#" onclick="return false;" ng-click="selectOrderBy('newest')"><h4 class="pd-1 mg-0">Mới nhất</h4></a></nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy=='mostview'}"><a href="#" onclick="return false;" ng-click="selectOrderBy('mostview')"><h4 class="pd-1 mg-0">Xem nhiều nhất</h4></a></nav.tabs.item>
                         </nav.tabs>
                     </panel.heading>
                     <panel.body>
@@ -84,7 +87,7 @@
             </col>
         </row>
     </container>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
         integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 

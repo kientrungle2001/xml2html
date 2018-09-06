@@ -18,9 +18,12 @@
 					<p>Đại diện công ty: Vũ Văn Hoàng</p>
 					<h5 class="text-uppercase text-bold">Hãy liên lạc thường xuyên nhé</h5>
 					<clearfix>
-						<fa symbol="facebook-square" size="3x" />
-						<fa symbol="twitter-square" size="3x" />
-						<fa symbol="google-plus-square" size="3x" />
+						<fab symbol="facebook-square" size="3x" />
+						<fab symbol="twitter-square" size="3x" />
+						<fab symbol="google-plus-square" size="3x" />
+						<fab symbol="instagram" size="3x" />
+						<fab symbol="youtube-square" size="3x" />
+						<fab symbol="pinterest-square" size="3x" />
 					</clearfix>
 				</col>
 				<col md="4">

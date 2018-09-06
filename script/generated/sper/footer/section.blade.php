@@ -21,9 +21,12 @@
                     Hãy liên lạc thường xuyên nhé
                 </h5>
                 <div class="clearfix">
-                    <span class="fa fa-facebook-square fa-3x"></span>
-                    <span class="fa fa-twitter-square fa-3x"></span>
-                    <span class="fa fa-google-plus-square fa-3x"></span>
+                    <span class="fab fa-facebook-square fa-3x"></span>
+                    <span class="fab fa-twitter-square fa-3x"></span>
+                    <span class="fab fa-google-plus-square fa-3x"></span>
+                    <span class="fab fa-instagram fa-3x"></span>
+                    <span class="fab fa-youtube-square fa-3x"></span>
+                    <span class="fab fa-pinterest-square fa-3x"></span>
                 </div>
             </div>
             <div class="col-md-4">

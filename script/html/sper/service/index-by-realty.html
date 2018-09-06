@@ -27,7 +27,7 @@
                              Dịch vụ của bạn
                         </a>
                     </li>
-                    <li class="list-group-item">
+                    <li class="hide list-group-item">
                         <a href="#">
                             <span class="glyphicon glyphicon-align-justify"></span>
                              Danh bạ sper
@@ -221,7 +221,7 @@
                                              
                                         </div>
                                         <div class="pull-right">
-                                            <span class="fa fa-bookmark fa-1x"></span>
+                                            <span class="pointer fa fa-bookmark fa-1x" ng-click="bookmark(service)"></span>
                                         </div>
                                     </div>
                                 </div>

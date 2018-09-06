@@ -1,15 +1,5 @@
 <root>
     <row class="row-pd-5 mt-3">
         <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
-        <?php require 'item-thumbnail.xml'; ?>
     </row>
 </root>

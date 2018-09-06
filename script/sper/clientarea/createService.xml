@@ -17,13 +17,13 @@
         </breadcrumb>
     </container>
 
-    <container ng-controller="Sper.ClientArea.CreateService">
+    <container>
         <row class="row-pd-5">
             <col md="3">
                 <?php require 'menu.xml';?>
             </col>
             <col md="9">
-                <panel>
+                <panel ng-controller="Sper.ClientArea.CreateService">
                     <panel.heading>
                         Tạo dịch vụ
                     </panel.heading>

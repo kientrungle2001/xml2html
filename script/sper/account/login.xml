@@ -31,10 +31,16 @@
                         <form.group>
                             <clearfix>
                                 <pull.left>
-                                    <checkbox value="1" ng-model="remember" /> Lưu mật khẩu
+                                    <div class="btn-group" data-toggle="buttons">
+                                        <btn.default tag="label" class="btn-checkbox btn-xs">
+                                            <checkbox value="1" ng-model="remember" autocomplete="off" /> 
+                                            <icon symbol="ok" />
+                                        </btn.default>
+                                    </div>
+                                    <span class="d-inline-block pl-3">Lưu mật khẩu</span>
                                 </pull.left>
                                 <pull.right>
-                                    <a href="#" onclick="jQuery('#forgotPasswordModal').modal('show');" data-dismiss="modal">Quên mật khẩu</a>
+                                    <a href="#" onclick="jQuery('#forgotPasswordModal').modal('show');" data-dismiss="modal" class="text-service">Quên mật khẩu</a>
                                 </pull.right>
                             </clearfix>
                         </form.group>
@@ -46,31 +52,31 @@
                         </form.group>
                         <form.group>
                             <input.group>
-                                <input.group.addon class="login-icon bg-google-phone"><fa.1x symbol="phone" /></input.group.addon>
-                                <btn.success class="btn-block">
+                                <input.group.addon class="login-icon bg-phone"><fa.1x symbol="phone" /></input.group.addon>
+                                <btn.success class="btn-block btn-login-social" tag="a">
                                 Đăng nhập bằng điện thoại
                                 </btn.success>
                             </input.group>
                         </form.group>
                         <form.group>
                             <input.group>
-                                <input.group.addon class="login-icon bg-google-facebook"><fa.1x symbol="facebook" /></input.group.addon>
-                                <btn.primary class="btn-block">
+                                <input.group.addon class="login-icon bg-facebook"><fab symbol="facebook-f" size="1x" /></input.group.addon>
+                                <btn.primary class="btn-block btn-login-social" tag="a">
                                 Đăng nhập bằng Facebook
                                 </btn.primary>
                             </input.group>
                         </form.group>
                         <form.group>
                             <input.group>
-                                <input.group.addon class="login-icon bg-google-plus"><fa.1x symbol="google-plus" /></input.group.addon>
-                                <btn.danger class="btn-block">
+                                <input.group.addon class="login-icon bg-google-plus"><fab symbol="google-plus-g" size="1x" /></input.group.addon>
+                                <btn.danger class="btn-block btn-login-social" tag="a">
                                 Đăng nhập bằng Google Plus
                                 </btn.danger>
                             </input.group>
                         </form.group>
                         <form.group>
                             <p class="text-center">
-                                Bạn chưa có tài khoản? <a href="#" data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Đăng ký</a>
+                                Bạn chưa có tài khoản? <a href="#" data-toggle="modal" data-target="#registerModal" data-dismiss="modal" class="text-service">Đăng ký</a>
                             </p>
                         </form.group>
                     </form>

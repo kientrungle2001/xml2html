@@ -1,8 +1,10 @@
 <root>
-    <thumbnail pd="0" class="relative">
-        <thumbnail.img src="http://placehold.it/480x360" />
+    <thumbnail pd="0" class="relative" ng-repeat="item in items">
+        <embed.responsive size="16by9">
+        <thumbnail.img src="%%item.article_img%%" />
+        </embed.responsive>
         <thumbnail.caption class="absolute p-bottom-0 w-100-p">
-            <h2 class="text-center pd-3 bd-2 b-r-3">Hello</h2>
+            <a href="/news/detail?article_id=%%item.id%%"><h2 class="text-center pd-3 bd-2 b-r-3 fs-18 text-white text-bold">%%item.article_title%%</h2></a>
         </thumbnail.caption>
     </thumbnail>
 </root>

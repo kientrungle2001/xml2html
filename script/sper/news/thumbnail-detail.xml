@@ -1,11 +1,17 @@
 <root>
-    <col md="3">
+    <col md="3" ng-repeat="item in items">
         <panel mb="2">
             <panel.heading pd="0">
-                <img.responsive src="http://placehold.it/480x360" />
+                <a href="/news/detail?article_id=%%item.id%%">
+                    <embed.responsive size="16by9">
+                        <img.responsive src="%%item.article_img%%" />
+                    </embed.responsive>
+                </a>
             </panel.heading>
             <panel.body>
-                <small>5 quan binh dan vit quay ngon nuc tieng cho mua..</small>
+                <a href="/news/detail?article_id=%%item.id%%">
+                    <small style="height: 30px; overflow: hidden; display: block; text-align: justify;">%%item.article_title%%</small>
+                </a>
             </panel.body>
             <panel.footer>
                 <media>
@@ -14,7 +20,7 @@
                     </media.left>
                     <media.body>
                         <strong>Thu Phuong</strong>
-                        <small>15/06/2018</small>
+                        <small>%%item.created_at%%</small>
                     </media.body>
                 </media>
             </panel.footer>

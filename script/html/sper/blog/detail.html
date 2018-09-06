@@ -13,7 +13,7 @@
 <div class="container pt-5 pb-5">
     <div class="row">
         <div class="col-md-8">
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-controller="Sper.Blog.Detail">
                 <div class="panel-body pd-0">
                     <ul class="list-group">
                         <li class="list-group-item bd-none bb-2">
@@ -28,13 +28,13 @@
                                                  Khanh Huyen 
                                             </h4>
                                             <small>
-                                                22/12/2019 - 11:05
+                                                %%blog.created_at%%
                                             </small>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="text-right col-md-3">
-                                    <button class="btn btn-success">
+                                    <button class="btn btn-success" ng-click="bookmark(blog)">
                                         <span class="fa fa-bookmark fa-1x"></span>
                                          Lưu bài viết
                                     </button>
@@ -42,8 +42,14 @@
                             </div>
                         </li>
                         <li class="list-group-item bd-none bb-2">
-                            <div class="blog-body">
-                                 Nội dung 
+                            <h1>
+                                %%blog.blog_title%%
+                            </h1>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <img class="img-responsive" src="%%blog.blog_img%%" />
+                            </div>
+                            <div class="blog-body" ng-bind-html="blog.blog_content">
+                                 
                             </div>
                         </li>
                         <li class="list-group-item bd-none bb-2">
@@ -69,46 +75,21 @@
                                  Bình luận 
                             </div>
                         </li>
-                        <li class="list-group-item bd-none">
+                        <li class="list-group-item bd-none" ng-controller="Sper.Blog.Others">
                             <h2>
                                 Bài viết khác
                             </h2>
                             <div class="row-pd-5 row">
-                                <div class="col-md-3">
+                                <div class="col-md-3" ng-repeat="item in items">
                                     <div class="panel panel-default mb-2">
                                         <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <img class="img-responsive" src="%%item.blog_img%%" />
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
                                         <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
+                                            <small class="d-block" style="height: 35px; overflow:hidden;text-align: justify;">
+                                                %%item.blog_title%%
                                             </small>
                                         </div>
                                         <div class="panel-footer">
@@ -121,169 +102,7 @@
                                                         Thu Phuong
                                                     </strong>
                                                     <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="panel panel-default mb-2">
-                                        <div class="panel-heading pd-0">
-                                            <img class="img-responsive" src="http://placehold.it/480x360" />
-                                        </div>
-                                        <div class="panel-body">
-                                            <small>
-                                                5 quan binh dan vit quay ngon nuc tieng cho mua..
-                                            </small>
-                                        </div>
-                                        <div class="panel-footer">
-                                            <div class="media">
-                                                <div class="media-left">
-                                                    <img class="img-circle media-object" src="http://placehold.it/36x36" />
-                                                </div>
-                                                <div class="media-body">
-                                                    <strong>
-                                                        Thu Phuong
-                                                    </strong>
-                                                    <small>
-                                                        15/06/2018
+                                                        %%item.created_at%%
                                                     </small>
                                                 </div>
                                             </div>
@@ -297,18 +116,18 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-controller="Sper.Blog.Lastest">
                 <div class="panel-heading pd-0">
                     <ul type="tabs" class="nav-justified nav nav-tabs">
-                        <li role="presentation" class="active">
-                            <a href="#">
+                        <li role="presentation" ng-class="{'active': orderBy=='newest'}">
+                            <a href="#" onclick="return false;" ng-click="selectOrderBy('newest')">
                                 <h4 class="pd-1 mg-0">
                                     Mới nhất
                                 </h4>
                             </a>
                         </li>
-                        <li role="presentation">
-                            <a href="#">
+                        <li role="presentation" ng-class="{'active': orderBy=='mostview'}">
+                            <a href="#" onclick="return false;" ng-click="selectOrderBy('mostview')">
                                 <h4 class="pd-1 mg-0">
                                     Xem nhiều nhất
                                 </h4>
@@ -326,7 +145,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading" style="height: 20px; overflow: hidden;">
-                                    <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">
+                                    <a href="/blog/detail?blog_id=%%blog.id%%">
                                         %%blog.blog_title%%
                                     </a>
                                 </h4>

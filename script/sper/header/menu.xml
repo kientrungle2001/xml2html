@@ -74,7 +74,7 @@
                             <a href="/clientarea/info"><fa.1x symbol="user"/> Cài đặt tài khoản</a>
                         </dropdown.menu.item>
                         <dropdown.menu.item>
-                            <a href="/clientarea/logout"><fa.1x symbol="power-off"/> Đăng xuất</a>
+                            <a href="/clientarea/logout" ng-click="logout()" onclick="return false;"><fa.1x symbol="power-off"/> Đăng xuất</a>
                         </dropdown.menu.item>
                     </dropdown.menu>
 
@@ -84,7 +84,7 @@
                             href="#" onclick="return false;">
                         <far symbol="bell" size="1x" class="fs-20" />
                     </navbar.link>
-                    <dropdown.menu.div>
+                    <dropdown.menu.div style="width: 400px;">
                         <?php require 'context/notification.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
@@ -107,7 +107,7 @@
                         <dropdown.menu.item style="width: 250px;">
                             <media>
                                 <media.left pd="3">
-                                    <fa symbol="star-o" />
+                                    <far symbol="star" />
                                 </media.left>
                                 <media.body>
                                     <a href="#" style="white-space: normal;line-height: 25px;"> Viết blog chia sẻ trải nghiệm cho cộng đồng</a>

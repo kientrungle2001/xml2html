@@ -6,23 +6,23 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container>
+    <container mt="3">
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
                 Blog
             </breadcrumb.item>
         </breadcrumb>
-        <panel>
+        <panel ng-controller="Sper.Blog.Board">
             <panel.heading pd="0">
                 <row>
                     <col md="6">
                         <nav.tabs.justified bd="none">
-                            <nav.tabs.item class="active"><a href="#">Moi nhat</a></nav.tabs.item>
-                            <nav.tabs.item><a href="#">Xem nhieu nhat</a></nav.tabs.item>
-                            <nav.tabs.item><a href="#">Kinh nghiem</a></nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy == 'newest'}"><a href="#" onclick="return false;" ng-click="selectOrderBy('newest')">Mới nhất</a></nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy == 'mostview'}"><a href="#" onclick="return false;" ng-click="selectOrderBy('mostview')">Xem nhiều nhất</a></nav.tabs.item>
+                            <nav.tabs.item ng-class="{'active': orderBy == 'experience'}"><a href="#" onclick="return false;" ng-click="selectOrderBy('experience')">Kinh nghiệm</a></nav.tabs.item>
                         </nav.tabs.justified>
                     </col>
                     <col md="6">

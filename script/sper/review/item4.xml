@@ -2,7 +2,7 @@
     <col md="3" ng-repeat="item in items">
         <panel mb="2">
             <panel.heading pd="0">
-                <embed.responsive size="4by3">
+                <embed.responsive size="16by9">
                 <img.responsive src="%%item.review_img%%" />
                 </embed.responsive>
             </panel.heading>
@@ -16,12 +16,12 @@
             <panel.footer>
                 <clearfix>
                     <pull.left>
-                        <fa.1x symbol="heart-o" /> %%item.review_likes%%
-                        <fa.1x symbol="comments-o" /> %%item.review_comments%%
-                        <fa.1x symbol="share-alt" /> %%item.review_shares%%
+                        <far symbol="heart" size="1x" /> %%item.review_likes%%
+                        <far symbol="comments" size="1x" /> %%item.review_comments%%
+                        <fas symbol="share-alt" size="1x" /> %%item.review_shares%%
                     </pull.left>
                     <pull.right>
-                        <fa.1x symbol="bookmark" />
+                        <fa.1x symbol="bookmark" ng-click="bookmark(item)" class="pointer" />
                     </pull.right>
                 </clearfix>
             </panel.footer>

@@ -42,7 +42,7 @@
                             <form.group>
                                 <control.label class="col-md-3">Tên đăng nhập</control.label>
                                 <col md="9">
-                                    <input.form.control ng-model="user.user_identifier.username" />
+                                    <input.form.control ng-model="user.user_identifier.username" readonly="readonly" />
                                 </col>
                             </form.group>
                             <form.group>
@@ -64,9 +64,9 @@
                                 </col>
                             </form.group>
                             <form.group>
-                                <control.label class="col-md-3" ng-model="user.address_identifier.addressname">Địa chỉ</control.label>
+                                <control.label class="col-md-3">Địa chỉ</control.label>
                                 <col md="9">
-                                    <input.form.control />
+                                    <input.form.control ng-model="user.address_identifier.addressname" />
                                 </col>
                             </form.group>
                             <form.group>
@@ -77,7 +77,7 @@
                             </form.group>
                             <form.group>
                                 <col md="9" mdo="3">
-                                    <btn.success class="btn-block">Cập nhật thông tin cá nhân</btn.success>
+                                    <btn.success class="btn-block" ng-click="update()">Cập nhật thông tin cá nhân</btn.success>
                                 </col>
                             </form.group>
                         </form.horizontal>

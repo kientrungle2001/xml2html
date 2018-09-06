@@ -1,17 +1,21 @@
 <root>
-    <col md="3">
+    <col md="3" ng-repeat="item in items">
         <panel mb="2">
             <panel.heading pd="0">
-                <img.responsive src="http://placehold.it/480x360" />
+                <embed.responsive size="16by9">
+                    <img.responsive src="%%item.blog_img%%" />
+                </embed.responsive>
             </panel.heading>
             <panel.body>
-                <strong>Nhung cach thiet ke noi that khien trong nha rong rai hon</strong>
+            <a href="/blog/detail?blog_id=%%item.id%%">
+                <strong class="d-block" style="height: 40px; overflow: hidden;">%%item.blog_title%%</strong>
+            </a>
             </panel.body>
             <panel.footer>
                 <clearfix>
-                    <fa.1x symbol="bookmark" /> 200
-                    <fa.1x symbol="comments-o" /> 200
-                    500 views
+                    <fa.1x symbol="bookmark" /> %%item.blog_likes%%
+                    <far symbol="comments" size="1x" /> %%item.blog_comments%%
+                    %%item.blog_views%% views
                 </clearfix>
             </panel.footer>
         </panel>

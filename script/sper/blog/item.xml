@@ -12,13 +12,13 @@
                     Chia sẻ blog - %% toDate(blog.created_at) | date: 'dd/MM/yyyy @ hh:mm' %%
                 </pull.left>
                 <pull.right>
-                    <btn.success>
+                    <btn.success ng-click="bookmark(blog)">
                         <icon symbol="bookmark" /> Lưu bài blog
                     </btn.success>
                 </pull.right>
             </clearfix>
             <strong>
-                <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">%%blog.blog_title%%</a>
+                <a href="/blog/detail?blog_id=%%blog.id%%">%%blog.blog_title%%</a>
             </strong>
         </media.body>
         

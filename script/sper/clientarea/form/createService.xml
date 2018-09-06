@@ -7,7 +7,7 @@
             <h2>Mô tả dịch vụ</h2>
         </form.group>
         <form.group>
-            <input.form.control placeholder="Nhập tên công ty / cửa hàng / đội nhóm" />
+            <input.form.control placeholder="Nhập tên công ty / cửa hàng / đội nhóm" ng-model="servicename" value="Điện thoại Di Động 101" />
         </form.group>
         <form.group>
             <select.form.control placeholder="Chọn lĩnh vực">
@@ -15,28 +15,28 @@
             </select.form.control>
         </form.group>
         <form.group>
-            <input.form.control placeholder="Nhập địa chỉ chính" />
+            <input.form.control placeholder="Nhập địa chỉ chính" ng-model="address_identifier.addressname" value="101 Nguyễn Trãi" />
         </form.group>
         <form.group>
             <input.form.control placeholder="Chọn định vị" />
         </form.group>
         <form.group>
-            <input.form.control placeholder="Số chi nhánh" />
+            <input.form.control placeholder="Số chi nhánh" value="2" />
         </form.group>
         <form.group>
-            <input.form.control placeholder="Nhập số điện thoại" />
+            <input.form.control placeholder="Nhập số điện thoại" ng-model="phone" value="0123456789" />
         </form.group>
         <form.group>
-            <input.form.control placeholder="Nhập Email" />
+            <input.form.control placeholder="Nhập Email" ng-model="email" value="kientrungle2001@gmail.com" />
         </form.group>
         <form.group>
-            <input.form.control placeholder="Nhập Website" />
+            <input.form.control placeholder="Nhập Website" ng-model="website" value="http://dtdd101.vn" />
         </form.group>
         <form.group>
-            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" />
+            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" ng-model="servicedesc" />
         </form.group>
         <form.group>
-            <btn.success>Hoàn thành</btn.success>
+            <btn.success ng-click="create()">Hoàn thành</btn.success>
             <btn.default>Chỉnh sửa</btn.default>
         </form.group>
     </form>

@@ -12,7 +12,7 @@
         <list.group.item class="hide">
             <a href="/clientarea/service"><icon symbol="align-justify" /> Dịch vụ của bạn</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item class="hide">
             <a href="#"><icon symbol="align-justify" /> Danh bạ sper</a>
         </list.group.item>
         <list.group.item>

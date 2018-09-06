@@ -6,27 +6,27 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container>
+    <container mt="3">
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
-                Bang tin Sper
+                Bảng tin Sper
             </breadcrumb.item>
         </breadcrumb>
         <text.center>
-            <h1>Bang tin Sper</h1>
-            <p>Kham pha the gioi cua sper tai day</p>
+            <h1>Bảng tin Sper</h1>
+            <p>Khám phá thế giới của Sper tại đây</p>
         </text.center>
     </container>
 
-    <container.fluid>
+    <container.fluid ng-controller="Sper.News.Board">
         <row class="row-pd-5">
             <col md="2">
                 <panel>
                     <panel.body pd="3">
-                        <h2>Doi tac cua chung toi</h2>
+                        <h2>Đối tác của chúng tôi</h2>
                         <img.responsive src="http://placehold.it/360x900" />
                     </panel.body>
                 </panel>
@@ -36,22 +36,47 @@
                     <panel.body pd="1">
                         <row class="row-pd-5">
                             <col md="8">
-                                <img.responsive src="http://placehold.it/600x300" />
+                                <a href="/news/detail?article_id=%%articles[0].id%%">
+                                    <embed.responsive size="4by3">
+                                        <img.responsive src="%%articles[0].article_img%%" />
+                                    </embed.responsive>
+                                </a>
                             </col>
                             <col md="4">
-                                <img.responsive src="http://placehold.it/300x300" />
+                                <a href="/news/detail?article_id=%%articles[1].id%%">
+                                    <embed.responsive size="4by3">
+                                        <img.responsive src="%%articles[1].article_img%%" />
+                                    </embed.responsive>
+                                </a>
+                                <a href="/news/detail?article_id=%%articles[5].id%%">
+                                    <embed.responsive size="4by3" mt="1">
+                                        <img.responsive src="%%articles[5].article_img%%" />
+                                    </embed.responsive>
+                                </a>
                             </col>
                         </row>
 
                         <row class="row-pd-5 mt-2">
                             <col md="4">
-                                <img.responsive src="http://placehold.it/300x300" />
+                                <a href="/news/detail?article_id=%%articles[0].id%%">
+                                    <embed.responsive size="16by9">
+                                        <img.responsive src="%%articles[2].article_img%%" />
+                                    </embed.responsive>
+                                </a>
                             </col>
                             <col md="4">
-                                <img.responsive src="http://placehold.it/300x300" />
+                                <a href="/news/detail?article_id=%%articles[0].id%%">
+                                    <embed.responsive size="16by9">
+                                        <img.responsive src="%%articles[3].article_img%%" />
+                                    </embed.responsive>
+                                </a>
                             </col>
                             <col md="4">
-                                <img.responsive src="http://placehold.it/300x300" />
+                                <a href="/news/detail?article_id=%%articles[0].id%%">
+                                    <embed.responsive size="16by9">
+                                        <img.responsive src="%%articles[4].article_img%%" />
+                                    </embed.responsive>
+                                </a>
                             </col>
                         </row>
 
@@ -61,7 +86,7 @@
             <col md="2">
                 <panel>
                     <panel.body pd="0">
-                        <img.responsive src="http://placehold.it/360x600" />
+                        <img.responsive src="http://placehold.it/320x900" />
                     </panel.body>
                 </panel>
             </col>

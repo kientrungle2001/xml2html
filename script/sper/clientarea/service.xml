@@ -17,18 +17,19 @@
         </breadcrumb>
     </container>
     
-    <container ng-controller="Sper.ClientArea.Service">
+    <container>
         <row class="row-pd-5">
             <col md="3">
                 <?php require 'menu.xml';?>
             </col>
             <col md="9">
-                <panel>
+                <panel ng-controller="Sper.ClientArea.Service">
                     <panel.heading>
                         Dịch vụ của bạn
                     </panel.heading>
                     <panel.body>
                         <?php require 'form/service.xml'; ?>
+                        <btn.success tag="a" href="/clientarea/createproduct?serviceid=%%service.serviceid%%" class="btn-block">Đăng sản phẩm</btn.success>
                     </panel.body>
                 </panel>
             </col>

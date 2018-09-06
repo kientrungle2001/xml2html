@@ -25,14 +25,14 @@
                                          Chia sẻ blog - %% toDate(blog.created_at) | date: 'dd/MM/yyyy @ hh:mm' %% 
                                     </div>
                                     <div class="pull-right">
-                                        <button class="btn btn-success">
+                                        <button class="btn btn-success" ng-click="bookmark(blog)">
                                             <span class="glyphicon glyphicon-bookmark"></span>
                                              Lưu bài blog 
                                         </button>
                                     </div>
                                 </div>
                                 <strong>
-                                    <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">
+                                    <a href="/blog/detail?blog_id=%%blog.id%%">
                                         %%blog.blog_title%%
                                     </a>
                                 </strong>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading" style="height: 20px; overflow: hidden;">
-                                    <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">
+                                    <a href="/blog/detail?blog_id=%%blog.id%%">
                                         %%blog.blog_title%%
                                     </a>
                                 </h4>
