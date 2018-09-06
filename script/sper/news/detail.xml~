@@ -1,0 +1,83 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+	<embed.responsive size="16by9" ng-controller="Sper.News.Detail">
+	    <img.responsive src="%%news.news_img%%" />
+    </embed.responsive>
+
+    <container pt="5" pb="5">
+        <row>
+            <col md="8">
+                <panel ng-controller="Sper.News.Detail">
+                    <panel.body>
+                        <list.group>
+                            <list.group.item bd="none" bb="2">
+                                <h1 class="heading news-heading">%%news.news_title%%</h1>
+                                <clearfix>
+                                    <pull.right>
+                                        <btn.success class="btn-flex"><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
+                                    </pull.right>
+                                </clearfix>
+                                <div class="news-body clearfix text-justify" ng-bind-html="news.news_content">
+                                    
+                                </div>
+                            </list.group.item>
+                            <list.group.item bd="none" bb="2">
+                                <clearfix>
+                                    <pull.left>
+                                        Like | Share
+                                    </pull.left>
+                                    <pull.right>
+                                        Đánh giá <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
+                                    </pull.right>
+                                </clearfix>
+                                <clearfix>
+                                    Binh luan
+                                </clearfix>
+                            </list.group.item>
+                            <list.group.item bd="none">
+                                <h2>Bài viết khác</h2>
+                                <?php require 'others.xml';?>
+                            </list.group.item>
+                        </list.group>
+                    </panel.body>
+                </panel>
+            </col>
+            <col md="4">
+                <list.group>
+                    <list.group.item class="text-center">
+                        <h2>Tải về app Sper</h2>
+                        <div>App Store | Google Play</div>
+                    </list.group.item>
+                    <list.group.item class="text-center">
+                        <h2>Liên hệ truyền thông</h2>
+                        <btn.success class="btn-block">
+                            <icon symbol="download" /> Liên hệ đội ngũ truyền thông Sper
+                        </btn.success>
+                    </list.group.item>
+                    <list.group.item class="text-center">
+                        <h2>Theo dõi các kênh truyền thông khác của Sper</h2>
+                        <clearfix>
+                            <fa size="4x" symbol="facebook-square" /> 
+                            <fa size="4x" symbol="linkedin-square" /> 
+                            <fa size="4x" symbol="twitter-square" />
+                            <fa size="4x" symbol="instagram" />
+                        </clearfix>
+                    </list.group.item>
+                    <list.group.item ng-controller="Sper.News.Featureds">
+                        <?php require 'featureds.xml'; ?>
+                    </list.group.item>
+                </list.group>
+            </col>
+        </row>
+    </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

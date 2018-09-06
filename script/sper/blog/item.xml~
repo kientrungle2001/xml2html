@@ -1,0 +1,26 @@
+<root>
+    <media.list.item ng-repeat="blog in blogs" class="d-table w-100-p bb-1 pb-3">
+        <media.left style="width: 64px;">
+            <media.object src="http://placehold.it/64x64" class="img-circle" />
+        </media.left>
+        <media.body>
+            <media.heading>
+                My Trần
+            </media.heading>
+            <clearfix>
+                <pull.left>
+                    Chia sẻ blog - %% toDate(blog.created_at) | date: 'dd/MM/yyyy @ hh:mm' %%
+                </pull.left>
+                <pull.right>
+                    <btn.success>
+                        <icon symbol="bookmark" /> Lưu bài blog
+                    </btn.success>
+                </pull.right>
+            </clearfix>
+            <strong>
+                <a href="/blog/detail/%%blog.id%%?blog_id=%%blog.id%%">%%blog.blog_title%%</a>
+            </strong>
+        </media.body>
+        
+    </media.list.item>
+</root>

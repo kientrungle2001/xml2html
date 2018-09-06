@@ -1,0 +1,31 @@
+<root>
+    <form ng-submit="create()">
+        <form.group>
+            <img.responsive src="http://placehold.it/1366x300" />
+        </form.group>
+        <form.group>
+            <h2>Đăng sản phẩm</h2>
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập tên sản phẩm" ng-model="prodcode" value="Samsung J7 Pro" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Giá" ng-model="price" value="200000" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Đơn vị" ng-model="unit" value="chiếc" />
+        </form.group>
+        <form.group>
+            <select.form.control placeholder="Chọn lĩnh vực" ng-model="categoryid">
+                <option value="1">Chọn lĩnh vực</option>
+            </select.form.control>
+        </form.group>
+        <form.group>
+            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" ng-model="proddesc" />
+        </form.group>
+        <form.group>
+            <btn.success>Hoàn thành</btn.success>
+            <btn.default>Chỉnh sửa</btn.default>
+        </form.group>
+    </form>
+</root>
