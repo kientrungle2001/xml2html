@@ -14,7 +14,7 @@
             <listgroup.item><a href="/clientarea/changepassword"><fa symbol="user" /> Đổi mật khẩu</a></listgroup.item>
             <listgroup.item><a href="/clientarea/trophy"><fa symbol="trophy" /> Điểm thưởng</a></listgroup.item>
             <listgroup.item><a href="/clientarea/payment"><fa symbol="credit-card" /> Thanh toán</a></listgroup.item>
-            <listgroup.item><a href="/clientarea/collection"><fa symbol="bookmark" /> Bộ sưu tập</a></listgroup.item>
+            <listgroup.item><a href="/clientarea/collection"><fa symbol="bookmark" class="bookmark-scale" /> Bộ sưu tập</a></listgroup.item>
             <listgroup.item><a href="/clientarea/service"><fa symbol="cubes" /> Dịch vụ của bạn</a></listgroup.item>
             <listgroup.item><a href="/clientarea/privilege"><fa symbol="user" /> Phân quyền chi nhánh</a></listgroup.item>
             <listgroup.item><a href="/clientarea/feedback"><fa symbol="inbox" /> Góp ý</a></listgroup.item>

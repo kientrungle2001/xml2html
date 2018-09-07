@@ -1,15 +1,15 @@
 <root>
     <media.list.item ng-repeat="blog in items" bb="1" pb="3">
         <media.left>
-            <embed.responsive size="4by3">
-                <media.object src="%%blog.blog_img%%" style="max-width: 120px;" />
+            <embed.responsive size="16by9">
+                <media.object src="%%blog.blog_img%%" style="max-width: 125px;" />
             </embed.responsive>
         </media.left>
         <media.body>
-            <media.heading style="height: 20px; overflow: hidden;">
+            <media.heading style="height: 16px; overflow: hidden;" class="fs-14 text-bold">
                 <a href="/blog/detail?blog_id=%%blog.id%%">%%blog.blog_title%%</a>
             </media.heading>
-            <clearfix style="height: 60px; overflow: hidden;">
+            <clearfix style="height: 45px; overflow: hidden;" class="text-justify">
                 %%blog.blog_content%%
             </clearfix>
         </media.body>

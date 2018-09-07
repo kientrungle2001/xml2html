@@ -7,21 +7,17 @@
                 </embed.responsive>
             </panel.heading>
             <panel.body style="height: 80px; overflow: hidden;">
-                <a href="#"><small>%%item.review_title%%</small></a>
-                <clearfix class="hide">
-                    <pull.left><icon symbol="map-marker" /> 2 chi nhanh</pull.left>
-                    <pull.right>To doi</pull.right>
-                </clearfix>
+                <a href="#" class="text-service-highlight text-justify text-bold">%%item.review_title%%</a>
             </panel.body>
             <panel.footer>
                 <clearfix>
-                    <pull.left>
-                        <far symbol="heart" size="1x" /> %%item.review_likes%%
-                        <far symbol="comments" size="1x" /> %%item.review_comments%%
-                        <fas symbol="share-alt" size="1x" /> %%item.review_shares%%
+                    <pull.left class="fs-13">
+                        <far symbol="heart" size="1x" class="fs-13" /> %%item.review_likes%%
+                        <far symbol="comments" size="1x" class="fs-13" /> %%item.review_comments%%
+                        <fas symbol="share-alt" size="1x" class="fs-13" /> %%item.review_shares%%
                     </pull.left>
                     <pull.right>
-                        <fa.1x symbol="bookmark" ng-click="bookmark(item)" class="pointer" />
+                        <fa.1x symbol="bookmark" ng-click="bookmark(item)" class="pointer bookmark-scale" />
                     </pull.right>
                 </clearfix>
             </panel.footer>

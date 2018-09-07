@@ -1,45 +1,45 @@
 <root>
-    <list.group class="service-category">
-        <list.group.item class="heading">
-            <a href="#"><icon symbol="align-justify" /> Danh mục</a>
+    <list.group class="service-category" mt="3">
+        <list.group.item class="heading" pd="1" pl="5">
+            <a href="#" class="text-service text-bold text-uppercase"><fas symbol="bars" size="1x" /> Danh mục</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Địa điểm</a>
         </list.group.item>
-        <list.group.item class="active">
+        <list.group.item class="active" pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Chủ đề</a>
         </list.group.item>
-        <list.group.item class="hide">
+        <list.group.item class="hide" pd="1" pl="5">
             <a href="/clientarea/service"><icon symbol="align-justify" /> Dịch vụ của bạn</a>
         </list.group.item>
-        <list.group.item class="hide">
+        <list.group.item class="hide" pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Danh bạ sper</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="/clientarea/collection"><icon symbol="align-justify" /> Bộ sưu tập</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Video Review</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Nổi bật</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Khuyến mại</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="/blog"><icon symbol="align-justify" /> Blog Sper</a>
         </list.group.item>
-        <list.group.item class="hide">
+        <list.group.item class="hide" pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Ví Sper</a>
         </list.group.item>
-        <list.group.item>
+        <list.group.item pd="1" pl="5">
             <a href="/news"><icon symbol="align-justify" /> Tin tức về Sper</a>
         </list.group.item>
-        <list.group.item class="hide">
+        <list.group.item class="hide" pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Diễn đàn Sper</a>
         </list.group.item>
-        <list.group.item class="hide">
+        <list.group.item class="hide" pd="1" pl="5">
             <a href="#"><icon symbol="align-justify" /> Tìm việc làm</a>
         </list.group.item>
     </list.group>

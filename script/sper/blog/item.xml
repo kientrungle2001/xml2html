@@ -4,16 +4,16 @@
             <media.object src="http://placehold.it/64x64" class="img-circle" />
         </media.left>
         <media.body>
-            <media.heading>
+            <media.heading class="fs-14 text-bold">
                 My Trần
             </media.heading>
             <clearfix>
-                <pull.left>
+                <pull.left class="text-light">
                     Chia sẻ blog - %% toDate(blog.created_at) | date: 'dd/MM/yyyy @ hh:mm' %%
                 </pull.left>
                 <pull.right>
-                    <btn.success ng-click="bookmark(blog)">
-                        <icon symbol="bookmark" /> Lưu bài blog
+                    <btn.success ng-click="bookmark(blog)" class="btn-bookmark" br="3">
+                        <icon symbol="bookmark" class="bookmark-scale" /> Lưu bài blog
                     </btn.success>
                 </pull.right>
             </clearfix>

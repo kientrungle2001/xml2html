@@ -13,7 +13,7 @@
             </panel.body>
             <panel.footer>
                 <clearfix>
-                    <fa.1x symbol="bookmark" /> %%item.blog_likes%%
+                    <fa.1x symbol="bookmark" class="bookmark-scale pointer" ng-click="bookmark(item)" /> %%item.blog_likes%%
                     <far symbol="comments" size="1x" /> %%item.blog_comments%%
                     %%item.blog_views%% views
                 </clearfix>

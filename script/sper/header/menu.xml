@@ -7,7 +7,7 @@
     <?php require BASE_DIR . '/sper/style.xml'; ?>
     <div class="bg-white">
     <container ng-controller="Sper.Header">
-        <navbar bg="white" mb="0">
+        <navbar bg="white" mb="0" bd="none">
             <navbar.header>
                 <navbar.btn.collapse data-target="#top-menu">
                     <icon.bar /> <icon.bar /> <icon.bar />
@@ -19,24 +19,24 @@
             
             <navbar.form align="left">
                 <form.group>
-                    <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()" class="input-sm">
+                    <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()" class="input-sm-new">
                     </select.form.control>
                 </form.group>
                 <form.group>
                     <input.group>
-                        <input.form.control placeholder="Search" style="width:280px"  class="input-sm"/>
+                        <input.form.control placeholder="Search" style="width:280px"  class="input-sm-new"/>
                         <input.group.btn tag="span">
-                            <btn.default style="height: 30px;" size="xs"><icon.search  class="fs-14"/></btn.default>
+                            <btn.default style="height: 34px; width: 34px;background-color: #e6e6e6" size="xs"><icon.search  class="fs-16"/></btn.default>
                         </input.group.btn>
                     </input.group>
                 </form.group>
                 <form.group>
-                    <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()" class="input-sm">
+                    <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()" class="input-sm-new">
                     </select.form.control>
                 </form.group>
                 <form.group>
-                    <btn.default size="xs" style="height: 30px;">
-                        <icon symbol="phone" class="fs-14" /> Tải App
+                    <btn.default size="xs" style="height: 34px;">
+                        <icon symbol="phone" class="fs-16" /> Tải App
                     </btn.default>
                 </form.group>
             </navbar.form>
@@ -62,7 +62,7 @@
                             <a href="#"><fa.1x symbol="history"/> Lịch sử</a>
                         </dropdown.menu.item>
                         <dropdown.menu.item>
-                            <a href="/clientarea/collection"><fa.1x symbol="bookmark"/> Bộ sưu tập</a>
+                            <a href="/clientarea/collection"><fa.1x symbol="bookmark" class="bookmark-scale"/> Bộ sưu tập</a>
                         </dropdown.menu.item>
                         <dropdown.menu.item>
                             <a href="#"><fa.1x symbol="trophy"/> Điểm thưởng</a>
@@ -119,7 +119,7 @@
                 <navbar.nav.item class="dropdown dropdown-no-close">
                     <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
                             href="#" onclick="return false;">
-                        <img src="/images/flag/vn.png" style="width: 20px; height: 20px;" />
+                        <img src="/images/flag/vn.png" style="width: 20px; height: 20px;" /> <caret />
                     </navbar.link>
                     <dropdown.menu>
                         <dropdown.menu.item>

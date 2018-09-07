@@ -16,7 +16,7 @@
                         <fa.1x symbol="share-alt" size="1x" /> %%product.countShare%%
                     </pull.left>
                     <pull.right>
-                        <icon symbol="trash" ng-click="delete(product)" />
+                        <icon symbol="trash" ng-click="delete(product)" class="pointer" />
                     </pull.right>
                 </clearfix>
                 <clearfix>

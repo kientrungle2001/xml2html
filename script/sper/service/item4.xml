@@ -20,7 +20,7 @@
                         
                     </pull.left>
                     <pull.right>
-                        <fa.1x symbol="bookmark" ng-click="bookmark(service)" class="pointer" />
+                        <fa.1x symbol="bookmark" ng-click="bookmark(service)" class="pointer bookmark-scale" />
                     </pull.right>
                 </clearfix>
             </panel.footer>

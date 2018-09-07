@@ -19,7 +19,7 @@
                                 <h1 class="heading news-heading">%%news.news_title%%</h1>
                                 <clearfix>
                                     <pull.right>
-                                        <btn.success class="btn-flex"><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
+                                        <btn.success class="btn-flex"><fa.1x symbol="bookmark" class="bookmark-scale" /> Lưu bài viết</btn.success>
                                     </pull.right>
                                 </clearfix>
                                 <div class="news-body clearfix text-justify" ng-bind-html="news.news_content">

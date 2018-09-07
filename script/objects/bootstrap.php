@@ -1172,3 +1172,22 @@ class PzkCarouselControlNext extends PzkCarouselControl {
 	];
 }
 
+class PzkNavTabsSperHeading extends PzkNavTabs {
+	public $extendClass = 'nav-sper-heading nav';	
+}
+
+class PzkNavTabsItemSperTitle extends PzkHtmlTag {
+	public $tag = 'a';
+	public $onclick = 'return false;';
+	public $href = '#';
+	public $extendClass = 'nav-sper-title';	
+}
+
+class PzkNavTabsItemSperIcon extends PzkIcon {
+	public $extendClass = 'nav-sper-icon glyphicon';	
+}
+
+class PzkNavTabsItemSperText extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'nav-sper-text';
+}

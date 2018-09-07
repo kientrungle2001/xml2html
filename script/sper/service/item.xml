@@ -8,9 +8,9 @@
             </panel.heading>
             <panel.body>
                 <a href="#" class="service-heading text-service-highlight"><h4>%%service.servicename%%</h4></a>
-                <address class="service-address mb-1">%%service.address_identifier.addressname%%</address>
-                <clearfix class="fs-13">
-                    <pull.left class="text-service"><icon symbol="map-marker" /> 2 chi nhánh</pull.left>
+                <address class="service-address mb-1 text-address">%%service.address_identifier.addressname%%</address>
+                <clearfix class="fs-12">
+                    <pull.left class="text-branch"><icon symbol="map-marker" /> 2 chi nhánh</pull.left>
                     <pull.right>%%selectedCategory.categoryname%%</pull.right>
                 </clearfix>
             </panel.body>
@@ -20,7 +20,7 @@
                         
                     </pull.left>
                     <pull.right>
-                        <fa.1x symbol="bookmark" />
+                        <fa.1x symbol="bookmark" class="pointer bookmark-scale" ng-click="bookmark(service)" />
                     </pull.right>
                 </clearfix>
             </panel.footer>

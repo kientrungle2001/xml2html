@@ -39,7 +39,7 @@
                                         </media>
                                     </col>
                                     <col md="3" class="text-right">
-                                        <btn.success><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
+                                        <btn.success ng-click="bookmark(blog)"><fa.1x symbol="bookmark" class="bookmark-scale" /> Lưu bài viết</btn.success>
                                     </col>
                                 </row>
                             </list.group.item>

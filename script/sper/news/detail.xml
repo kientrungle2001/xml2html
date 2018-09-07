@@ -19,7 +19,7 @@
                                 <h1 class="heading article-heading">%%article.article_title%%</h1>
                                 <clearfix>
                                     <pull.right>
-                                        <btn.success class="btn-flex" ng-click="bookmark(article)"><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
+                                        <btn.success class="btn-flex" ng-click="bookmark(article)"><fa.1x symbol="bookmark" class="bookmark-scale" /> Lưu bài viết</btn.success>
                                     </pull.right>
                                 </clearfix>
                                 <div class="article-body clearfix text-justify" ng-bind-html="article.article_content">

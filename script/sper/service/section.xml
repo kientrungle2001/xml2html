@@ -11,11 +11,26 @@
             <col md="3">
                 <panel>
                     <?php require 'category.xml';?>
+                    <hr mt="1" mb="1" />
+                    <list.group class="service-category">
+                        <list.group.item class="heading" pd="1" pl="5">
+                            <a href="#" class="text-service text-bold text-uppercase"><fas symbol="credit-card" size="1x" /> Thanh toán</a>
+                        </list.group.item>
+                        <list.group.item pl="5">
+                            <img.responsive src="/images/payment.png" />    
+                        </list.group.item>
+                    </list.group>
+                    <hr mt="1" mb="1" />
+                    <list.group class="service-category">
+                        <list.group.item class="heading" pd="1" pl="5">
+                            <a href="#" class="text-service text-bold text-uppercase">Đối tác của chúng tôi</a>
+                        </list.group.item>
+                        <list.group.item pl="5">
+                            <img.responsive src="/images/partner.png" />    
+                        </list.group.item>
+                    </list.group>
                     <panel.body>
-                        <div>
-                            <h2></h2>
-                        </div>
-                        <img.responsive src="http://placehold.it/480x900" />
+                        
                     </panel.body>
                 </panel>
             </col>

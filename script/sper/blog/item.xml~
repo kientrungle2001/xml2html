@@ -13,7 +13,7 @@
                 </pull.left>
                 <pull.right>
                     <btn.success>
-                        <icon symbol="bookmark" /> Lưu bài blog
+                        <icon symbol="bookmark" class="bookmark-scale" /> Lưu bài blog
                     </btn.success>
                 </pull.right>
             </clearfix>
