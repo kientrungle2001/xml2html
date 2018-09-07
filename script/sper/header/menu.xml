@@ -105,12 +105,20 @@
                     </navbar.link>
                     <dropdown.menu>
                         <dropdown.menu.item style="width: 250px;">
-                            <media>
+                            <media bb="1">
                                 <media.left pd="3">
                                     <far symbol="star" />
                                 </media.left>
                                 <media.body>
                                     <a href="#" style="white-space: normal;line-height: 25px;"> Viết blog chia sẻ trải nghiệm cho cộng đồng</a>
+                                </media.body>
+                            </media>
+                            <media>
+                                <media.left pd="3">
+                                    <fab symbol="youtube" />
+                                </media.left>
+                                <media.body>
+                                    <a href="#" style="white-space: normal;line-height: 25px;"> Tạo Video Review</a>
                                 </media.body>
                             </media>
                         </dropdown.menu.item>

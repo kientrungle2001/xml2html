@@ -2,15 +2,13 @@
     <dropdown.menu.div class="dropdown-menu-right dropdown-menu-add" style="width: 300px">
         <panel mg="0" ng-repeat="city in cities" ng-class="{'panel-success': selectedCity === city}">
             <panel.heading>
-                <a href="#" onclick="return false;" ng-click="selectCity(city)">%%city.addcityname%%</a>
+                <checkbox id="city_%%city.addcityid%%" ng-model="selectedCityIds[city.addcityid]" ng-change="selectCity(city)" />
+                <label href="#" for="city_%%city.addcityid%%">%%city.addcityname%%</label>
             </panel.heading>
             <panel.body pd="0">
                 <list.group mg="0">
-                    <list.group.item>
-                        <checkbox /><a href="#" onclick="return false;" ng-click="selectDistrict(district)">Quận 1</a>
-                    </list.group.item>
-                    <list.group.item>
-                        <checkbox /><a href="#" onclick="return false;" ng-click="selectDistrict(district)">Quận 2</a>
+                    <list.group.item ng-repeat="district in city.districts">
+                        <checkbox id="district_%%district.addmunicipalityid%%" ng-model="selectedDistrictIds[district.addmunicipalityid]" ng-change="selectDistrict(district)" /><label for="district_%%district.addmunicipalityid%%" pl="3">%%district.addmunicipalityaltcode%%</label>
                     </list.group.item>
                 </list.group>
             </panel.body>
