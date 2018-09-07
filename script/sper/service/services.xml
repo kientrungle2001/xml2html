@@ -30,7 +30,7 @@
         </panel.heading>
         <panel.body pd="2" class="bg-none-i">
             <?php require 'items4.xml'; ?>
-            <p class="text-center"><a class="text-service text-underline" href="/service">Xem thêm</a></p>
+            <p class="text-center"><a class="text-view-more" href="/service">Xem thêm</a></p>
         </panel.body>
     </panel>
 </root>

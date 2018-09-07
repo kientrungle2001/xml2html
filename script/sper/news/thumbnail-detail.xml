@@ -10,7 +10,7 @@
             </panel.heading>
             <panel.body>
                 <a href="/news/detail?article_id=%%item.id%%">
-                    <small style="height: 30px; overflow: hidden; display: block; text-align: justify;">%%item.article_title%%</small>
+                    <small class="fs-12" style="height: 30px; overflow: hidden; display: block; text-align: justify;">%%item.article_title%%</small>
                 </a>
             </panel.body>
             <panel.footer>
@@ -19,8 +19,8 @@
                         <media.object src="http://placehold.it/36x36" class="img-circle" />
                     </media.left>
                     <media.body>
-                        <strong>Thu Phuong</strong>
-                        <small>%%item.created_at%%</small>
+                        <strong class="fs-12">Thu Phuong</strong>
+                        <small class="fs-12">%%item.created_at%%</small>
                     </media.body>
                 </media>
             </panel.footer>

@@ -28,23 +28,23 @@
                                     <col md="9">
                                         <media>
                                             <media.left>
-                                                <media.object src="http://placehold.it/48x48" class="img-circle" />
+                                                <media.object src="http://placehold.it/32x32" class="img-circle" />
                                             </media.left>
                                             <media.body>
-                                                <media.heading>
+                                                <media.heading class="fs-14 text-bold mg-0">
                                                     Khanh Huyen
                                                 </media.heading>
-                                                <small>%%blog.created_at%%</small>
+                                                <small class="fs-12 text-light">%%blog.created_at%%</small>
                                             </media.body>
                                         </media>
                                     </col>
                                     <col md="3" class="text-right">
-                                        <btn.success ng-click="bookmark(blog)"><fa.1x symbol="bookmark" /> Lưu bài viết</btn.success>
+                                        <btn.success ng-click="bookmark(blog)" class="btn-bookmark"><fa.1x symbol="bookmark" class="bookmark-scale" /> Lưu bài viết</btn.success>
                                     </col>
                                 </row>
                             </list.group.item>
                             <list.group.item bd="none" bb="2">
-                            	<h1>%%blog.blog_title%%</h1>
+                            	<h1 class="fs-18 text-bold mg-1">%%blog.blog_title%%</h1>
                             	<embed.responsive size="16by9">
                             		<img.responsive src="%%blog.blog_img%%" />
                             	</embed.responsive>
@@ -54,18 +54,18 @@
                             <list.group.item bd="none" bb="2">
                                 <clearfix>
                                     <pull.left>
-                                        Like | Share
+                                        <div class="fb-like" data-href="https://sper.vn/blog/detail?blog_id=%%blog.id%%" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                                     </pull.left>
                                     <pull.right>
                                         Đánh giá <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
                                     </pull.right>
                                 </clearfix>
                                 <clearfix>
-                                    Bình luận
+                                    <div class="fb-comments" data-href="https://sper.vn/blog/detail?blog_id=%%blog.id%%" data-numposts="5"></div>
                                 </clearfix>
                             </list.group.item>
                             <list.group.item bd="none" ng-controller="Sper.Blog.Others">
-                                <h2>Bài viết khác</h2>
+                                <h2 class="fs-18 text-bold mg-1">Bài viết khác</h2>
                                 <?php require 'others.xml';?>
                             </list.group.item>
                         </list.group>

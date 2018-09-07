@@ -5,9 +5,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
+    <div style="overflow: hidden; height: 200px;">
 	<embed.responsive size="16by9" ng-controller="Sper.News.Detail">
 	    <img.responsive src="%%article.article_img%%" class="w-100-p" />
     </embed.responsive>
+    </div>
 
     <container pt="5" pb="5">
         <row>
@@ -16,10 +18,10 @@
                     <panel.body>
                         <list.group>
                             <list.group.item bd="none" bb="2">
-                                <h1 class="heading article-heading">%%article.article_title%%</h1>
+                                <h1 class="heading article-heading fs-18 text-bold mg-1 text-service-highlight">%%article.article_title%%</h1>
                                 <clearfix>
                                     <pull.right>
-                                        <btn.success class="btn-flex" ng-click="bookmark(article)"><fa.1x symbol="bookmark" class="bookmark-scale" /> Lưu bài viết</btn.success>
+                                        <btn.success class="btn-bookmark" ng-click="bookmark(article)"><fa.1x symbol="bookmark" class="bookmark-scale" /> Lưu bài viết</btn.success>
                                     </pull.right>
                                 </clearfix>
                                 <div class="article-body clearfix text-justify" ng-bind-html="article.article_content">
@@ -29,18 +31,18 @@
                             <list.group.item bd="none" bb="2">
                                 <clearfix>
                                     <pull.left>
-                                        Like | Share
+                                        <div class="fb-like" data-href="https://sper.vn/news/detail?blog_id=%%article.id%%" data-layout="button" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                                     </pull.left>
                                     <pull.right>
                                         Đánh giá <icon.star /> <icon.star /> <icon.star /> <icon.star /> <icon.star />
                                     </pull.right>
                                 </clearfix>
                                 <clearfix>
-                                    Binh luan
+                                    <div class="fb-comments" data-href="https://sper.vn/news/detail?blog_id=%%article.id%%" data-numposts="5"></div>
                                 </clearfix>
                             </list.group.item>
                             <list.group.item bd="none" ng-controller="Sper.News.Others">
-                                <h2>Bài viết khác</h2>
+                                <h2 class="fs-18 text-bold mg-1">Bài viết khác</h2>
                                 <?php require 'others.xml';?>
                             </list.group.item>
                         </list.group>
@@ -50,26 +52,29 @@
             <col md="4">
                 <list.group>
                     <list.group.item class="text-center">
-                        <h2>Tải về app Sper</h2>
-                        <div>App Store | Google Play</div>
+                        <h2 class="fs-18 mg-1">Tải về app Sper</h2>
+                        <div><img src="/images/app/google-play.png" style="width: 110px" /><img src="/images/app/ios-store.png" style="width: 110px" /></div>
                     </list.group.item>
                     <list.group.item class="text-center">
-                        <h2>Liên hệ truyền thông</h2>
-                        <btn.success class="btn-block">
-                            <icon symbol="download" /> Liên hệ đội ngũ truyền thông Sper
+                        <h2 class="fs-18 mg-1">Liên hệ truyền thông</h2>
+                        <btn.success class="btn-block pd-3">
+                            <icon symbol="download" class="fs-18 relative" style="left: -10px; transform: scale(2, 2)" /> Liên hệ đội ngũ truyền thông Sper
                         </btn.success>
                     </list.group.item>
                     <list.group.item class="text-center">
-                        <h2>Theo dõi các kênh truyền thông khác của Sper</h2>
+                        <h2 class="fs-18 mg-1">Theo dõi các kênh truyền thông khác của Sper</h2>
                         <clearfix>
-                            <fab size="4x" symbol="facebook-square" /> 
-                            <fab size="4x" symbol="linkedin-square" /> 
-                            <fab size="4x" symbol="twitter-square" />
-                            <fab size="4x" symbol="instagram" />
+                            <fab size="3x" symbol="facebook-square" /> 
+                            <fab size="3x" symbol="linkedin-square" /> 
+                            <fab size="3x" symbol="twitter-square" />
+                            <fab size="3x" symbol="instagram" />
                         </clearfix>
                     </list.group.item>
                     <list.group.item ng-controller="Sper.News.Featureds">
                         <?php require 'featureds.xml'; ?>
+                    </list.group.item>
+                    <list.group.item>
+                        <img.responsive src="/images/others/ad2.jpeg" />
                     </list.group.item>
                 </list.group>
             </col>

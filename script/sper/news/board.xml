@@ -25,9 +25,15 @@
         <row class="row-pd-5">
             <col md="2">
                 <panel>
+                    <list.group class="service-category mt-3">
+                        <list.group.item class="heading" pd="1" pl="5">
+                            <a href="#" class="text-service text-bold text-uppercase">Đối tác của chúng tôi</a>
+                        </list.group.item>
+                        <list.group.item pl="5">
+                            <img.responsive src="/images/partner.png" />    
+                        </list.group.item>
+                    </list.group>
                     <panel.body pd="3">
-                        <h2>Đối tác của chúng tôi</h2>
-                        <img.responsive src="http://placehold.it/360x900" />
                     </panel.body>
                 </panel>
             </col>
@@ -37,45 +43,69 @@
                         <row class="row-pd-5">
                             <col md="8">
                                 <a href="/news/detail?article_id=%%articles[0].id%%">
-                                    <embed.responsive size="4by3">
-                                        <img.responsive src="%%articles[0].article_img%%" />
-                                    </embed.responsive>
+                                    <div class="relative">
+                                        <embed.responsive size="16by9">
+                                            <img.responsive src="%%articles[0].article_img%%" />
+                                        </embed.responsive>
+                                        <div class="absolute" style="bottom: 0; left: 0; background: #000; opacity: 0.8; width: 100%; height: 60px; z-index: 1;"></div>
+                                        <div class="absolute pd-2 fs-14 text-white" style="bottom: 0; left: 0; background: transparent; width: 100%; height: 60px; z-index: 2;">%%articles[0].article_title%%</div>
+                                    </div>
                                 </a>
                             </col>
                             <col md="4">
                                 <a href="/news/detail?article_id=%%articles[1].id%%">
-                                    <embed.responsive size="4by3">
-                                        <img.responsive src="%%articles[1].article_img%%" />
-                                    </embed.responsive>
+                                    <div class="relative">
+                                        <embed.responsive size="16by9">
+                                            <img.responsive src="%%articles[1].article_img%%" />
+                                        </embed.responsive>
+                                        <div class="absolute" style="bottom: 0; left: 0; background: #000; opacity: 0.8; width: 100%; height: 60px; z-index: 1;"></div>
+                                        <div class="absolute pd-2 fs-14 text-white" style="bottom: 0; left: 0; background: transparent; width: 100%; height: 60px; z-index: 2;">%%articles[1].article_title%%</div>
+                                    </div>
                                 </a>
                                 <a href="/news/detail?article_id=%%articles[5].id%%">
-                                    <embed.responsive size="4by3" mt="1">
-                                        <img.responsive src="%%articles[5].article_img%%" />
-                                    </embed.responsive>
+                                    <div class="relative mt-1">
+                                        <embed.responsive size="16by9">
+                                            <img.responsive src="%%articles[5].article_img%%" />
+                                        </embed.responsive>
+                                        <div class="absolute" style="bottom: 0; left: 0; background: #000; opacity: 0.8; width: 100%; height: 60px; z-index: 1;"></div>
+                                        <div class="absolute pd-2 fs-14 text-white" style="bottom: 0; left: 0; background: transparent; width: 100%; height: 60px; z-index: 2;">%%articles[5].article_title%%</div>
+                                    </div>
                                 </a>
                             </col>
                         </row>
 
                         <row class="row-pd-5 mt-2">
                             <col md="4">
-                                <a href="/news/detail?article_id=%%articles[0].id%%">
-                                    <embed.responsive size="16by9">
-                                        <img.responsive src="%%articles[2].article_img%%" />
-                                    </embed.responsive>
+                                <a href="/news/detail?article_id=%%articles[2].id%%">
+                                    <div class="relative">
+                                        <embed.responsive size="16by9">
+                                            <img.responsive src="%%articles[2].article_img%%" />
+                                        </embed.responsive>
+                                        <div class="absolute" style="bottom: 0; left: 0; background: #000; opacity: 0.8; width: 100%; height: 60px; z-index: 1;"></div>
+                                        <div class="absolute pd-2 fs-14 text-white" style="bottom: 0; left: 0; background: transparent; width: 100%; height: 60px; z-index: 2;">%%articles[2].article_title%%</div>
+                                    </div>
                                 </a>
                             </col>
                             <col md="4">
-                                <a href="/news/detail?article_id=%%articles[0].id%%">
-                                    <embed.responsive size="16by9">
-                                        <img.responsive src="%%articles[3].article_img%%" />
-                                    </embed.responsive>
+                                <a href="/news/detail?article_id=%%articles[3].id%%">
+                                    <div class="relative">
+                                        <embed.responsive size="16by9">
+                                            <img.responsive src="%%articles[3].article_img%%" />
+                                        </embed.responsive>
+                                        <div class="absolute" style="bottom: 0; left: 0; background: #000; opacity: 0.8; width: 100%; height: 60px; z-index: 1;"></div>
+                                        <div class="absolute pd-2 fs-14 text-white" style="bottom: 0; left: 0; background: transparent; width: 100%; height: 60px; z-index: 2;">%%articles[3].article_title%%</div>
+                                    </div>
                                 </a>
                             </col>
                             <col md="4">
-                                <a href="/news/detail?article_id=%%articles[0].id%%">
-                                    <embed.responsive size="16by9">
-                                        <img.responsive src="%%articles[4].article_img%%" />
-                                    </embed.responsive>
+                                <a href="/news/detail?article_id=%%articles[4].id%%">
+                                    <div class="relative">
+                                        <embed.responsive size="16by9">
+                                            <img.responsive src="%%articles[4].article_img%%" />
+                                        </embed.responsive>
+                                        <div class="absolute" style="bottom: 0; left: 0; background: #000; opacity: 0.8; width: 100%; height: 60px; z-index: 1;"></div>
+                                        <div class="absolute pd-2 fs-14 text-white" style="bottom: 0; left: 0; background: transparent; width: 100%; height: 60px; z-index: 2;">%%articles[4].article_title%%</div>
+                                    </div>
                                 </a>
                             </col>
                         </row>
@@ -86,7 +116,7 @@
             <col md="2">
                 <panel>
                     <panel.body pd="0">
-                        <img.responsive src="http://placehold.it/320x900" />
+                        <img.responsive src="/images/others/ad.jpeg" />
                     </panel.body>
                 </panel>
             </col>

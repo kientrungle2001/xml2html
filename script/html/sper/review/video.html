@@ -148,5 +148,10 @@
                 </div>
             </div>
         </div>
+        <p class="text-center">
+            <a class="text-view-more" href="/review">
+                Xem thêm
+            </a>
+        </p>
     </div>
 </div>
