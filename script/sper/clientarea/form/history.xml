@@ -1,0 +1,52 @@
+<root>
+    <div bd="1" mb="3">
+        <nav.tabs bd="none">
+            <nav.tabs.item class="active"><a href="#">Tất cả</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Dịch vụ</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Sản phẩm</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Video</a></nav.tabs.item>
+            <nav.tabs.item><a href="#">Blog</a></nav.tabs.item>
+        </nav.tabs>
+        
+    </div>
+    <form>
+        <row>
+            <col md="3">
+                Trạng thái<br />
+                <select.form.control>
+                    <option value="">Tất cả</option>
+                </select.form.control>
+            </col>
+            <col md="3">
+                Từ ngày <br />
+                <input.form.control />
+            </col>
+            <col md="3">
+                Đến ngày <br />
+                <input.form.control />
+            </col>
+            <col md="3">
+                 <br />
+                <btn.success class="btn-block">Tìm kiếm</btn.success>
+            </col>
+        </row>
+    </form>
+    <row mt="3">
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+        <?php require 'history/item.xml';?>
+    </row>
+</root>

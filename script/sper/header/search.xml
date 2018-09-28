@@ -1,0 +1,20 @@
+<root>
+    <form.group>
+        <input.group class="relative">
+            <input.form.control placeholder="Tìm kiếm" style="width:450px"  class="input-sm-new"/>
+            <div class="absolute fs-14 pointer dropdown dropdown-no-close" style="top: 7px; right: 40px; z-index: 2;">
+                <div class="relative">
+                    <span class="dropdown-toggle" data-toggle="dropdown">
+                        <fas symbol="sliders-h" class="fs-14" /> Bộ lọc
+                    </span>
+                    <dropdown.menu.div style="width: 800px; z-index: 3; left: -500px; padding: 0;padding-top: 6px; border: none; background: transparent; overflow: hidden;">
+                        <?php require 'context/filter.xml';?>
+                    </dropdown.menu.div>
+                </div>
+            </div>
+            <input.group.btn tag="span">
+                <btn.default style="height: 34px; width: 34px;background-color: #e6e6e6" size="xs"><icon.search  class="fs-16"/></btn.default>
+            </input.group.btn>
+        </input.group>
+    </form.group>
+</root>

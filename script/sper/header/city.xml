@@ -1,0 +1,7 @@
+<root>
+    <form.group class="relative">
+        <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()" class="input-sm-new dropdown-replace" style="width: 120px;">
+        </select.form.control>
+        <icon symbol="chevron-down" />
+    </form.group>
+</root>

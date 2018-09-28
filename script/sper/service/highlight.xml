@@ -41,7 +41,7 @@
                                     <nav.tabs bd="none" class="pull-right tabs-black tabs-no-bg">
                                         <nav.tabs.item class="dropdown dropdown-no-close">
                                             <a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
-                                            <?php require 'highlight/div.xml'; ?>
+                                            <?php require 'highlight/category.xml'; ?>
                                         </nav.tabs.item>
                                     </nav.tabs>
                                 </clearfix>

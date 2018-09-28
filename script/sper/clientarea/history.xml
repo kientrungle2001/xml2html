@@ -1,0 +1,42 @@
+<root>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" 
+        integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" 
+        integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
+    <?php require BASE_DIR . '/sper/style.xml'; ?>
+
+    <container mt="3">
+        <breadcrumb>
+            <breadcrumb.item>
+                <a href="/">Trang chủ</a>
+            </breadcrumb.item>
+            <breadcrumb.item class="active">
+                Lịch sử
+            </breadcrumb.item>
+        </breadcrumb>
+    </container>
+
+    <container ng-controller="Sper.ClientArea.Collection">
+        <row class="row-pd-5">
+            <col md="3">
+                <?php require 'menu.xml';?>
+            </col>
+            <col md="9">
+                <panel>
+                    <panel.heading>
+                        Lịch sử
+                    </panel.heading>
+                    <panel.body>
+                        <?php require 'form/history.xml'; ?>
+                    </panel.body>
+                </panel>
+            </col>
+        </row>
+    </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
+        integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" 
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

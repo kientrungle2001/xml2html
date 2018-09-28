@@ -1,5 +1,5 @@
 <root>
-    <panel ng-controller="Sper.Video.Review" class="bg-none-i">
+    <panel ng-controller="Sper.Video.Review" class="bg-none-i" id="video-review">
         <panel.heading pd="0" class="bg-white-i">
             <row>
                 <col md="3">
@@ -22,13 +22,13 @@
                         <nav.tabs bd="none" class="pull-right tabs-no-bg">
                         	<nav.tabs.item class="dropdown dropdown-no-close">
                             	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedSubCategory.categoryname || 'Chủ đề'%% <caret /></a>
-                              <?php require 'video/div.xml'; ?>
+                              <?php require 'video/category.xml'; ?>
                         	</nav.tabs.item>
                        	</nav.tabs>
                         <nav.tabs bd="none" class="pull-right tabs-no-bg">
                         	<nav.tabs.item class="dropdown dropdown-no-close">
                             	<a href="#" class="data-toggle" data-toggle="dropdown">%%selectedCity.addcityname || 'Địa điểm'%% <caret /></a>
-                              <?php require 'video/add.xml'; ?>
+                              <?php require 'video/place.xml'; ?>
                         	</nav.tabs.item>
                        	</nav.tabs>
                         

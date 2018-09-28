@@ -1,0 +1,15 @@
+<root>
+    <section id="header-main">
+        <container>
+            <row>
+                <col class="text-left">
+                    Báo giá số lượng lớn! Hình thức đặt hàng!
+                </col>
+                <col class="text-right">
+                    vhp-auto@website.com
+                </col>
+            </row>
+        </container>
+        <nav>Menu</nav>
+    </section>
+</root>

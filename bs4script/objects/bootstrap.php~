@@ -1,0 +1,279 @@
+<?php
+
+/* Text*/
+class PzkTextCenter extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'text-center';
+}
+
+class PzkTextLeft extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'text-left';
+}
+
+class PzkTextRight extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'text-right';
+}
+
+class PzkTextJustify extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'text-justify';
+}
+
+/* Container & Grid System */
+class PzkContainer extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'container';
+}
+
+class PzkContainerFluid extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'container-fluid';
+}
+
+class PzkRow extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = 'row';
+}
+
+class PzkCol extends PzkHtmlTag{
+	public $tag = 'div';
+	public $extendClass = '';
+	public function getColClass() {
+		$cols = [];
+		if(isset($this->xs)) {
+			$cols[] = ('col-xs-' . $this->xs);
+		}
+		if(isset($this->xso)) {
+			$cols[] = ('col-xs-offset-' . $this->xso);
+		}
+		if(isset($this->sm)) {
+			$cols[] = ('col-sm-' . $this->sm);
+		}
+		if(isset($this->smo)) {
+			$cols[] = ('col-sm-offset-' . $this->smo);
+		}
+		if(isset($this->md)) {
+			$cols[] = ('col-md-' . $this->md);
+		}
+		if(isset($this->mdo)) {
+			$cols[] = ('col-md-offset-' . $this->mdo);
+		}
+		if(isset($this->lg)) {
+			$cols[] = ('col-lg-' . $this->lg);
+		}
+		if(isset($this->lgo)) {
+			$cols[] = ('col-lg-offset-' . $this->lgo);
+		}
+		return implode(' ', $cols);
+	}
+	
+	public function init() {
+		$this->extendClass = $this->getColClass();
+		parent::init();
+	}
+}
+
+class PzkColFull extends PzkCol {
+	public $xs = 12;
+}
+
+class PzkColHalf extends PzkCol {
+	public $xs = 12;
+	public $md = 6;
+}
+
+class PzkColThird extends PzkCol {
+	public $xs = 12;
+	public $md = 4;
+}
+
+class PzkColTwoThird extends PzkCol {
+	public $xs = 12;
+	public $md = 8;
+}
+
+class PzkColQuarter extends PzkCol {
+	public $xs = 12;
+	public $md = 3;
+}
+
+class PzkColTwoQuarter extends PzkCol {
+	public $xs = 12;
+	public $md = 6;
+}
+
+class PzkColThreeQuarter extends PzkCol {
+	public $xs = 12;
+	public $md = 9;
+}
+
+/* Form & Inputs */
+class PzkFormInline extends PzkHtmlTag {
+	public $tag = 'form';
+	public $extendClass = 'form-inline';
+}
+
+class PzkFormHorizontal extends PzkHtmlTag {
+	public $tag = 'form';
+	public $extendClass = 'form-horizontal';
+}
+
+class PzkFormGroup extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'form-group';
+}
+
+class PzkInputGroup extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'input-group';
+}
+
+class PzkInputGroupAddon extends PzkHtmlTag {
+	public $tag = 'div';
+	public $extendClass = 'input-group-addon';
+}
+
+class PzkFormControl extends PzkHtmlTag {
+	public $extendClass = 'form-control';
+	public $size = '';
+	public function init() {
+		if($this->size) {
+			$this->extendClass .= ' input-' . $this->size;
+		}
+		parent::init();
+	}
+}
+
+class PzkInputFormControl extends PzkFormControl {
+	public $tag = 'input';
+}
+
+class PzkSelectFormControl extends PzkFormControl {
+	public $tag = 'select';
+}
+
+class PzkTextareaFormControl extends PzkFormControl {
+	public $tag = 'textarea';
+}
+
+class PzkStaticFormControl extends PzkHtmlTag {
+	public $tag = 'p';
+	public $extendClass = 'static-form-control';
+}
+
+class PzkControlLabel extends PzkHtmlTag {
+	public $tag = 'label';
+	public $extendClass = 'control-label';
+}
+
+class PzkFormInputHelp extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'help-block';
+}
+
+class PzkCheckbox extends PzkHtmlTag {
+	public $tag = 'input';
+	public $type = 'checkbox';
+}
+
+class PzkRadio extends PzkHtmlTag {
+	public $tag = 'input';
+	public $type = 'radio';
+}
+
+/* Buttons */
+
+class PzkBtn extends PzkHtmlTag {
+	public $tag = 'button';
+	public $extendClass = 'btn';
+	public $context = 'default';
+	public $size = '';
+	public function init() {
+		$this->extendClass .= ' btn-' . $this->context;
+		if($this->size) {
+			$this->extendClass .= ' btn-' . $this->size;
+		}
+	}
+}
+
+class PzkBtnPrimary extends PzkBtn {
+	public $context = 'primary';
+}
+
+class PzkBtnSuccess extends PzkBtn {
+	public $context = 'success';
+}
+
+class PzkBtnInfo extends PzkBtn {
+	public $context = 'info';
+}
+
+class PzkBtnWarning extends PzkBtn {
+	public $context = 'warning';
+}
+
+class PzkBtnDanger extends PzkBtn {
+	public $context = 'đanger';
+}
+
+class PzkBtnLink extends PzkBtn {
+	public $context = 'link';
+}
+
+/* Images */
+class PzkImgResponsive extends PzkHtmlTag {
+	public $tag = 'img';
+	public $extendClass = 'img-responsive';
+	public $shape = '';
+	public function init() {
+		if($this->shape) {
+			$this->extendClass .= ' img-' . $this->shape;
+		}	
+	}
+}
+
+/* Glyphicons & FontAwesome */
+class PzkIcon extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'glyphicon';
+	public $symbol = '';
+	public function init() {
+		$this->extendClass .= ' glyphicon-' . $this->symbol;
+		return parent::init();
+	}
+}
+
+class PzkIconStar extends PzkIcon {
+	public $symbol = 'star';
+}
+
+class PzkIconUser extends PzkIcon {
+	public $symbol = 'user';
+}
+
+class PzkIconSearch extends PzkIcon {
+	public $symbol = 'search';
+}
+
+class PzkFa extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'fa';
+	public $symbol = '';
+	public $size = '2x';
+	public function init() {
+		$this->extendClass .= ' fa-' . $this->symbol . ' fa-' . $this->size;
+		return parent::init();
+	}
+}
+
+class PzkFa1x extends PzkFa {
+	public $size = '1x';
+}
+
+class PzkFa2x extends PzkFa {
+	public $size = '2x';
+}
+
+/*  */

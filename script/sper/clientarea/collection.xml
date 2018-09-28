@@ -9,10 +9,10 @@
     <container mt="3">
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
-                Tai khoan
+                Bộ sưu tập
             </breadcrumb.item>
         </breadcrumb>
     </container>

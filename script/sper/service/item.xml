@@ -2,12 +2,12 @@
     <col md="15" ng-repeat="service in services" class="service-item">
         <panel mb="2">
             <panel.heading pd="0">
-                <embed.responsive size="4by3" style="overflow:hidden;">
-                <img.responsive ng-src="%%service.serviceimg%%" />
+                <embed.responsive size="16by9" style="overflow:hidden;">
+                <img.responsive ng-src="%%service.serviceimg | thumb:640:360%%" />
                 </embed.responsive>
             </panel.heading>
             <panel.body>
-                <a href="#" class="service-heading text-service-highlight"><h4>%%service.servicename%%</h4></a>
+                <a href="/service/detail?serviceid=%%service.serviceid%%" class="service-heading text-service-highlight"><h4>%%service.servicename%%</h4></a>
                 <address class="service-address mb-1 text-address">%%service.address_identifier.addressname%%</address>
                 <clearfix class="fs-12">
                     <pull.left class="text-branch"><icon symbol="map-marker" /> 2 chi nhánh</pull.left>

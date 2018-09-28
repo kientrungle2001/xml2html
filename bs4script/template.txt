@@ -1,0 +1,4 @@
+{div id="abc", children=[
+	{div id="hello", class="world", ng-repeat="row in rows"},
+	{div id="hello2", class="world", ng-repeat="row in rows", onclick="showHello('Hello');"}
+]}

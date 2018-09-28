@@ -1,0 +1,11 @@
+<root>
+    <col lg="3" md="4" sm="2">
+        <panel mb="2">
+            <panel.heading pd="0">
+                <embed.responsive size="16by9" style="overflow:hidden;">
+                <img.responsive src="https://placehold.it/204x115" />
+                </embed.responsive>
+            </panel.heading>
+        </panel>
+    </col>
+</root>

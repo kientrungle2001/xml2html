@@ -1,0 +1,24 @@
+<?php
+require 'xml.php';
+
+function generate_files($files) {
+    foreach($files as $file) {
+        $fileWithoutExt = str_replace('.xml', '', $file);
+        $genFile = $fileWithoutExt . '.html';
+        if(!file_exists($genFile) || filemtime($file) > filemtime($genFile)) {
+            generate($fileWithoutExt);
+        }
+        
+    }
+}
+echo "Start generate\r\n";
+$folder = $argv[1];
+
+$files = glob($folder. '/*.xml');
+generate_files($files);
+
+$files = glob($folder. '/*/*.xml');
+generate_files($files);
+
+$files = glob($folder. '/*/*/*.xml');
+generate_files($files);

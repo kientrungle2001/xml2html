@@ -1,0 +1,7 @@
+<root>
+    <form.group class="relative">
+        <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()" class="input-sm-new dropdown-replace" style="width: 120px;">
+        </select.form.control>
+        <icon symbol="chevron-down" />
+    </form.group>
+</root>

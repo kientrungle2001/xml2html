@@ -3,11 +3,14 @@
         <panel mb="2">
             <panel.heading pd="0">
                 <embed.responsive size="16by9">
-                <img.responsive src="%%item.review_img%%" />
+                <img.responsive src="%%item.review_img|thumb:480:270%%" />
                 </embed.responsive>
             </panel.heading>
-            <panel.body style="height: 80px; overflow: hidden;">
-                <a href="#" class="text-service-highlight text-justify text-bold">%%item.review_title%%</a>
+            <panel.body>
+                <a href="/video/detail?videoid=%%item.id%%" class="text-justify text-bold d-block fs-14" style="height: 18px; overflow: hidden;">%%item.review_title%%</a>
+                <clearfix>
+                <small class="text-light">%%item.created_at%%</small>
+                </clearfix>
             </panel.body>
             <panel.footer>
                 <clearfix>

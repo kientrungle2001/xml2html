@@ -1,8 +1,12 @@
 <root>
-    <col md="4" sm="6" ng-repeat="product in products">
+    <col md="4" sm="6" ng-repeat="product in products | filter: {deleted: false}">
         <panel mb="3">
             <panel.heading pd="0">
-                <img.responsive src="http://placehold.it/480x360" />
+                <a href="/clientarea/product?prodid=%%product.prodid%%">
+                    <embed.responsive size="16by9">
+                        <img.responsive src="%%product.prodimg || 'http://placehold.it/480x360'%%" />
+                    </embed.responsive>
+                </a>
             </panel.heading>
             <panel.body>
                 <a href="/clientarea/product?prodid=%%product.prodid%%"><h4>%%product.prodcode%%</h4></a>
@@ -20,7 +24,12 @@
                     </pull.right>
                 </clearfix>
                 <clearfix>
-                    <a href="/clientarea/product?prodid=%%product.prodid%%">Xem chi tiết</a>
+                    <pull.left>
+                        <a href="/clientarea/product?prodid=%%product.prodid%%">Xem chi tiết</a>
+                    </pull.left>
+                    <pull.right>
+                        <a href="/clientarea/editproduct?prodid=%%product.prodid%%"><icon symbol="edit" /> Sửa</a>
+                    </pull.right>
                 </clearfix>
             </panel.footer>
         </panel>

@@ -1,0 +1,10 @@
+<root>
+    <clearfix ng-controller="Sper.Service.Detail.Product.List">
+        <row class="row-pd-5">
+            <?php require 'item.xml'; ?>
+        </row>
+        <p class="text-center">
+            <a href="#" class="text-view-more">Xem thêm</a>
+        </p>
+    </clearfix>
+</root>

@@ -1,0 +1,56 @@
+<root>
+    <panel mg="0" pd="0" ng-init="selectedTab='region'">
+        <panel.body pd="0">
+        <row class="row-pd-0">
+            <col md="3">
+                <list.group class="service-category mt-3">
+                    <list.group.item class="pd-1 pl-5" ng-class="{'active': selectedTab=='region'}" ng-click="selectTab('region')">
+                        <a href="#" onclick="return false;">Khu vực</a>
+                    </list.group.item>
+                    <list.group.item class="pd-1 pl-5 bb-1" ng-class="{'active': selectedTab=='category'}" ng-click="selectTab('category')">
+                        <a href="#" onclick="return false;">Chủ đề</a>
+                    </list.group.item>
+                    <list.group.item class="pd-1 pl-5" ng-class="{'active': selectedTab=='organize'}" ng-click="selectTab('organize')">
+                        <a href="#" onclick="return false;">Phân loại</a>
+                    </list.group.item>
+                </list.group>
+            </col>
+            <col md="9">
+                <div pd="3">
+                    <row ng-show="selectedTab=='region'" style="height: 300px; overflow-y: scroll; overflow-x: hidden;">
+                        <col xs="6" class="checkbox" ng-repeat="district in selectedCity.districts">
+                            <label>
+                                <input type="checkbox" value="%%district.addmunicipalityid%%" aria-label="..."/> %%district.addmunicipalityname%%
+                            </label>
+                        </col>
+                    </row>
+                    <row ng-show="selectedTab=='category'" style="height: 300px; overflow-y: scroll; overflow-x: hidden;">
+                        <col xs="12">
+                            <panel ng-repeat="category in selectedCategory.children">
+                                <panel.heading>
+                                    <label>
+                                        <input type="checkbox" value="%%category.categoryid%%" aria-label="..."/> %%category.categoryname%%
+                                    </label>
+                                </panel.heading>
+                                <panel.body>
+                                    <row>
+                                        <col xs="6" class="checkbox" ng-repeat="subCategory in category.children">
+                                            <label>
+                                                <input type="checkbox" value="%%subCategory.categoryid%%" aria-label="..."/> %%subCategory.categoryname%%
+                                            </label>
+                                        </col>
+                                    </row>
+                                </panel.body>
+                            </panel>
+                        </col>
+                    </row>
+                </div>
+            </col>
+        </row>
+        </panel.body>
+        <panel.footer class="text-center">
+            <btn.success>Tìm kiếm</btn.success>
+            <btn.default>Xóa bộ lọc</btn.default>
+        </panel.footer>
+    </panel>
+</root>

@@ -7,8 +7,8 @@
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
     <container mt="3">
-        <row>
-            <col md="3">
+        <row class="row-pd-5">
+            <col md="2">
                 <panel>
                     <?php require 'category.xml';?>
                     <hr mt="1" mb="1" />
@@ -34,8 +34,10 @@
                     </panel.body>
                 </panel>
             </col>
-            <col md="9">
-                <?php require 'services.xml';?>
+            <col md="10">
+                <?php require 'places.xml';?>
+                <?php require 'categories.xml';?>
+                <?php require 'promotions.xml';?>
                 <?php require BASE_DIR .'/sper/review/video.xml';?>
             </col>
         </row>

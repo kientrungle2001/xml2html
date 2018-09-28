@@ -1,0 +1,110 @@
+<root>
+    <container mt="3">
+        <breadcrumb>
+            <breadcrumb.item>
+                <a href="/">Trang chủ</a>
+            </breadcrumb.item>
+            <breadcrumb.item class="active">
+                Dịch vụ
+            </breadcrumb.item>
+        </breadcrumb>
+    </container>
+
+    <container mb="3" ng-controller="Sper.Service.Detail">
+        <row class="row-pd-0 bg-white-i">
+            <col md="4" class="detail-left">
+                <embed.responsive size="4by3" class="relative">
+                    <img.responsive src="%% (service.serviceimg || 'http://placehold.it/1600x1200') | thumb:800:600 %%" />
+                    <div class="absolute" pd="3" style="bottom: 0; background: #ccc; opacity: 0.7;z-index: 1; width: 100%;"><div class="invisible">Thông tin</div></div>
+                    <div class="absolute" pd="3" style="bottom: 0; background: none; z-index: 2; width: 100%;"><div>Thông tin</div></div>
+                </embed.responsive>
+            </col>
+            <col md="8" class="relative detail-right">
+                <div mg="3">
+                    <h1 class="fs-25 text-bold">%%service.servicename%%</h1>
+                    <clearfix class="mt-1">
+                        <strong class="d-inline-block" style="width: 120px;">%%getCategory(service.categoryid).categoryname%%</strong> Độ uy tín <strong>345</strong>
+                    </clearfix>
+                    <clearfix class="text-light mt-1">
+                        %% service.address_identifier.addressname %%
+                    </clearfix>
+                    <clearfix mt="1" class="hide">
+                        <div class="btn-group" data-toggle="buttons">
+                            <btn.default tag="label" class="btn-checkbox btn-xs">
+                                <checkbox checked="checked" value="1" autocomplete="off" /> 
+                                <icon symbol="ok" style="color: green" />
+                            </btn.default>
+                            <label class="fs-16 d-inline-block pl-3" style="color: orange;"> Đã cam kết dịch vụ</label>
+                        </div>
+                    </clearfix>
+                    <clearfix class="fs-14 hide">
+                        <span class="text-map-marker d-inline-block pr-3"><icon symbol="map-marker" /> 2 chi nhánh</span>
+                        <span class="d-inline-block pr-3">
+                            <far symbol="heart" size="1x" class="fs-14" /> 200
+                            <far symbol="comments" size="1x" class="fs-14" /> 200
+                            <fas symbol="share-alt" size="1x" class="fs-14" /> 200
+                        </span>
+                        <span class="d-inline-block pr-3 text-map-marker">
+                            Đang mở cửa <fas symbol="circle" class="fs-14" />
+                        </span>
+                        <span class="d-inline-block pr-3 text-italic">
+                            (Thời gian mở cửa: 7h - 17h)
+                        </span>
+                    </clearfix>
+                    <hr mt="1" mb="1" />
+                    <clearfix ng-bind-html="service.servicedesc">
+                    </clearfix>
+                </div>
+                <div class="absolute" pd="3" style="bottom: 0; background: #ccc; opacity: 0.7;z-index: 1; width: 100%;"><div class="invisible">Thông tin</div></div>
+                    <div class="absolute" pd="3" style="bottom: 0; background: none; z-index: 2; width: 100%;">
+                    
+                <div class="row row-pd-0">
+                    
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="phone" /> Số điện thoại
+                    </span>
+
+                    <span class="d-inline-block col-md-1">
+                        <icon symbol="comment" /> Chat
+                    </span>
+
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="comment" /> Bình luận
+                    </span>
+
+                    <span class="d-inline-block col-md-3">
+                        <icon symbol="bookmark" class="bookmark-scale" /> Lưu vào bộ sưu tập
+                    </span>
+
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="picture" /> Hình ảnh
+                    </span>
+
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="share-alt" /> Chia sẻ
+                    </span>
+                </div>
+                </div>
+            </col>
+        </row>
+    </container>
+
+    <container mt="3">
+        <row class="row-pd-5">
+            <col md="3">
+                <clearfix bg="white-i">
+                    <?php require 'detail/menu.xml'; ?>
+                </clearfix>
+
+                <clearfix mt="3" mb="3">
+                    <img.responsive src="/images/others/ad2.jpeg" />
+                </clearfix>
+            </col>
+            <col md="9">
+                <?php require 'detail/product/items.xml';?>
+                <?php require 'detail/photo/items.xml';?>
+                <?php require 'detail/comment/section.xml';?>
+            </col>
+        </row>
+    </container>
+</root>

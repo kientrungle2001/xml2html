@@ -1,31 +1,77 @@
 <root>
+    <modal id="previewModal">
+        <modal.dialog context="primary">
+            <modal.content>
+                <modal.header>Xem trước</modal.header>
+                <modal.body>
+                    <img.responsive src="" id="previewImg" />
+                    <input type="hidden" id="base64Img" />
+                </modal.body>
+                <modal.footer>
+                    <clearfix>
+                        <pull.left>
+                            <btn.success ng-click="updateProductImg()" data-dismiss="modal">Cập nhật</btn.success>
+                        </pull.left>
+                        <pull.right>
+                            <btn.danger data-dismiss="modal">Đóng lại</btn.danger>
+                        </pull.right>
+                    </clearfix>
+                </modal.footer>
+            </modal.content>
+        </modal.dialog>
+    </modal>
     <form ng-submit="update()">
         <form.group>
-            <img.responsive src="http://placehold.it/1366x300" />
+            <div class="relative" style="height: 200px; overflow: hidden;">
+                <h2 class="text-white text-center absolute w-100-p" style="bottom:15px">%%service.servicename%%</h2>
+                <img.responsive src="%% service.serviceimg || 'http://placehold.it/1366x300'%%" />
+            </div>
+        </form.group>
+        <form.group id="productImages">
+            <clearfix>
+                <div class="pull-left product-image-item" ng-repeat="image in product_images">
+                    <icon symbol="remove-sign" class="absolute pointer" style="top: 5px; right: 5px; color: red;" ng-click="removeProductImg($index)" />
+                    <img.responsive src="%%image.path%%" />
+                </div>
+                <div class="pull-left product-image-item">
+                    <div style="padding-top: 25px;">
+                        <input type="file" class="hide" id="productUploader" onchange="handleServiceUpload(event)" />
+                        <a href="#" onclick="jQuery('#productUploader').click(); return false;"><icon symbol="plus" /> Thêm</a>
+                    </div>
+                </div>
+            </clearfix>
         </form.group>
         <form.group>
-            <h2>Sửa sản phẩm</h2>
+            <input.form.control placeholder="Nhập tên sản phẩm" ng-model="product.prodcode" value="Samsung J7 Pro" />
         </form.group>
+        <div ng-repeat="attribute in product.attributeset_identifier.attrsetvalue">
+            <div ng-switch="ng-switch" on="attribute.attrvaluename">
+                <div ng-switch-when="PRICE">
+                    <form.group>
+                        <input.form.control placeholder="Giá" ng-model="attribute.totalamt" />
+                    </form.group>
+                    <form.group>
+                        <input.form.control placeholder="Đơn vị" ng-model="attribute.unit" />
+                    </form.group>
+                </div>
+                <div ng-switch-default="ng-switch-default">
+                    <form.group>
+                        <input.form.control placeholder="%%attribute.attrvaluename%%" ng-model="attribute.path" />
+                    </form.group>
+                </div>
+            </div>
+        </div>
         <form.group>
-            <input.form.control placeholder="Nhập tên sản phẩm" ng-model="prodcode" value="Samsung J7 Pro" />
-        </form.group>
-        <form.group>
-            <input.form.control placeholder="Giá" ng-model="price" value="200000" />
-        </form.group>
-        <form.group>
-            <input.form.control placeholder="Đơn vị" ng-model="unit" value="chiếc" />
-        </form.group>
-        <form.group>
-            <select.form.control placeholder="Chọn lĩnh vực" ng-model="categoryid">
-                <option value="1">Chọn lĩnh vực</option>
+            <select.form.control placeholder="Chọn lĩnh vực" ng-model="product.categoryid" ng-options="subCategory.categoryid as subCategory.categoryname for subCategory in category.children">
+                <option value="">Chọn lĩnh vực</option>
             </select.form.control>
         </form.group>
         <form.group>
-            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" ng-model="proddesc" />
+            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" ng-model="product.proddesc" />
         </form.group>
         <form.group>
             <btn.success>Hoàn thành</btn.success>
-            <btn.default>Chỉnh sửa</btn.default>
+            <btn.default tag="a" href="/clientarea/service">Trở về</btn.default>
         </form.group>
     </form>
 </root>

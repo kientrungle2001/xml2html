@@ -1,0 +1,2031 @@
+idPartner: 2
+namePartner: web
+keyPartner: 3be3b14f25aef540d6617aac86685bb1
+
+A, Thông tin tài khoản:
+
+Kiểu dữ liệu:
+
+	public string accid ; // id sinh tự động
+	public int acctype ; // loại tài khoản (1- tư nhân, 2- tổ chức)
+	public string fullname ; // Tên khách hàng
+	public int gender; // giới tính ( 1 - nam, 2- nữ)
+	public string email ; // Địa chỉ email khách hàng
+	public string phone; // Số điện thoại khách hàng
+	public string addressid ; // id bảng Address
+	public date dateofbirth; //   ngày sinh 
+	public string code; // mã xác thực dùng khi tạo tài khoản
+	public int status; 
+	public string avatar ; // Ảnh đại diện 
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner;
+	public string namePartner ;
+	public string key ; 
+
+1, Function: Đăng ký tài khoản (OK)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/account/RegisterAccount
+
+Request:
+{
+	"acctype": 1,
+	"fullname": "Quan Do",
+	"avatar": "",
+	"gender": 1,
+	"email": "quan.hut.09@gmail.com",
+	"phone": "0979081573",
+	"datebirth": "1990-01-10T21:14:00.18",
+	"user_identifier": {
+		"username": "quandm",
+		"password": "14e1b600b1fd579f47433b88e8d85291"
+	},
+	"address_identifier": {
+		"addressname": "Thai Binh City",
+		"latitude": "21.9899",
+		"longitude": "105.79211719999"
+	},
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "4e070e58475a26ee66c65e7e5475d738" // MD5(username + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": "DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2" // accid
+}
+
+2, Function: Cập nhật tài khoản (OK)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/account/UpdateAccount
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+	"acctype": 1,
+	"fullname": "Quan Do",
+	"email": "quan.hut.09@gmail.com",
+	"phone": "0912440516",
+	"datebirth": "1990-01-10T21:14:00.18",
+	"address_identifier": {
+		"addressname": "Phu Do, Ha Noi",
+		"latitude": "20.9899",
+		"longitude": "105.79211719999"
+	},
+	"deleted": false,
+	"status": 1,
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "a5c205bed4816bbcb793ee15b189d8d6" // MD5(accid + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"token": null,
+		"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+		"acctype": 1,
+		"gender": 1,
+		"fullname": "Quan Do",
+		"avatar": "http://test.sper.com.vn/Image/20180509154333.jpg",
+		"email": "quan.hut.09@gmail.com",
+		"user_identifier": {
+			"userid": "317E7CE3-493B-4C64-9609-5C8EF2A9F0B5",
+			"username": "nhanexp",
+			"password": "c56d0e9a7ccec67b4ea131655038d604",
+			"usertype": 0,
+			"active": 1,
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"createddate": "2018-05-07T10:58:49",
+			"updateddate": "2018-05-09T11:17:34",
+			"deleted": false
+		},
+		"address_identifier": {
+			"addressid": "87F3BFBD-BE94-4F28-9817-BCF803410E8C",
+			"addressname": "Phu Do, Ha Noi",
+			"latitude": "20.9899",
+			"longitude": "105.79211719999",
+			"city": "",
+			"zone": "",
+			"zipcode": "",
+			"country": "",
+			"createddate": "2018-05-20T11:25:05.2609049+07:00",
+			"updateddate": "2018-05-20T11:25:05.2609049+07:00",
+			"deleted": false
+		},
+		"wallet_identifier": {
+			"walletid": "1B0CA85D-D755-470A-98F4-2C5EAD5463F6",
+			"walletnum": 217646,
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"balance": 0,
+			"createddate": "2018-05-07T10:58:49",
+			"updateddate": "2018-05-07T10:58:49",
+			"deleted": false
+		},
+		"listServices": [{
+			"serviceid": "C1B8BB75-D32E-48D2-808B-87D4658C113F",
+			"servicename": "Công ty AB",
+			"servicedesc": null,
+			"serviceimg": "http://test.sper.com.vn/Image/20180507112621.png",
+			"accidentifier": null,
+			"categoryid": null,
+			"address_identifier": null,
+			"listProduct": null,
+			"listComment": null,
+			"phone": "123456789",
+			"email": "ab.company@gmail.com",
+			"status": 1,
+			"entityid": null,
+			"createddate": "2018-05-07T11:26:24",
+			"updateddate": "2018-05-07T11:27:29",
+			"deleted": false
+		}],
+		"datebirth": "1990-01-10T21:14:00",
+		"phone": "0912440516",
+		"status": 1,
+		"code": "abd5492c36b1067a58ab70f441de3465",
+		"createddate": "2018-05-07T10:58:48",
+		"updateddate": "2018-05-20T11:25:05",
+		"deleted": false
+	}
+}
+
+
+3, Function: Lấy thông tin tài khoản (OK)
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/account/GetAccount?username=nhanexp&password=14e1b600b1fd579f47433b88e8d85291&idPartner=1&namePartner=sper&key=3ed31aaa9653ed2ff5de554ac4cee7cb
+
+key: MD5(username +idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"token": "fd302596be17d55203f71e2cbd8ccf315e7a70ab3e66abd4eb9866a8916a970ef8bdcf3405603dd2545d963596bd3ea9",
+		"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+		"acctype": 1,
+		"gender": 1,
+		"fullname": "Kiều Danh Nhân",
+		"avatar": "http://test.sper.com.vn/Image/20180509154333.jpg",
+		"email": "nhan.kieudanh@gmail.com",
+		"user_identifier": {
+			"userid": "317E7CE3-493B-4C64-9609-5C8EF2A9F0B5",
+			"usertype": 0,
+			"username": "nhanexp",
+			"password": "c56d0e9a7ccec67b4ea131655038d604",
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"active": 1,
+			"deleted": false,
+			"createddate": "2018-05-07T10:58:49",
+			"updateddate": "2018-05-09T11:17:34"
+		},
+		"address_identifier": {
+			"addressid": "C3EDED47-D486-4830-B280-A9AA752CD662",
+			"addressname": "",
+			"latitude": "21.028511",
+			"longitude": "105.804817",
+			"city": "",
+			"zone": "VN",
+			"zipcode": "123456",
+			"country": "VietNam",
+			"createddate": "2018-05-20T10:53:18.7848607+07:00",
+			"updateddate": "2018-05-20T10:53:18.7848607+07:00",
+			"deleted": false
+		},
+		"wallet_identifier": {
+			"walletid": "1B0CA85D-D755-470A-98F4-2C5EAD5463F6",
+			"walletnum": 217646,
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"balance": 0,
+			"createddate": "2018-05-07T10:58:49",
+			"updateddate": "2018-05-07T10:58:49",
+			"deleted": false
+		},
+		"listServices": [{
+			"serviceid": "C1B8BB75-D32E-48D2-808B-87D4658C113F",
+			"servicename": "Công ty AB",
+			"servicedesc": null,
+			"serviceimg": "http://test.sper.com.vn/Image/20180507112621.png",
+			"accidentifier": null,
+			"categoryid": null,
+			"address_identifier": null,
+			"listProduct": null,
+			"listComment": null,
+			"phone": "123456789",
+			"email": "ab.company@gmail.com",
+			"status": 1,
+			"entityid": null,
+			"createddate": "2018-05-07T11:26:24",
+			"updateddate": "2018-05-07T11:27:29",
+			"deleted": false
+		}],
+		"datebirth": "1990-05-07T00:00:00",
+		"phone": "123456789",
+		"status": 1,
+		"code": "abd5492c36b1067a58ab70f441de3465",
+		"createddate": "2018-05-07T10:58:48",
+		"updateddate": "2018-05-07T11:41:53",
+		"deleted": false
+	}
+}
+
+4, Function: Xác thực tài khoản (OK)
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/authen/AuthenAccount?accid=DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2&codeAuthen=9e62cfd1670e836c4799068971a80f5c&idPartner=1&namePartner=sper&key=0a62afa469fbd50a6d7300d59902ad19
+
+codeAuthen: MD5(MD5(mã code gửi qua email))
+key: MD5(accid + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Xác thực tài khoản thành công",
+		"ReturnCode": 12
+	},
+	"ResponseData": {
+		"accid": "DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2",
+		"token": "9b999e766e9b6cb4a09c815a84457bee419728eab9a53057eea5e480d718d1bd041e5f1e932ee5aa91d32ab55c27bbd1",
+		"acctype": 1,
+		"gender": 1,
+		"fullname": "Quan Do",
+		"avatar": "http://test.sper.com.vn/Image/20180520114114.jpg",
+		"email": "quan.hut.09@gmail.com",
+		"user_identifier": {
+			"userid": "8D394EE9-6863-4EAD-A7C9-926A464BBC0F",
+			"username": "quandm",
+			"password": "c56d0e9a7ccec67b4ea131655038d604",
+			"usertype": 0,
+			"active": 0,
+			"accid": "DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2",
+			"createddate": "2018-05-20T11:41:15",
+			"updateddate": "2018-05-20T11:41:15",
+			"deleted": false
+		},
+		"address_identifier": {
+			"addressid": "7B4CC76F-872C-4BC5-B6FA-B16B097A03FE",
+			"addressname": "Thai Binh City",
+			"latitude": "21.9899",
+			"longitude": "105.79211719999",
+			"city": "",
+			"zone": "",
+			"zipcode": "",
+			"country": "",
+			"createddate": "2018-05-20T11:49:35.783014+07:00",
+			"updateddate": "2018-05-20T11:49:35.783014+07:00",
+			"deleted": false
+		},
+		"wallet_identifier": {
+			"walletid": "E1662A24-EBE5-4778-AC76-C9AEF3BDC40F",
+			"walletnum": 1001,
+			"accid": "DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2",
+			"balance": 0,
+			"createddate": "2018-05-20T11:42:05",
+			"updateddate": "2018-05-20T11:42:05",
+			"deleted": false
+		},
+		"listServices": [],
+		"datebirth": "1990-01-10T21:14:00",
+		"phone": "0979081573",
+		"status": 1,
+		"code": "f3d398f4ddb3c944d8961695e9261025",
+		"createddate": "2018-05-20T11:41:14",
+		"updateddate": "2018-05-20T11:49:35",
+		"deleted": false
+	}
+}
+
+5, Function: Thay đổi mật khẩu
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/authen/ChangePass?token=9b999e766e9b6cb4a09c815a84457bee419728eab9a53057eea5e480d718d1bd041e5f1e932ee5aa91d32ab55c27bbd1&username=quandm&password=550e1bafe077ff0b0b67f4e32f29d751&idPartner=1&namePartner=sper&key=4e070e58475a26ee66c65e7e5475d738
+
+password: MD5(MD5(password người dùng))
+key: MD5(username + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Reset pass thành công",
+		"ReturnCode": 14
+	},
+	"ResponseData": {
+		"userid": "8D394EE9-6863-4EAD-A7C9-926A464BBC0F",
+		"username": "quandm",
+		"password": "579646aad11fae4dd295812fb4526245",
+		"usertype": 0,
+		"active": 0,
+		"accid": "DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2",
+		"createddate": "2018-05-20T11:41:15.797",
+		"updateddate": "2018-05-20T11:54:09.6196765+07:00",
+		"deleted": false
+	}
+}
+
+6, Reset mật khẩu (OK)
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/authen/ResetPass?token=9b999e766e9b6cb4a09c815a84457bee419728eab9a53057eea5e480d718d1bd041e5f1e932ee5aa91d32ab55c27bbd1&username=quandm&email=quan.hut.09@gmail.com&idPartner=1&namePartner=sper&key=4e070e58475a26ee66c65e7e5475d738
+
+password: MD5(MD5(new password sent by email))
+key: MD5(username + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Reset pass thành công",
+		"ReturnCode": 14
+	},
+	"ResponseData": {
+		"userid": "8D394EE9-6863-4EAD-A7C9-926A464BBC0F",
+		"username": "quandm",
+		"password": "924f50c799b7f8a30f4f5268d779bdd9",
+		"usertype": 0,
+		"active": 0,
+		"accid": "DEFFD7CD-86E4-4A10-89F7-DF903EFF93E2",
+		"createddate": "2018-05-20T11:41:15.797",
+		"updateddate": "2018-05-20T11:57:12.4821357+07:00",
+		"deleted": false
+	}
+}
+
+7, Thay đổi avatar (OK)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/account/ChangeAvatar
+
+Request:
+{
+	"token": "ddc63102416fde4b7bedf05613b8c29fdc2da09291d4b28609261ae33376a51e0555f219e2062bdb0c4444f0aa444c08",
+	"accid": "26D66E6E-E0EB-4282-BAF4-3E7507CF323A",
+	"avatar": "", // image định dạng Base64
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "6c56437c073c98323d3e4a79dfe60fe3" //Md5(accid + idpartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thay đổi avatar thành công !",
+		"ReturnCode": 16
+	},
+	"ResponseData": "http://test.sper.com.vn/Image/20180520163456.jpg"
+}
+
+B, THÔNG TIN DỊCH VỤ
+	
+	Kiểu dữ liệu:
+	
+	public string serviceid ; // id định danh
+	public string servicename ; // tên dịch vụ
+	public string servicedesc ; // mô tả dịch vụ
+	public string serviceimg ; // ảnh dịch vụ
+	public string accid // id tài khoản
+	public string categoryid // id của category
+	public string addressid // id của địa chỉ
+	public string phone ; // số điện thoại
+	public string email ; // email
+	public int status ;
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ; 
+	public string namePartner ;
+	public string key;
+
+
+1, Thêm dịch vụ (OK)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/AddService
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"servicename": "Cong Ty Thanh Phong",
+	"servicedesc": "Cong Ty Thanh Phong",
+	"serviceimg": "", // ảnh dạng base64
+	"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+	"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+	"address_identifier": {
+		"addressname": "Ha Noi",
+		"latitude": "21.0501",
+		"longitude": "280.2"
+	},
+	"phone": "0912440516",
+	"email": "quan.hut.09@gmail.com",
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "a5c205bed4816bbcb793ee15b189d8d6" // MD5(accid + idPartner + namePartner + keyPartner)
+}
+
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"servicename": "Cong Ty Thanh Phong",
+		"servicedesc": "Cong Ty Thanh Phong",
+		"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+		"address_identifier": {
+			"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+			"addressname": "Ha Noi",
+			"latitude": "21.0501",
+			"longitude": "280.2",
+			"city": "",
+			"zone": "",
+			"zipcode": "",
+			"country": "",
+			"createddate": "2018-05-20T17:48:26",
+			"updateddate": "2018-05-20T17:48:26",
+			"deleted": false
+		},
+		"phone": "0912440516",
+		"email": "quan.hut.09@gmail.com",
+		"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+		"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+		"status": 0,
+		"deleted": false,
+		"createddate": "2018-05-20T17:48:25.27",
+		"updateddate": "2018-05-20T17:48:25.27",
+		"listProduct": null,
+		"listComment": null
+	}
+}
+2, Lấy thông tin dịch vụ (OK)
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/business/GetService?token=831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a&serviceid=6DB9FE8B-CA15-4712-9A2F-C49759E43FDA&idPartner=1&namePartner=sper&key=51db9e1ac1fcef3f8ba84043008fe49f
+
+key = MD5(serviceid + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"servicename": "Cong Ty Thanh Phong",
+		"servicedesc": "Cong Ty Thanh Phong",
+		"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+		"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+		"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+		"address_identifier": {
+			"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+			"addressname": "Ha Noi",
+			"latitude": "21.0501",
+			"longitude": "280.2",
+			"city": "",
+			"zone": "",
+			"zipcode": "",
+			"country": "",
+			"createddate": "2018-05-20T17:48:26",
+			"updateddate": "2018-05-20T17:48:26",
+			"deleted": false
+		},
+		"listProduct": [],
+		"listComment": [],
+		"phone": "0912440516",
+		"email": "quan.hut.09@gmail.com",
+		"status": 0,
+		"createddate": "2018-05-20T17:48:25",
+		"updateddate": "2018-05-20T17:48:25",
+		"deleted": false
+	}
+}
+
+3, Cập nhật thông tin dịch vụ (OK}
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/UpdateService
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+	"servicename": "Cong Ty Thanh Phong",
+	"servicedesc": "Chuyen thi cong cong trinh",
+	"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+	"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+	"address_identifier": {
+		"address_name": "Ha Noi",
+		"latitude": "21.0501",
+		"longitude": "280.2"
+	},
+	"phone": "0912440516",
+	"email": "quan.hut.09@gmail.com",
+	"status": 1,
+	"deleted": false,
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "51db9e1ac1fcef3f8ba84043008fe49f"  //MD5(serviceid + idPartner + namePartner + keyPartner)
+}
+
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"servicename": "Cong Ty Thanh Phong",
+		"servicedesc": "Chuyen thi cong cong trinh",
+		"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+		"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+		"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+		"address_identifier": {
+			"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+			"addressname": "Ha Noi",
+			"latitude": "21.0501",
+			"longitude": "280.2",
+			"city": "",
+			"zone": "",
+			"zipcode": "",
+			"country": "",
+			"createddate": "2018-05-20T17:48:26",
+			"updateddate": "2018-05-20T17:48:26",
+			"deleted": false
+		},
+		"listProduct": [],
+		"listComment": [],
+		"phone": "0912440516",
+		"email": "quan.hut.09@gmail.com",
+		"status": 1,
+		"createddate": "2018-05-20T17:48:25",
+		"updateddate": "2018-05-20T18:17:12",
+		"deleted": false
+	}
+}
+
+4, Lấy thông tin dịch vụ theo category {OK}
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/business/SearchServiceByCate?token=831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a&lstcategoryid=D7B91EAF-5F7B-4E53-9474-8EFAF26F0007&latitude=21.028511&longitude=280.2&idPartner=1&namePartner=sper&key=beddfb19f9f65518c1270dc246e858a3
+
+key = MD5(idPartner + namePartner + keyPartner)
+
+Response: 
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": [{
+			"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+			"servicename": "Cong Ty Thanh Phong",
+			"servicedesc": "Chuyen thi cong cong trinh",
+			"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+			"address_identifier": {
+				"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+				"addressname": "Ha Noi",
+				"latitude": "21.0501",
+				"longitude": "280.2",
+				"city": "",
+				"zone": "",
+				"zipcode": "",
+				"country": "",
+				"createddate": "2018-05-20T17:48:26",
+				"updateddate": "2018-05-20T17:48:26",
+				"deleted": false
+			},
+			"phone": "0912440516",
+			"email": "quan.hut.09@gmail.com",
+			"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"status": 1,
+			"deleted": false,
+			"createddate": "2018-05-20T17:48:25",
+			"updateddate": "2018-05-20T18:17:12.487",
+			"listProduct": null,
+			"listComment": null
+		},
+		{
+			"serviceid": "87AA3B95-7EEC-48A5-8B42-1431EFF59506",
+			"servicename": "Cong Ty Thanh Phong",
+			"servicedesc": "Cong Ty Thanh Phong",
+			"serviceimg": "http://test.sper.com.vn/Image/20180520172738.jpg",
+			"address_identifier": {
+				"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+				"addressname": "Ha Noi",
+				"latitude": "21.0501",
+				"longitude": "280.2",
+				"city": "",
+				"zone": "",
+				"zipcode": "",
+				"country": "",
+				"createddate": "2018-05-20T17:48:26",
+				"updateddate": "2018-05-20T17:48:26",
+				"deleted": false
+			},
+			"phone": "0912440516",
+			"email": "quan.hut.09@gmail.com",
+			"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"status": 0,
+			"deleted": false,
+			"createddate": "2018-05-20T17:27:01.37",
+			"updateddate": "2018-05-20T17:27:01.37",
+			"listProduct": null,
+			"listComment": null
+		}
+	],
+}
+
+5, Lấy thông tin dịch vụ theo nội dung (OK)
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/business/SearchServiceByContent?token=831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a&content=cong-trinh&latitude=21.028511&longitude=280.2&idPartner=1&namePartner=sper&key=beddfb19f9f65518c1270dc246e858a3
+
+key = MD5(idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": [{
+		"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"servicename": "Cong Ty Thanh Phong",
+		"servicedesc": "Chuyen thi cong cong trinh",
+		"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+		"address_identifier": {
+			"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+			"addressname": "Ha Noi",
+			"latitude": "21.0501",
+			"longitude": "280.2",
+			"city": "",
+			"zone": "",
+			"zipcode": "",
+			"country": "",
+			"createddate": "2018-05-20T17:48:26",
+			"updateddate": "2018-05-20T17:48:26",
+			"deleted": false
+		},
+		"phone": "0912440516",
+		"email": "quan.hut.09@gmail.com",
+		"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+		"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+		"status": 1,
+		"deleted": false,
+		"createddate": "2018-05-20T17:48:25",
+		"updateddate": "2018-05-20T18:17:12.487",
+		"listProduct": null,
+		"listComment": null
+	}],
+}
+
+C, THÔNG TIN SẢN PHẨM
+
+Kiểu dữ liệu products
+	
+	public string prodid ;
+	public string prodcode ;
+	public string proddesc ;
+	public string attrsetid;
+	public string categoryid ;
+	public string serviceid ;
+	public int status ;
+	public DateTime validate ;
+	public double rate;
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ;
+	public string namePartner ;
+	public string key ;
+
+1, Lấy thông tin sản phẩm
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/business/GetProduct?token=04fefe0800d3127ace17ffe0c2064877072d783ceaf9a954a9aa5725d98dc57a149246594eb157b8aef461de5a4552f9&prodid=3266CE00-65CF-4208-B3F7-1494B591D91C&idPartner=1&namePartner=sper&key=60cbcaa93a255456011aa0cce69a30e3
+
+key: MD5(prodid + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData":{
+		"prodid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+		"prodcode": "Lat nen nha",
+		"proddesc": "Thi cong xay dung nha ho dan",
+		"attributeset_identifier": {
+			"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+			"entityid": "",
+			"entityname": "PRODUCTS",
+			"attrsetvalue": [{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_15030220180315001746.png",
+					"attrvalueid": "85DF2FE7-E25A-491D-9F3D-97F2BB9CFD6D",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "98E9CF10-909F-4647-BDCE-DCD9B9B30B4C",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1503.png",
+					"action": null,
+					"attrvalueid": "991642F7-63E9-4A76-B2E5-A03370D33E73",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "A003A260-6D4A-4956-88D2-F8C8277D776E",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "B5B11352-3723-4353-9643-17401192B8F8",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "D553E21C-BBB5-490A-8BCC-EEF8A77D7B33",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "F9BBBEE8-F2AF-435E-80EA-44998FE8425C",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"totalamt": 1000000,
+					"currency": "VND",
+					"unit": "m2",
+					"action": null,
+					"attrvalueid": "63C3D6CE-9536-4154-89DA-A4FAB379589B",
+					"attrvaluename": "PRICE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				}
+			],
+			"status": 0,
+			"createddate": "2018-04-06T23:33:11.9166633+07:00",
+			"updateddate": "2018-04-06T23:33:11.9166633+07:00",
+			"deleted": false
+        },
+        "categoryid": "382ADA97-495A-4EBF-B4E6-1D48E31C17AA",
+		"serviceid": "D6B01A38-2572-4ED7-A088-95211D269CB1",        
+		"address_identifier": null,
+		"listComment": [{
+				"cmtid": "B2595D18-A529-4993-BE06-31487EB89228",
+				"cmtdesc": "San pham gia bao nhieu",
+				"entityid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+				"status": 0,
+				"accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+				"createdbyaccid": null,
+                "avatar": null,
+                "type": 0,
+				"createddate": "2018-02-04T12:01:33",
+				"updateddate": "2018-02-04T12:18:56",
+				"deleted": false
+			},
+			{
+				"cmtid": "E3786842-3BA5-4DFD-937F-21B45FEA215B",
+				"cmtdesc": "B?o hành d?ch v? trong bao lâu ?",
+				"prodid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+				"status": 1,
+				"accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+				"createdbyaccid": null,
+                "avatar": null,
+                "type": 0,
+				"createddate": "2018-02-04T22:49:42",
+				"updateddate": "2018-02-04T22:49:42",
+				"deleted": false
+			}
+		],
+		"countLike": 1,
+		"countShare": 0,
+		"status": 1,
+		"validate": "2018-01-31T22:22:00",
+        "rate": 3.333333,
+        "expiredate": "2018-01-28T16:32:11",
+		"createddate": "2018-01-28T16:32:11",
+		"updateddate": "2018-03-15T00:17:47",
+		"deleted": false
+	}
+}
+
+2, Lấy danh sách sản phẩm theo dịch vụ
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/business/GetListProduct?token=04fefe0800d3127ace17ffe0c2064877072d783ceaf9a954a9aa5725d98dc57a149246594eb157b8aef461de5a4552f9&serviceid=D6B01A38-2572-4ED7-A088-95211D269CB1&idPartner=1&namePartner=sper&key=7c7b41384a4049ac46ca3e87f4a9db38
+
+key: MD5(serviceid + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData":[{
+			"prodid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+			"prodcode": "Lat nen nha",
+			"proddesc": "Thi cong xay dung nha ho dan",
+			"validate": "2018-01-31T22:22:00.18",
+			"status": 1,
+			"deleted": false,
+			"createddate": "2018-01-28T16:32:11.527",
+			"updateddate": "2018-01-28T16:32:11.527",
+			"attributeset_identifier": null,
+			"category_info": "dsfhsdjhfsdjhf",
+			"service_info": "fsdjhfhdshfdshf",
+			"address_identifier": null,
+			"listComment": [], // insert data to here
+            "rate": 0,
+            "countLike": 123,
+            "countShare":12232
+		} // list product
+	]
+}
+
+
+3, Tạo thông tin sản phẩm
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/AddProduct
+
+Request:
+{
+	"token": "759ab64e93b0b29c1818adc6ef4dd46ed3f3822fedfb03bc985bd0883efee245ab7b8df7b4fd35c1e088d38f6bc88abc",
+	"prodcode": "Test 0803",
+	"proddesc": "Test 0803",
+	"serviceid": "11B254A5-1378-4783-81DA-08806820CEFF",
+	"categoryid": "05A8A2D3-EBCC-4B98-A732-5FAD8351C787",
+	"attributeset_identifier": {
+		"entityname": "PRODUCTS",
+		"attrsetvalue": [{
+				"name": "IMAGE_0803",
+				"path": "" // ảnh định dạng base64
+			},
+			{
+				"name": "PRICE",
+				"totalamt": 1000000,
+				"currency": "VND",
+				"unit": "m2"
+			}
+		]
+	},
+	"status": 1,
+	"validate": "2018-01-31T22:22:00.18",
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "aa5aa0de9839d423bd54c7dba7c6ae0c" // MD5(serviceid + idPartner + namePartner + keyPartner)
+}
+
+Response: 
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData":{
+		"prodid": "2DCCC69E-25D6-4929-B665-AB444C2CD2C6",
+		"prodcode": "Test 0803",
+		"proddesc": "Test 0803",
+		"attributeset_identifier": {
+			"attrsetid": "A0F0349B-1873-499A-9D54-46AF9C040AC6",
+			"entityname": "PRODUCTS",
+			"attrsetvalue": [{
+					"name": "IMAGE_0803",
+					"path": "http://test.sper.com.vn/Image/IMAGE_0803.png",
+					"attrvalueid": "EEA802CD-CA9E-487A-BF92-9147EA1BFEAC",
+					"attrvaluename": null,
+					"createddate": "2018-01-24T22:22:00.18",
+					"updateddate": "2018-01-24T22:22:00.18",
+					"deleted": false
+				},
+				{
+					"totalamt": 1000000,
+					"currency": "VND",
+					"unit": "m2",
+					"attrvalueid": "26CD1483-EE92-4632-99C0-62A398B69AEE",
+					"attrvaluename": null,
+					"createddate": "2018-01-24T22:22:00.18",
+					"updateddate": "2018-01-24T22:22:00.18",
+					"deleted": false
+				}
+			],
+			"status": 0,
+			"createddate": "2018-03-08T22:07:10.7989465+07:00",
+			"updateddate": "2018-03-08T22:07:10.7989465+07:00",
+			"deleted": false
+		},
+        "categoryid": "05A8A2D3-EBCC-4B98-A732-5FAD8351C787",
+        "serviceid": "11B254A5-1378-4783-81DA-08806820CEFF",
+		"listComment": null,
+		"status": 1,
+		"validate": "2018-01-31T22:22:00.18",
+		"rate": 0,
+		"createddate": "2018-03-08T22:07:10.7677464+07:00",
+		"updateddate": "2018-03-08T22:07:10.7677464+07:00",
+		"deleted": false
+	}
+}
+
+4, Cập nhật thông tin sản phẩm
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/UpdateProduct
+
+Action:
+	-	ADD: Thêm mới ảnh, giá,...
+	-	UPDATE: Cập nhật thông tin ảnh, giá,...
+Request:
+
+{
+	"token": "759ab64e93b0b29c1818adc6ef4dd46ed3f3822fedfb03bc985bd0883efee245ab7b8df7b4fd35c1e088d38f6bc88abc",
+	"prodid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+	"prodcode": "Lat nen nha",
+	"proddesc": "Thi cong xay dung nha ho dan",
+	"attributeset_identifier": {
+		"entityname": "PRODUCTS",
+		"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+		"deleted": false,
+		"createddate": "2018-01-24T22:22:00.18",
+		"updateddate": "2018-01-24T22:22:00.18",
+		"attrsetvalue": [{
+				"action": "ADD",
+				"name": "IMAGE_1203",
+				"path": ""// ảnh định dạng base 64
+			},
+			{
+				"action": "UPDATE",
+				"name": "IMAGE_120302",
+				"attrvalueid": "85DF2FE7-E25A-491D-9F3D-97F2BB9CFD6D",
+				"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+				"path": "" // ảnh đã convert to base64
+			}
+		]
+	},
+	"status": 1,
+	"validate": "2018-01-31T22:22:00.18",
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "60cbcaa93a255456011aa0cce69a30e3" // MD5(prodid + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData":{
+		"prodid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+		"prodcode": "Lat nen nha",
+		"proddesc": "Thi cong xay dung nha ho dan",
+		"attributeset_identifier": {
+			"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+			"entityid": "",
+			"entityname": "PRODUCTS",
+			"attrsetvalue": [{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_15030220180315001746.png",
+					"attrvalueid": "85DF2FE7-E25A-491D-9F3D-97F2BB9CFD6D",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "98E9CF10-909F-4647-BDCE-DCD9B9B30B4C",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1503.png",
+					"action": null,
+					"attrvalueid": "991642F7-63E9-4A76-B2E5-A03370D33E73",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "A003A260-6D4A-4956-88D2-F8C8277D776E",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "B5B11352-3723-4353-9643-17401192B8F8",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "D553E21C-BBB5-490A-8BCC-EEF8A77D7B33",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"name": null,
+					"path": "http://test.sper.com.vn/Image/IMAGE_1203.png",
+					"action": null,
+					"attrvalueid": "F9BBBEE8-F2AF-435E-80EA-44998FE8425C",
+					"attrvaluename": "IMAGE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				},
+				{
+					"totalamt": 1000000,
+					"currency": "VND",
+					"unit": "m2",
+					"action": null,
+					"attrvalueid": "63C3D6CE-9536-4154-89DA-A4FAB379589B",
+					"attrvaluename": "PRICE",
+					"attrsetid": "D87054E3-93D5-46AE-A32F-7EA7C8B0F586",
+					"createddate": "2018-01-24T22:22:00",
+					"updateddate": "2018-01-24T22:22:00",
+					"deleted": false
+				}
+			],
+			"status": 0,
+			"createddate": "2018-04-06T23:33:11.9166633+07:00",
+			"updateddate": "2018-04-06T23:33:11.9166633+07:00",
+			"deleted": false
+        },
+        "categoryid": "382ADA97-495A-4EBF-B4E6-1D48E31C17AA",
+		"serviceid": "D6B01A38-2572-4ED7-A088-95211D269CB1",        
+		"listComment": [{
+				"cmtid": "B2595D18-A529-4993-BE06-31487EB89228",
+				"cmtdesc": "San pham gia bao nhieu",
+				"entityid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+				"status": 0,
+				"accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+				"createdbyaccid": null,
+                "avatar": null,
+                "type": 0,
+				"createddate": "2018-02-04T12:01:33",
+				"updateddate": "2018-02-04T12:18:56",
+				"deleted": false
+			},
+			{
+				"cmtid": "E3786842-3BA5-4DFD-937F-21B45FEA215B",
+				"cmtdesc": "B?o hành d?ch v? trong bao lâu ?",
+				"prodid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+				"status": 1,
+				"accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+				"createdbyaccid": null,
+                "avatar": null,
+                "type": 0,
+				"createddate": "2018-02-04T22:49:42",
+				"updateddate": "2018-02-04T22:49:42",
+				"deleted": false
+			}
+		],
+		"countLike": 1,
+		"countShare": 0,
+		"status": 1,
+		"validate": "2018-01-31T22:22:00",
+        "rate": 3.333333,
+        "expiredate": "2018-01-28T16:32:11",
+		"createddate": "2018-01-28T16:32:11",
+		"updateddate": "2018-03-15T00:17:47",
+		"deleted": false
+	}
+}
+
+D, THÔNG TIN CATEGORY
+
+Kiểu dữ liệu:
+
+	public string categoryid ;
+	public string categoryname ;
+	public string categorydesc ;
+	public string parentid ;
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ;
+	public string namePartner ;
+	public string key ;
+	
+1, Lấy thông tin danh sách category
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/GetListCateByDate?token=04fefe0800d3127ace17ffe0c2064877072d783ceaf9a954a9aa5725d98dc57a149246594eb157b8aef461de5a4552f9&idPartner=1&namePartner=sper&key=beddfb19f9f65518c1270dc246e858a3
+
+key: MD5(idPartner + namePartner + keyPartner)
+
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":[
+        {
+            "categoryid": "0198FB52-D591-48A5-A968-3A82EFD7E9DA",
+            "categoryname": "T? Ð?i",
+            "categorydesc": "T? Ð?i",
+            "parentid": null,
+            "position": 1,
+            "createddate": "2018-01-28T00:00:00",
+            "updateddate": "2018-01-28T00:00:00",
+            "deleted": false
+        }
+    ]
+}
+
+E, THÔNG TIN COMMENT
+
+Kiểu dữ liệu:
+
+	public string cmtid;
+	public string cmtdesc;
+	public int type; // 1 - service, 2 - product
+	public string entityid; // ID của serviceid or prodid
+	public string accid;
+	public string createdbyaccid;
+	public int status; //  0 - chưa đọc , 1 đã đọc
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner;
+	public string namePartner;
+	public string key;
+
+1, Tạo thông tin comment
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/review/CreateComment
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"cmtdesc": "Dịch vụ tốt, bộ phận chăm sóc KH tốt",
+	"type": 2,
+	"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+	"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+	"createdbyaccid": "61A7900A-E0FE-43FB-88AF-F7685BF31665",
+	"status": 1,
+	"idPartner": 1,
+	"namePartner": "sper",
+	"key": "9fcf885f78339ccf444f4507bbbf3b8d" // MD5(entityid + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"cmtid": "7F35C823-BD8D-4743-A4BE-E6BFB618F3B1",
+		"cmtdesc": "Dịch vụ tốt, bộ phận chăm sóc KH tốt",
+		"type": 2,
+		"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+		"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+		"createdbyaccid": "61A7900A-E0FE-43FB-88AF-F7685BF31665",
+		"status": 0,
+		"deleted": false,
+		"createddate": "2018-05-23T15:25:19.357",
+		"updateddate": "2018-05-23T15:25:19.357",
+		"fullname": "thế thành",
+		"avatar": "",
+		"countComment": 5
+	}
+}
+
+2, Cập nhật thông tin comment (chỉ cho phép sửa nội dung, xóa, cập nhật đã đọc hay chưa đọc comment)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/review/UpdateComment
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"cmtdesc": "Dịch vụ tốt, bộ phận chăm sóc KH tốt",
+	"type": 2,
+	"cmtid":"7F35C823-BD8D-4743-A4BE-E6BFB618F3B1",
+	"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+	"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+	"createdbyaccid": "61A7900A-E0FE-43FB-88AF-F7685BF31665",
+	"status": 1,
+	"idPartner": 1,
+	"namePartner": "sper",
+	"deleted":true,
+	"key": "9fcf885f78339ccf444f4507bbbf3b8d" // MD5(cmtid + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"cmtid": "7F35C823-BD8D-4743-A4BE-E6BFB618F3B1",
+		"cmtdesc": "Dịch vụ tốt, bộ phận chăm sóc KH tốt",
+		"type": 2,
+		"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+		"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+		"createdbyaccid": "61A7900A-E0FE-43FB-88AF-F7685BF31665",
+		"status": 0,
+		"deleted": true,
+		"createddate": "2018-05-23T15:25:19.357",
+		"updateddate": "2018-05-23T15:25:19.357",
+		"fullname": "thế thành",
+		"avatar": "",
+		"countComment": 4
+	}
+}
+
+3, Lấy danh sách comment theo sản phẩm
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/review/GetListComment?token=831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a&entityid=06A4F741-3900-4D5D-B31E-2567618EBB49&idPartner=1&namePartner=sper&key=9fcf885f78339ccf444f4507bbbf3b8d
+
+key: MD5(entityid + idPartner + namePartner + keyPartner)
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": [{
+			"cmtid": "405F5A1E-A22A-49D0-8D01-2A365977CA64",
+			"cmtdesc": "Dịch vụ tốt, bộ phận chăm sóc KH tốt",
+			"type": 2,
+			"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+			"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+			"createdbyaccid": "61A7900A-E0FE-43FB-88AF-F7685BF31665",
+			"status": 0,
+			"deleted": false,
+			"createddate": "2018-05-23T15:20:00.003",
+			"updateddate": "2018-05-23T15:20:00.003",
+			"avatar": "",
+			"fullname": "thế thành",
+			"countComment": 0
+		},
+		{
+			"cmtid": "50877132-B31E-4963-B74A-EEFA96834618",
+			"cmtdesc": "công ty xây dựng abc",
+			"type": 2,
+			"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+			"accid": "",
+			"createdbyaccid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"status": 0,
+			"deleted": false,
+			"createddate": "2018-05-07T13:28:28.78",
+			"updateddate": "2018-05-07T13:28:28.78",
+			"avatar": "http://test.sper.com.vn/Image/20180520163456.jpg",
+			"fullname": "Quan Do",
+			"countComment": 0
+		},
+		{
+			"cmtid": "7D1A59FC-360A-461B-A71F-D1EBFCC11421",
+			"cmtdesc": "nhà ở chất lượng cao",
+			"type": 2,
+			"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+			"accid": "",
+			"createdbyaccid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"status": 0,
+			"deleted": false,
+			"createddate": "2018-05-07T13:17:19.633",
+			"updateddate": "2018-05-07T13:17:19.633",
+			"avatar": "http://test.sper.com.vn/Image/20180520163456.jpg",
+			"fullname": "Quan Do",
+			"countComment": 0
+		},
+		{
+			"cmtid": "7F35C823-BD8D-4743-A4BE-E6BFB618F3B1",
+			"cmtdesc": "Dịch vụ tốt, bộ phận chăm sóc KH tốt",
+			"type": 2,
+			"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+			"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+			"createdbyaccid": "61A7900A-E0FE-43FB-88AF-F7685BF31665",
+			"status": 0,
+			"deleted": false,
+			"createddate": "2018-05-23T15:25:19.357",
+			"updateddate": "2018-05-23T15:25:19.357",
+			"avatar": "",
+			"fullname": "thế thành",
+			"countComment": 0
+		},
+		{
+			"cmtid": "A8C84E01-53D4-494E-8611-99BC0F0074E2",
+			"cmtdesc": "comment thứ ba",
+			"type": 2,
+			"entityid": "06A4F741-3900-4D5D-B31E-2567618EBB49",
+			"accid": "",
+			"createdbyaccid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"status": 0,
+			"deleted": false,
+			"createddate": "2018-05-07T13:34:57.753",
+			"updateddate": "2018-05-07T13:34:57.753",
+			"avatar": "http://test.sper.com.vn/Image/20180520163456.jpg",
+			"fullname": "Quan Do",
+			"countComment": 0
+		}
+	],
+}
+
+F, THÔNG TIN MESSAGE
+
+Kiểu dữ liệu:
+
+public string msgid;
+public string msgtitle; // Tiêu đề của tin nhắn
+public string msgdesc; // Nội dung của tin nhắn
+public int type; // 1 - service, 2 - product
+public int status; //  0 - chưa đọc , 1 đã đọc
+public string entityid; // ID của serviceid or prodid
+public string accid ;
+public string createdbyaccid;
+public bool deleted;
+public DateTime createddate;
+public DateTime updateddate;
+public int idPartner;
+public string namePartner;
+public string key;
+
+1, Tạo tin nhắn
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/review/CreateMessage
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"msgtitle":"Don nha dip tet",
+	"msgdesc":"Don nha dip tet",
+	"type": 2,
+	"entityid":"3266CE00-65CF-4208-B3F7-1494B591D91C",
+	"accid":"9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+	"createdbyaccid":"41243526-EF62-49E5-A4A8-FA1C1E1952A1",
+	"idPartner":1,
+	"namePartner": "sper",
+	"key": "beddfb19f9f65518c1270dc246e858a3" // MD5(entityid + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":{
+		"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+        "msgid": "B794DBCA-744A-4287-AA74-E05ED930ED00",
+        "msgtitle": "Don nha dip tet",
+        "msgdesc": "Don nha dip tet",
+        "entityid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+        "accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+        "createdbyaccid": "41243526-EF62-49E5-A4A8-FA1C1E1952A1",
+        "avatar": "",
+        "status": 1,
+        "type": 0,
+        "deleted": false,
+        "createddate": "2018-02-04T23:16:08.987",
+        "updateddate": "2018-02-04T23:16:08.987"
+    }
+}
+
+2, Cập nhật tin nhắn (chỉ cho phép cập nhật trạng thái đọc hoặc xóa tin nhắn)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/review/UpdateMessage
+
+Request:
+{
+	"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+	"msgid": "B794DBCA-744A-4287-AA74-E05ED930ED00",
+	"status":1,
+	"deleted": true,
+	"idPartner":1,
+	"namePartner": "sper",
+	"key": "beddfb19f9f65518c1270dc246e858a3" MD5(msgid + idPartner + namePartner + keyPartner)
+}
+
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":{
+		"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+        "msgid": "B794DBCA-744A-4287-AA74-E05ED930ED00",
+        "msgtitle": "Don nha dip tet",
+        "msgdesc": "Don nha dip tet",
+        "entityid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+        "accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+        "createdbyaccid": "41243526-EF62-49E5-A4A8-FA1C1E1952A1",
+        "avatar": "",
+        "status": 1,
+        "type": 0,
+        "deleted": false,
+        "createddate": "2018-02-04T23:16:08.987",
+        "updateddate": "2018-02-04T23:16:08.987"
+    }
+}
+
+3, Lấy danh sách tin nhắn của người dùng
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/review/GetListMessage?token=1c6c3d91f014469b80849438a042dc26eccb92ae1527260dcd484657e6978cc8a7ebcea11518698b12a776e1a11c255d&accid=9E0D338F-6672-43D3-8C97-8FAFC6D5383F&idPartner=1&namePartner=sper&key=05ea400614f5b4a97e0f867866698505
+
+key = MD5(accid + idPartner + namePartner + keyPartner)
+
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":[
+        {
+            "msgid": "B794DBCA-744A-4287-AA74-E05ED930ED00",
+            "msgtitle": "Don nha dip tet",
+            "msgdesc": "Don nha dip tet",
+            "entityid": "3266CE00-65CF-4208-B3F7-1494B591D91C",
+            "accid": "9E0D338F-6672-43D3-8C97-8FAFC6D5383F",
+            "createdbyaccid": "41243526-EF62-49E5-A4A8-FA1C1E1952A1",
+            "avatar":"",
+			"fullname":"AAAAA"
+            "status": 1,
+            "type":0,
+            "deleted": false,
+            "createddate": "2018-02-04T23:16:08.987",
+            "updateddate": "2018-02-04T23:16:08.987"
+        }
+    ]
+}
+
+G, ĐÁNH DẤU (MARK)
+
+Kiểu dữ liệu:
+
+	public string markid ;
+	public string accid ;
+	public int type ; // 1 - service, 2 - product
+	public string entityid ; // ID của serviceid or prodid
+	public int status ;
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ;
+	public string namePartner ;
+	public string key ;
+
+1, Tạo thông tin đánh dấu
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/AddMark
+
+Request:
+{
+  "token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+  "accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+  "type": 1,
+  "entityid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+  "idPartner": 1,
+  "namePartner": "sper",
+  "key": "51db9e1ac1fcef3f8ba84043008fe49f" // MD5(entityid + idPartner + namePartner+ keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+		"markid": "1BB1B1EA-FD2C-481D-8931-3AF9A48C3D19",
+		"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+		"type": 1,
+		"entityid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"status": 0,
+		"idPartner": 1,
+		"namePartner": "sper",
+		"key": "51db9e1ac1fcef3f8ba84043008fe49f",
+		"createddate": "2018-05-22T15:51:03.9812862+07:00",
+		"updateddate": "2018-05-22T15:51:03.9812862+07:00",
+		"deleted": false
+	}
+}
+
+2, Cập nhật thông tin đánh dấu (chỉ cho phép cập nhật xóa đánh dấu)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/UpdateMark
+
+Request:
+{
+  "token": "496cc647d7c9ab35b530960f7a611b6e6be08acfc05e427ed0794eaae97d7e578b3e1c89ebda68ea8225dd7cd9fee823",
+  "markid": "A800C69A-3247-47AA-A53B-521CACCAC4EC",
+  "deleted": true,
+  "idPartner": 1,
+  "namePartner": "sper",
+  "key": "0de6a34244060a3b4acf1612e9a42b8e" // MD5(markid + idPartner + namePartner+ keyPartner)
+}
+
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":{
+		"markid": "88BEC045-3645-42DD-8E80-278FAF8F6D62",
+		"createdbyaccid": "08EBC399-B947-4CC3-80A3-133388AA28EB",
+		"type": 2,
+		"entityid": "16647314-DF52-4E87-AC35-266B350F6780",
+		"status": 1,
+		"createddate": "2018-03-22T23:19:17.3156943+07:00",
+		"updateddate": "2018-03-22T23:19:17.3156943+07:00",
+		"deleted": true
+    }
+}
+
+3, Lấy danh sách đánh dấu
+
+Phương thức: GET
+
+URL: http://test.sper.com.vn/api/business/GetListMark?token=831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a&accid=01ADB580-0E16-4885-8F55-0FC89BE2E2C6&idPartner=1&namePartner=sper&key=a1240e52df921a4f97d89ab7a2b77401
+
+key: MD5(accid + idPartner + namePartner + keyPartner) 
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": [{
+		"markid": "1BB1B1EA-FD2C-481D-8931-3AF9A48C3D19",
+		"type": 1,
+		"entityid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"service_identifier": {
+			"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+			"servicename": "Cong Ty Thanh Phong",
+			"servicedesc": "Chuyen thi cong cong trinh",
+			"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+			"address_identifier": {
+				"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+				"addressname": "Ha Noi",
+				"latitude": "21.0501",
+				"longitude": "280.2",
+				"city": "",
+				"zone": "",
+				"zipcode": "",
+				"country": "",
+				"createddate": "2018-05-20T17:48:26",
+				"updateddate": "2018-05-20T17:48:26",
+				"deleted": false
+			},
+			"listProduct": [],
+			"listComment": [],
+			"phone": "0912440516",
+			"email": "quan.hut.09@gmail.com",
+			"status": 1,
+			"createddate": "2018-05-20T17:48:25",
+			"updateddate": "2018-05-20T18:17:12",
+			"deleted": false
+		},
+		"product_identifier": null,
+		"status": 0,
+		"createddate": "2018-05-22T15:51:03",
+		"updateddate": "2018-05-22T15:51:03",
+		"deleted": false
+	}],
+}
+
+H, LỊCH SỬ
+
+Kiểu dữ liệu:
+
+	public string historyid ;
+	public string accid ;
+	public int type ; // 1 - service, 2 - product
+	public string entityid ; // ID của serviceid or prodid
+	public int status ;
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ;
+	public string namePartner ;
+	public string key ;
+
+1, Tạo lịch sử
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/AddHistory
+
+Request:
+{
+  "token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+  "accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+  "type": 1,
+  "entityid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+  "idPartner": 1,
+  "namePartner": "sper",
+  "key": "51db9e1ac1fcef3f8ba84043008fe49f" // MD5(entityid + idpartner + namePartner + keyPartner)
+}
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": {
+		"token": "831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a",
+		"historyid": "5AAE591A-8C4B-4030-BF3A-D12FB83A7325",
+		"accid": "01ADB580-0E16-4885-8F55-0FC89BE2E2C6",
+		"type": 1,
+		"entityid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"status": 0,
+		"idPartner": 1,
+		"namePartner": "sper",
+		"key": "51db9e1ac1fcef3f8ba84043008fe49f",
+		"createddate": "2018-05-22T15:17:30.1180998+07:00",
+		"updateddate": "2018-05-22T15:17:30.1180998+07:00",
+		"deleted": false
+	}
+}
+
+2, Cập nhật lịch sử (chỉ cho phép cập nhật trạng thái hoặc trường deleted)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/UpdateHistory
+
+Request:
+{
+  "token": "abb54a71bed5d8f8cb0a08954f195fecb62beeabdafcbc1d2d28f546ce52d516ead8fc335ed2c2f751be1a17a20b0a06",
+  "historyid": "C45DE3E9-5187-44C0-9277-5FDC218D5472",
+  "deleted":true,
+  "idPartner": 1,
+  "namePartner": "sper",
+  "key": "f5f7ffce74ab658ca647a1d49b6ca501",// MD5(historyid + idpartner + namePartner + keyPartner)
+}
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":{
+		"historyid": "88BEC045-3645-42DD-8E80-278FAF8F6D62",
+		"createdbyaccid": "08EBC399-B947-4CC3-80A3-133388AA28EB",
+		"type": 1,
+		"entityid": "16647314-DF52-4E87-AC35-266B350F6780",
+		"status": 1,
+		"createddate": "2018-03-22T23:19:17.3156943+07:00",
+		"updateddate": "2018-03-22T23:19:17.3156943+07:00",
+		"deleted": false
+    }
+}
+
+3, Lấy danh sách lịch sử của người dùng
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/business/GetListHistory?token=831b388ceac91253b05f56708409d2b09c8e50850be5043ab32d7ab1e22acf88c1d6b96e05225a8d981dbf4a50cac54a&accid=01ADB580-0E16-4885-8F55-0FC89BE2E2C6&idPartner=1&namePartner=sper&key=a1240e52df921a4f97d89ab7a2b77401
+
+key: MD5(accid + idPartner + namePartner + keyPartner) 
+
+Response:
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": [{
+		"historyid": "5AAE591A-8C4B-4030-BF3A-D12FB83A7325",
+		"status": 0,
+		"type": 1,
+		"entityid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+		"service_identifier": {
+			"serviceid": "6DB9FE8B-CA15-4712-9A2F-C49759E43FDA",
+			"servicename": "Cong Ty Thanh Phong",
+			"servicedesc": "Chuyen thi cong cong trinh",
+			"serviceimg": "http://test.sper.com.vn/Image/20180520174826.jpg",
+			"accid": "F26D9D8E-F9FF-480A-A84F-2C23F9ED6822",
+			"categoryid": "D7B91EAF-5F7B-4E53-9474-8EFAF26F0007",
+			"address_identifier": {
+				"addressid": "9CBA5E4B-D5F5-4A73-B7FD-5DA4AA4AC4FA",
+				"addressname": "Ha Noi",
+				"latitude": "21.0501",
+				"longitude": "280.2",
+				"city": "",
+				"zone": "",
+				"zipcode": "",
+				"country": "",
+				"createddate": "2018-05-20T17:48:26",
+				"updateddate": "2018-05-20T17:48:26",
+				"deleted": false
+			},
+			"listProduct": [],
+			"listComment": [],
+			"phone": "0912440516",
+			"email": "quan.hut.09@gmail.com",
+			"status": 1,
+			"createddate": "2018-05-20T17:48:25",
+			"updateddate": "2018-05-20T18:17:12",
+			"deleted": false
+		},
+		"product_identifier": null,
+		"createddate": "2018-05-22T15:17:30",
+		"updateddate": "2018-05-22T15:17:30",
+		"deleted": false
+	}],
+}
+
+I, XẾP HẠNG (RATE)
+
+Kiểu dữ liệu:
+
+	public string evaluatid;
+	public string accid;
+	public int value;
+	public int type ; // 1 - service, 2 - product
+	public string entityid ; // ID của serviceid or prodid
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ;
+	public string namePartner ;
+	public string key ; 
+	
+1, Tạo đánh giá xếp hạng
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/review/CreateEvaluation
+
+Request:
+{
+	"token": "1c6c3d91f014469b80849438a042dc26eccb92ae1527260dcd484657e6978cc8a7ebcea11518698b12a776e1a11c255d",
+	"type": 2,
+	"entityid": "0AFAB6C9-838E-4DDC-A2B3-050324FDDA85",
+	"accid": "26D66E6E-E0EB-4282-BAF4-3E7507CF323A",
+	"value": 3,
+	"idPartner": "1",
+	"namePartner": "sper",
+	"key": "d9b843899d22b781e405f2b286880cf0" //MD5(entityid + idpartner + namePartner + keyPartner)
+}
+
+Response:
+
+
+K, YÊU THÍCH (FAVOURITE)
+
+Kiểu dữ liệu:
+
+	public string favouritid ;
+	public int type ; // 1 - service, 2 - product
+	public string entityid ; // ID của serviceid or prodid
+	public string createdbyaccid ;
+	public int favouritype ; // 1- like, 2- share 
+	public bool deleted;
+	public DateTime createddate;
+	public DateTime updateddate;
+	public int idPartner ;
+	public string namePartner ;
+	public string key ;
+
+1, Tạo yêu thích (API này bao gồm chức năng: Like, Dislike và share)
+
+Phương thức: POST
+
+URL: http://test.sper.com.vn/api/review/AddFavourite
+
+Request:
+
+{
+  "token": "7ae9a9b2af5e133e94d7e7d1692ebb9ecd566fc6af8931c1e964b4801625a4784d09adcc1e5036b279d25d4392b75ed6",
+  "type": 2,
+  "entityid": "16647314-DF52-4E87-AC35-266B350F6780",
+  "createdbyaccid":"08EBC399-B947-4CC3-80A3-133388AA28EB", 
+  "favouritype": 1, //  1 - like, 2 - share
+  "idPartner": 1,
+  "namePartner": "sper",
+  "key": "60cbcaa93a255456011aa0cce69a30e3" // MD5(entityid+ idpartner+ namepartner+ keypartner)
+}
+
+Response:
+{
+    "ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+    "ResponseData":{
+        "favouriteid": "2F437B2B-FE54-48E9-A773-6C34ECD4D480",
+        "entityid": "16647314-DF52-4E87-AC35-266B350F6780",
+        "createdbyaccid": "08EBC399-B947-4CC3-80A3-133388AA28EB",
+        "favouritetype": 1,
+        "type": 1,
+        "createddate": "2018-04-06T23:53:12.7333461+07:00",
+        "updateddate": "2018-04-06T23:53:12.7333461+07:00",
+        "deleted": false
+    }
+}
+
+L, TOKEN
+
+1, Lấy token đối với người dùng có tài khoản
+
+Phương thức: GET
+
+Request:
+
+http://test.sper.com.vn/api/authen/GetAccessTokenAccid?accid=9E0D338F-6672-43D3-8C97-8FAFC6D5383F&idPartner=1&namePartner=sper&key=05ea400614f5b4a97e0f867866698505
+
+Trong đó key = MD5(accid+ idPartner+ namePartner+ keyPartner)
+
+Response:
+
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": "f90d17f6f204b7df8018a0d29f0afff33dc3b24a5c8768b7e9a7846490c24fa6ef910976622a4311a042a0bb1443ddae" // token
+}
+
+2, Lấy token đối với người dùng vãng lai, chưa tạo tài khoản
+
+Phương thức: GET
+
+Request:
+
+http://test.sper.com.vn/api/authen/GetAccessToken?idPartner=1&namePartner=sper&key=8d56933162203af1f52a16560d9b48a3
+
+Trong đó key = MD5(APPID + idPartner+ namePartner+ KEY_SERCURITY)
+APPID = "da3e1502cc678218532b61f0a4d0a31c";
+KEY_SERCURITY = "e5f92ab61f0a4d0a31c4004afb85c998";
+
+Response:
+
+{
+	"ResponseStatus": {
+		"Status": true,
+		"Message": "Thành công|Success",
+		"ReturnCode": 1
+	},
+	"ResponseData": "54645f2906420c6fda5489f53147e6ff0d75fd527a249ad97f05cf1e965013d5f191db3377fdc55d263df0ee0c35312b"
+}
+

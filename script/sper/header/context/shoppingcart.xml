@@ -1,6 +1,44 @@
 <root>
-    Cart Item 1<br />
-    Cart Item 2<br />
-    Cart Item 3<br />
-    Cart Item 4<br />
+    <section id="shopping-cart-section" ng-controller="Sper.Checkout.Cart" style="width: 570px;">
+        <table class="table table-hovered">
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn vị</th>
+                <th>Đơn giá</th>
+                <th>Thành tiền</th>
+                <th>Xóa</th>
+            </tr>
+            <tr ng-repeat="item in cart_items">
+                <td style="width: 350px;">
+                <media>
+                    <media.left>
+                        <div style="width: 80px;">
+                            <embed.responsive size="16by9">
+                                <media.object src="%%getImage(item.product).path | thumb:640:360%%" />
+                            </embed.responsive>
+                        </div>
+                    </media.left>
+                    <media.body>
+                        <media.heading>
+                            <div class="fs-14"><a href="/service/product?serviceid=%%item.service.serviceid%%&prodid=%%item.product.prodid%%">%%item.product.prodcode%%</a></div>
+                        </media.heading>
+                    </media.body>
+                </media>
+                </td>
+                <td><span class="pointer" ng-click="decreaseQuantity(item)"> - </span>%%item.quantity%%<span class="pointer" ng-click="increaseQuantity(item)"> + </span></td>
+                <td>%%getPrice(item.product).unit%%</td>
+                <td>%%getPrice(item.product).price | toCurrency%%đ</td>
+                <td>%%getPrice(item.product).price * item.quantity | toCurrency%%đ</td>
+                <td><icon symbol="trash" ng-click="remove($index)" class="pointer" /></td>
+            </tr>
+            <tr>
+                <td colspan="6">Tổng tiền: %%calculateTotal() | toCurrency%%đ</td>
+            </tr>
+        </table>
+
+        <text.center>
+            <btn.success class="btn-cart-page" tag="a" href="/cart"> <fa.1x symbol="shopping-cart" /> Xem giỏ hàng</btn.success>
+        </text.center>
+    </section>
 </root>

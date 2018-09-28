@@ -1,0 +1,32 @@
+<root>
+    <container mt="3">
+        <row>
+            <col md="8" mdo="2">
+                <panel>
+                    <panel.heading>
+                        <img.responsive src="http://placehold.it/1600x900" />
+                    </panel.heading>
+                    <panel.body>
+                        <h2 class="fs-16">Hải Sư - Cơm Niêu Singapore</h2>
+                        <small>2018/09/25 - 11:51 - 17 lượt xem</small>
+                    </panel.body>
+                    <panel.footer>
+                        <media>
+                            <media.left>
+                                <media.object src="http://placehold.it/32x32" class="img-circle" style="width: 32px; height: auto;" />
+                            </media.left>
+                            <media.body>
+                                <media.heading class="fs-14">Trần thạch cao Bảo Vy</media.heading>
+                                <div class="fs-12 text-light">175 Lý Nam Đế</div>
+                            </media.body>
+                        </media>
+                    </panel.footer>
+                </panel>
+            </col>
+        </row>
+    </container>
+    <container ng-controller="Sper.Video.Review">
+        <h2 class="fs-16 text-bold">Video cùng thể loại</h2>
+        <?php require 'items4.xml';?>
+    </container>
+</root>

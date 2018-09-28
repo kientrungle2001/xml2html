@@ -1,0 +1,73 @@
+<root>
+    <modal id="previewModal">
+        <modal.dialog context="primary">
+            <modal.content>
+                <modal.header>Xem trước</modal.header>
+                <modal.body>
+                    <img.responsive src="" id="previewImg" />
+                    <input type="hidden" id="base64Img" />
+                </modal.body>
+                <modal.footer>
+                    <clearfix>
+                        <pull.left>
+                            <btn.success ng-click="updateServiceImg()" data-dismiss="modal">Cập nhật</btn.success>
+                        </pull.left>
+                        <pull.right>
+                            <btn.danger data-dismiss="modal">Đóng lại</btn.danger>
+                        </pull.right>
+                    </clearfix>
+                </modal.footer>
+            </modal.content>
+        </modal.dialog>
+    </modal>
+    <form>
+        <form.group>
+            <div class="relative hover-content" style="height: 200px; overflow: hidden;">
+                <input type="file" id="serviceImg" class="hide" onchange="handleServiceUpload(event)" />
+                <btn.success class="absolute hover-inner" style="bottom: 40%; right: 40%; z-index: 1" onclick="jQuery('#serviceImg').click();">Đổi ảnh đại diện</btn.success>
+                <img.responsive src="%%service.serviceimg || 'http://placehold.it/1366x300'%%" />
+            </div>
+        </form.group>
+        <form.group>
+            <h2>Mô tả dịch vụ</h2>
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập tên công ty / cửa hàng / đội nhóm" ng-model="service.servicename" value="Điện thoại Di Động 101" />
+        </form.group>
+        <form.group>
+            <select.form.control placeholder="Chọn lĩnh vực" ng-model="service.categoryid" ng-options="category.categoryid as category.categoryname for category in categories">
+                
+            </select.form.control>
+        </form.group>
+        <form.group>
+            <select.form.control placeholder="Chọn thành phố" ng-model="service.address_identifier.addcityid" ng-options="city.addcityid as city.addcityname for city in cities" ng-change="selectCity()">
+            </select.form.control>
+        </form.group>
+        <form.group>
+            <select.form.control placeholder="Chọn quận huyện" ng-model="service.address_identifier.addmunicipalityid" ng-options="municipality.addmunicipalityid as municipality.addmunicipalityname for municipality in selectedCity.districts" ng-change="selectDistrict()">
+            </select.form.control>
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập địa chỉ chính" ng-model="service.address_identifier.addressname" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Chọn định vị" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Số chi nhánh" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập số điện thoại" ng-model="service.phone" value="0123456789" />
+        </form.group>
+        <form.group>
+            <input.form.control placeholder="Nhập Email" ng-model="service.email" value="kientrungle2001@gmail.com" />
+        </form.group>
+        <form.group>
+            <textarea.form.control placeholder="Mô tả chi tiết" rows="5" ng-model="service.servicedesc" />
+        </form.group>
+        <form.group>
+            <btn.success ng-click="update()">Hoàn thành</btn.success>
+            <btn.default tag="a" href="/clientarea/service">Quay lại</btn.default>
+        </form.group>
+    </form>
+</root>

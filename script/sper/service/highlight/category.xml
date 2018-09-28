@@ -1,0 +1,22 @@
+<root>
+    <dropdown.menu.div class="dropdown-menu-right dropdown-menu-category" style="width: 300px">
+        <panel mg="0" pd="0" ng-repeat="subCategory in selectedCategory.children" ng-class="{'panel-success': selectedSubCategory === subCategory}">
+            <panel.heading mg="0">
+                <clearfix class="relative">
+                    <a onclick="return false;" ng-click="selectSubCategory(subCategory)" class="collapsed" data-toggle="collapse" href="#sub-category-%%subCategory.categoryid%%"> <icon symbol="chevron-right" /> %%subCategory.categoryname%% </a>
+                    <checkbox class="absolute p-right-5 p-top-0" />
+                </clearfix>
+            </panel.heading>
+            <panel.body pd="0" id="sub-category-%%subCategory.categoryid%%" class="collapse">
+                <list.group mg="0">
+                    <list.group.item ng-repeat="subCategoryLevel2 in subCategory.children" ng-class="{'active': selectedSubCategory === subCategoryLevel2}">
+                        <clearfix class="relative">
+                            <a href="#" onclick="return false;" class="pl-5" ng-click="selectSubCategory(subCategoryLevel2)"> %%subCategoryLevel2.categoryname%%</a>
+                            <checkbox class="absolute p-top-0 p-right-5" />
+                        </clearfix>
+                    </list.group.item>
+                </list.group>
+            </panel.body>
+        </panel>
+    </dropdown.menu.div>
+</root>

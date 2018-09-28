@@ -18,6 +18,27 @@
     </container>
 
     <container ng-controller="Sper.ClientArea.Info">
+        <modal id="previewModal">
+            <modal.dialog context="primary">
+                <modal.content>
+                    <modal.header>Xem trước</modal.header>
+                    <modal.body>
+                        <img.responsive src="" id="previewImg" />
+                        <input type="hidden" id="base64Img" />
+                    </modal.body>
+                    <modal.footer>
+                        <clearfix>
+                            <pull.left>
+                                <btn.success ng-click="updateInfoImage()" data-dismiss="modal">Cập nhật</btn.success>
+                            </pull.left>
+                            <pull.right>
+                                <btn.danger data-dismiss="modal">Đóng lại</btn.danger>
+                            </pull.right>
+                        </clearfix>
+                    </modal.footer>
+                </modal.content>
+            </modal.dialog>
+        </modal>
         <row class="row-pd-5">
             <col md="3">
                 <?php require 'menu.xml';?>
@@ -32,10 +53,10 @@
                             <form.group>
                                 <control.label class="col-md-3">Ảnh đại diện</control.label>
                                 <col md="9">
-                                    <img id="userAvatar" src="%% user.avatar || 'http://placehold.it/64x64'%%" class="img-circle" />
+                                    <img id="userAvatar" src="%% user.avatar || 'http://placehold.it/64x64'%%" class="img-circle" style="width: 64px; height: auto;" />
                                     <div mt="3">
-                                        <btn.primary onclick="jQuery('#avatarSelector').click();">Đổi ảnh đại diện</btn.primary>
-                                        <input type="file" id="avatarSelector" class="hide" onchange="handleUploadInfo(event)" />
+                                        <btn.primary onclick="jQuery('#avatarSelector').click(); return false;">Đổi ảnh đại diện</btn.primary>
+                                        <input type="file" id="avatarSelector" class="hide" onchange="handleServiceUpload(event)" />
                                     </div>
                                 </col>
                             </form.group>
@@ -86,6 +107,7 @@
             </col>
         </row>
     </container>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" 
         integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>

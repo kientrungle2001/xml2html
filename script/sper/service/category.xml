@@ -1,13 +1,15 @@
 <root>
-    <list.group class="service-category" mt="3">
+    <list.group class="service-category" mt="3" ng-controller="Sper.Service.Category">
         <list.group.item class="heading" pd="1" pl="5">
             <a href="#" class="text-service text-bold text-uppercase"><fas symbol="bars" size="1x" /> Danh mục</a>
         </list.group.item>
-        <list.group.item pd="1" pl="5">
-            <a href="#"><icon symbol="align-justify" /> Địa điểm</a>
+        <list.group.item pd="1" pl="5" ng-class="{'active': selectedTab == 'places'}">
+            <a href="#" 
+                onclick="return false;" ng-click="selectCategoryTab('places')"><icon symbol="align-justify" /> Địa điểm</a>
         </list.group.item>
-        <list.group.item class="active" pd="1" pl="5">
-            <a href="#"><icon symbol="align-justify" /> Chủ đề</a>
+        <list.group.item pd="1" pl="5" ng-class="{'active': selectedTab == 'categories'}">
+            <a href="#"
+                onclick="return false;" ng-click="selectCategoryTab('categories')"><icon symbol="align-justify" /> Chủ đề</a>
         </list.group.item>
         <list.group.item class="hide" pd="1" pl="5">
             <a href="/clientarea/service"><icon symbol="align-justify" /> Dịch vụ của bạn</a>
@@ -19,13 +21,15 @@
             <a href="/clientarea/collection"><icon symbol="align-justify" /> Bộ sưu tập</a>
         </list.group.item>
         <list.group.item pd="1" pl="5">
-            <a href="#"><icon symbol="align-justify" /> Video Review</a>
+            <a href="#video-review"><icon symbol="align-justify" /> Video Review</a>
         </list.group.item>
-        <list.group.item pd="1" pl="5">
-            <a href="#"><icon symbol="align-justify" /> Nổi bật</a>
+        <list.group.item pd="1" pl="5" ng-class="{'active': selectedTab == 'featured'}">
+            <a href="#"
+                onclick="return false;" ng-click="selectCategoryTab('featured')"><icon symbol="align-justify" /> Nổi bật</a>
         </list.group.item>
-        <list.group.item pd="1" pl="5">
-            <a href="#"><icon symbol="align-justify" /> Khuyến mại</a>
+        <list.group.item pd="1" pl="5" ng-class="{'active': selectedTab == 'promotion'}">
+            <a href="#"
+                onclick="return false;" ng-click="selectCategoryTab('promotion')"><icon symbol="align-justify" /> Khuyến mại</a>
         </list.group.item>
         <list.group.item pd="1" pl="5">
             <a href="/blog"><icon symbol="align-justify" /> Blog Sper</a>

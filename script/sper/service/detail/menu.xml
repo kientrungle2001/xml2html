@@ -1,0 +1,25 @@
+<root>
+    <list.group class="service-category" mt="3">
+        <list.group.item pd="1" pl="5" class="active">
+            <a href="#"><icon symbol="align-justify" /> Trang chủ</a>
+        </list.group.item>
+        <list.group.item pd="1" pl="5">
+            <a href="#"><icon symbol="align-justify" /> Ảnh và Video 2.1K</a>
+        </list.group.item>
+        <list.group.item pd="1" pl="5">
+            <a href="/clientarea/collection"><icon symbol="align-justify" /> Bình luận (220)</a>
+        </list.group.item>
+        <list.group.item pd="1" pl="5">
+            <a href="#"><icon symbol="align-justify" /> Bản đồ</a>
+        </list.group.item>
+        <list.group.item pd="1" pl="5">
+            <a href="#"><icon symbol="align-justify" /> Đánh giá</a>
+        </list.group.item>
+        <list.group.item pd="1" pl="5">
+            <a href="#"><icon symbol="align-justify" /> Chi nhánh</a>
+        </list.group.item>
+        <list.group.item pd="1" pl="5">
+            <a href="/blog"><icon symbol="align-justify" /> Sản phẩm</a>
+        </list.group.item>
+    </list.group>
+</root>

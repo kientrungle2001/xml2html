@@ -1,0 +1,33 @@
+<root>
+    <container mt="3">
+        <breadcrumb>
+            <breadcrumb.item>
+                <a href="/">Trang chủ</a>
+            </breadcrumb.item>
+            <breadcrumb.item class="active">
+                Sản phẩm
+            </breadcrumb.item>
+        </breadcrumb>
+    </container>
+
+    <?php require 'product/detail.xml';?>
+    
+    <container mt="3">
+        <row class="row-pd-5">
+            <col md="3">
+                <clearfix bg="white-i">
+                    <?php require 'detail/menu.xml'; ?>
+                </clearfix>
+
+                <clearfix mt="3" mb="3">
+                    <img.responsive src="/images/others/ad2.jpeg" />
+                </clearfix>
+            </col>
+            <col md="9">
+                <?php require 'detail/product/items.xml';?>
+                <?php require 'detail/photo/items.xml';?>
+                <?php require 'detail/comment/section.xml';?>
+            </col>
+        </row>
+    </container>
+</root>

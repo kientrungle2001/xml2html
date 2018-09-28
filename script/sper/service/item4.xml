@@ -3,7 +3,7 @@
         <panel mb="2">
             <panel.heading pd="0">
                 <embed.responsive size="4by3" style="overflow:hidden;">
-                <img.responsive ng-src="%%service.serviceimg%%" />
+                <img.responsive ng-src="%%service.serviceimg|thumb:400:300%%" />
                 </embed.responsive>
             </panel.heading>
             <panel.body>

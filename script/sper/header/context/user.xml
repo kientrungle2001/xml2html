@@ -1,0 +1,28 @@
+<root>
+<dropdown.menu>
+    <dropdown.menu.item>
+        <a href="/clientarea/service" class="user-menu-link"><fa.1x symbol="cubes"/> Dịch vụ của bạn</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="#" class="user-menu-link"><fa.1x symbol="credit-card"/> Thanh toán</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="/clientarea/history" class="user-menu-link"><fa.1x symbol="history"/> Lịch sử</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="/clientarea/collection" class="user-menu-link"><fa.1x symbol="bookmark" class="bookmark-scale"/> Bộ sưu tập</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="#" class="user-menu-link"><fa.1x symbol="trophy"/> Điểm thưởng</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="/clientarea/feedback" class="user-menu-link"><fa.1x symbol="inbox"/> Góp ý</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="/clientarea/info" class="user-menu-link"><fa.1x symbol="user"/> Cài đặt tài khoản</a>
+    </dropdown.menu.item>
+    <dropdown.menu.item>
+        <a href="/clientarea/logout" ng-click="logout()" onclick="return false;" class="user-menu-link"><fa.1x symbol="power-off"/> Đăng xuất</a>
+    </dropdown.menu.item>
+</dropdown.menu>
+</root>

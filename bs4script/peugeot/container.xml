@@ -1,0 +1,36 @@
+<root>
+    <container>
+        <h1>Welcome</h1>
+    </container>
+    <container.fluid>
+        <h1>Welcome</h1>
+    </container.fluid>
+
+    <container>
+        <row>
+            <col md="3">
+                col-md-3
+            </col>
+            <col md="3" mdo="1">
+                col-md-3
+            </col>
+            <col md="auto">
+                col-md-auto
+            </col>
+        </row>
+        <row>
+            <col size="sm">
+                col-sm
+            </col>
+            <col size="sm">
+                col-sm
+            </col>
+            <col size="sm">
+                col-sm
+            </col>
+            <col size="sm">
+                col-sm
+            </col>
+        </row>
+    </container>
+</root>

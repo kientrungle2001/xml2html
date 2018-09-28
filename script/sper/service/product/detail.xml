@@ -1,0 +1,72 @@
+<root>
+    <container mb="3" ng-controller="Sper.Service.Product.Detail">
+        <row class="row-pd-0 bg-white-i">
+            <col md="4" class="detail-left">
+                <embed.responsive size="4by3" class="relative">
+                    <img.responsive src="%% (getImage(product).path || 'http://placehold.it/1600x1200') | thumb:800:600  %%" />
+                    <div class="absolute" pd="3" style="bottom: 0; background: #ccc; opacity: 0.7;z-index: 1; width: 100%;"><div class="invisible">Thông tin</div></div>
+                    <div class="absolute" pd="3" style="bottom: 0; background: none; z-index: 2; width: 100%;"><div>Thông tin</div></div>
+                </embed.responsive>
+            </col>
+            <col md="8" class="relative detail-right">
+                <div mg="3">
+                    <row>
+                        <col md="8">
+                            <h1 class="fs-25 text-bold">%%product.prodcode%%</h1>
+                            <div>
+                                <strong class="fs-20 text-red">Giá %%getPrice(product).price | toCurrency%%đ/%%getPrice(product).unit%%</strong>
+                            </div>
+                            <hr mt="1" mb="1" />
+                            <clearfix ng-bind-html="product.proddesc">
+                            </clearfix>
+                            <clearfix>
+                                <btn.success ng-click="checkout()">Đặt hàng</btn.success>
+                                <btn.success ng-click="addToCart()"> <fa.1x symbol="shopping-cart" /> Thêm vào giỏ hàng</btn.success>
+                            </clearfix>
+                        </col>
+                        <col md="4" class="text-center" pt="3">
+                            <div style="width: 160px; margin:0 auto;">
+                                <embed.responsive size="16by9">
+                                    <img.responsive src="%%service.serviceimg|thumb:640:360%%" />
+                                </embed.responsive>
+                            </div>
+                            <a href="/service/detail?serviceid=%%service.serviceid%%">
+                                <h2 class="fs-14 text-bold">%%service.servicename%%</h2>
+                            </a>
+                        </col>
+                    </row>
+                </div>
+                <div class="absolute" pd="3" style="bottom: 0; background: #ccc; opacity: 0.7;z-index: 1; width: 100%;"><div class="invisible">Thông tin</div></div>
+                    <div class="absolute" pd="3" style="bottom: 0; background: none; z-index: 2; width: 100%;">
+                    
+                <div class="row row-pd-0">
+                    
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="phone" /> Số điện thoại
+                    </span>
+
+                    <span class="d-inline-block col-md-1">
+                        <icon symbol="comment" /> Chat
+                    </span>
+
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="comment" /> Bình luận
+                    </span>
+
+                    <span class="d-inline-block col-md-3">
+                        <icon symbol="bookmark" class="bookmark-scale" /> Lưu vào bộ sưu tập
+                    </span>
+
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="picture" /> Hình ảnh
+                    </span>
+
+                    <span class="d-inline-block col-md-2">
+                        <icon symbol="share-alt" /> Chia sẻ
+                    </span>
+                </div>
+                </div>
+            </col>
+        </row>
+    </container>
+</root>

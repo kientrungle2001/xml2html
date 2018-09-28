@@ -1,11 +1,14 @@
 <root>
     <panel>
-        <panel.heading pd="0">
+        <panel.heading pd="0" ng-controller="Sper.ClientArea.User">
             <thumbnail mg="0">
-                <thumbnail.img src="http://placehold.it/64x64" class="img-circle" />
+                <a href="/clientarea/info">
+                    <thumbnail.img src="%% user.avatar || 'http://placehold.it/64x64' %%" class="img-circle" style="width: 64px; height: auto;" />
+                </a>
+
                 <thumbnail.caption class="text-center">
-                    Đinh Nhật Nam<br />
-                    <small>dinhnhatnam@gmail.com</small>
+                    <a href="/clientarea/info">%%user.fullname%%</a><br />
+                    <small>%%user.email%%</small>
                 </thumbnail.caption>
             </thumbnail>
         </panel.heading>

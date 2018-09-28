@@ -2,7 +2,7 @@
     <media.list.item ng-repeat="blog in items" bb="1" pb="3">
         <media.left>
             <embed.responsive size="16by9">
-                <media.object src="%%blog.blog_img%%" style="max-width: 125px;" />
+                <media.object src="%%blog.blog_img|thumb:480:270%%" style="max-width: 125px;" />
             </embed.responsive>
         </media.left>
         <media.body>

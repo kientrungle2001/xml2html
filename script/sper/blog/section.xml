@@ -11,7 +11,7 @@
             <col md="7">
                 <panel>
                     <panel.heading pd="0">
-                        <h2 mg="0" pd="3" class="blog-heading fs-18"><span class="text-title">Blog ></span> <small class="fs-14 text-light">Lựa chọn ngôi nhà ngoại ô cho gia đình trẻ</small></h2>
+                        <h2 mg="0" pd="3" class="blog-heading fs-18"><a href="/blog"><span class="text-title">Blog ></span></a> <small class="fs-14 text-light">Lựa chọn ngôi nhà ngoại ô cho gia đình trẻ</small></h2>
                     </panel.heading>
                     <panel.body>
                         <?php require 'items.xml'; ?>

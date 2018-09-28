@@ -460,6 +460,17 @@ class PzkIconBar extends PzkHtmlTag {
 	public $extendClass = 'icon-bar';
 }
 
+class PzkLnr extends PzkHtmlTag {
+	public $tag = 'span';
+	public $extendClass = 'lnr';
+	public $symbol = '';
+	public $size = '2x';
+	public function init() {
+		$this->extendClass .= ' lnr-' . $this->symbol . ' lnr-' . $this->size;
+		return parent::init();
+	}
+}
+
 /**
  * Components
  */

@@ -8,32 +8,12 @@
     <div class="bg-white">
     <container ng-controller="Sper.Header">
         <navbar bg="white" mb="0" bd="none">
-            <navbar.header>
-                <navbar.btn.collapse data-target="#top-menu">
-                    <icon.bar /> <icon.bar /> <icon.bar />
-                </navbar.btn.collapse>
-                <navbar.brand class="relative" style="width: 50px" href="/">
-                    <img src="/images/logo/2.jpeg" style="width: 50px; height: 50px" class="absolute p-top-0 p-left-0" />
-                </navbar.brand>
-            </navbar.header>
+            <?php require 'brand.xml';?>
             
-            <navbar.form align="left">
-                <form.group>
-                    <select.form.control ng-options="category.categoryid as category.categoryname for category in categories | orderBy: 'position'" ng-model="selectedCategoryId" ng-change="selectCategory()" class="input-sm-new">
-                    </select.form.control>
-                </form.group>
-                <form.group>
-                    <input.group>
-                        <input.form.control placeholder="Search" style="width:280px"  class="input-sm-new"/>
-                        <input.group.btn tag="span">
-                            <btn.default style="height: 34px; width: 34px;background-color: #e6e6e6" size="xs"><icon.search  class="fs-16"/></btn.default>
-                        </input.group.btn>
-                    </input.group>
-                </form.group>
-                <form.group>
-                    <select.form.control ng-options="city.addcityid as city.addcityname for city in cities" ng-model="selectedCityId" ng-change="selectCity()" class="input-sm-new">
-                    </select.form.control>
-                </form.group>
+            <navbar.form align="left" class="pl-1 pr-1">
+                <?php require 'category.xml'; ?>
+                <?php require 'search.xml'; ?>
+                <?php require 'city.xml'; ?>
                 <form.group>
                     <btn.default size="xs" style="height: 34px;">
                         <icon symbol="phone" class="fs-16" /> Tải App
@@ -41,46 +21,20 @@
                 </form.group>
             </navbar.form>
             
-            <navbar.nav align="right" id="top-menu" class="navbar-collapse collapse">
+            <navbar.nav align="right" id="top-menu" class="navbar-collapse collapse pl-1 pr-1">
                 <navbar.nav.item>
-                    <a href="#" data-toggle="modal" data-target="#loginModal" ng-hide="user">Đăng nhập</a>
+                    <a href="#" data-toggle="modal" data-target="#loginModal" ng-hide="user" class="pl-1 pr-1">Đăng nhập</a>
                 </navbar.nav.item>
-                <navbar.nav.item ng-show="user" class="dropdown dropdown-no-close">
-                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                <navbar.nav.item ng-show="user" class="dropdown dropdown-no-close dropdown-no-bg">
+                    <navbar.link class="dropdown-toggle pl-1 pr-1" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <fa symbol="user" size="1x" class="fs-20" />
                         %%user.fullname%% <caret />
                     </navbar.link>
-                    <dropdown.menu>
-                        <dropdown.menu.item>
-                            <a href="/clientarea/service"><fa.1x symbol="cubes"/> Dịch vụ của bạn</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="#"><fa.1x symbol="credit-card"/> Thanh toán</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="#"><fa.1x symbol="history"/> Lịch sử</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="/clientarea/collection"><fa.1x symbol="bookmark" class="bookmark-scale"/> Bộ sưu tập</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="#"><fa.1x symbol="trophy"/> Điểm thưởng</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="/clientarea/feedback"><fa.1x symbol="inbox"/> Góp ý</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="/clientarea/info"><fa.1x symbol="user"/> Cài đặt tài khoản</a>
-                        </dropdown.menu.item>
-                        <dropdown.menu.item>
-                            <a href="/clientarea/logout" ng-click="logout()" onclick="return false;"><fa.1x symbol="power-off"/> Đăng xuất</a>
-                        </dropdown.menu.item>
-                    </dropdown.menu>
-
+                    <?php require 'context/user.xml';?>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown dropdown-no-close">
-                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                <navbar.nav.item class="dropdown dropdown-no-close dropdown-no-bg" ng-show="user">
+                    <navbar.link class="dropdown-toggle pl-1 pr-1" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <far symbol="bell" size="1x" class="fs-20" />
                     </navbar.link>
@@ -88,8 +42,8 @@
                         <?php require 'context/notification.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown dropdown-no-close">
-                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                <navbar.nav.item class="dropdown dropdown-no-close dropdown-no-bg">
+                    <navbar.link class="dropdown-toggle pl-1 pr-1" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <fa symbol="shopping-cart" size="1x" class="fs-20" />
                         <badge bg="red" class="hidden">1</badge>
@@ -98,8 +52,8 @@
                         <?php require 'context/shoppingcart.xml';?>
                     </dropdown.menu.div>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown dropdown-no-close">
-                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                <navbar.nav.item class="dropdown dropdown-no-close dropdown-no-bg">
+                    <navbar.link class="dropdown-toggle pl-1 pr-1" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <icon symbol="plus-sign" class="fs-20" />
                     </navbar.link>
@@ -124,8 +78,8 @@
                         </dropdown.menu.item>
                     </dropdown.menu>
                 </navbar.nav.item>
-                <navbar.nav.item class="dropdown dropdown-no-close">
-                    <navbar.link class="dropdown-toggle" data-toggle="dropdown" 
+                <navbar.nav.item class="dropdown dropdown-no-close dropdown-no-bg">
+                    <navbar.link class="dropdown-toggle pl-1 pr-1" data-toggle="dropdown" 
                             href="#" onclick="return false;">
                         <img src="/images/flag/vn.png" style="width: 20px; height: 20px;" /> <caret />
                     </navbar.link>

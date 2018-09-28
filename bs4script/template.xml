@@ -1,0 +1,195 @@
+<root>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+	
+	<container>
+		<col lg="6">
+			<row>
+				<col md="1">
+					col-md-1
+				</col>
+				<col md="2">
+					col-md-2
+				</col>
+				<col md="3">
+					col-md-3
+				</col>
+				<col md="4">
+					col-md-4
+				</col>
+				<col md="2">
+					col-md-2
+				</col>
+			</row>
+
+			<h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+			<h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+			<h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+			<h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+			<h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+			<h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+			<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+			<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+			<p><del>This line of text is meant to be treated as deleted text.</del></p>
+			<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+			<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+			<p><u>This line of text is meant to be treated as an addition to the document.</u></p>
+			<p><i>This line of text is meant to be treated as an addition to the document.</i></p>
+			<text.left>Left aligned text.</text.left>
+			<text.center>Center aligned text.</text.center>
+			<text.right>Right aligned text.</text.right>
+			<text.justify>Justified text.</text.justify>
+			<p class="text-nowrap">No wrap text.</p>
+			<table class="table table-bordered table-hover">
+				<tr>
+					<th>Ho Ten</th>
+					<th>So dien thoai</th>
+					<th>Ngay sinh</th>
+				</tr>
+				<tr class="success">
+					<td>Ho Ten</td>
+					<td>So dien thoai</td>
+					<td>Ngay sinh</td>
+				</tr>
+				<tr class="info">
+					<td>Ho Ten</td>
+					<td>So dien thoai</td>
+					<td>Ngay sinh</td>
+				</tr>
+				<tr class="warning">
+					<td>Ho Ten</td>
+					<td>So dien thoai</td>
+					<td>Ngay sinh</td>
+				</tr>
+				<tr class="danger">
+					<td>Ho Ten</td>
+					<td>So dien thoai</td>
+					<td>Ngay sinh</td>
+				</tr>
+			</table>
+
+			<form>
+				<form.group>
+					<label>Email address</label>
+					<input.form.control type="email" placeholder="Email" />
+				</form.group>
+				<form.group>
+					<label>Password</label>
+					<input.form.control type="password" placeholder="Password" />
+				</form.group>
+				<form.group>
+					<label>File input</label>
+					<input type="file" />
+					<help.block>Example block-level help text here.</help.block>
+				</form.group>
+				<div class="checkbox">
+					<label>
+						<checkbox /> Check me out
+					</label>
+				</div>
+				<btn.default>Submit</btn.default>
+			</form>
+			<form.inline>
+				<form.group>
+					<label>Name</label>
+					<input.form.control placeholder="Jane Doe" />
+				</form.group>
+				<form.group>
+					<label>Email</label>
+					<input.form.control type="email" placeholder="jane.doe@example.com" />
+				</form.group>
+				<btn.default type="submit">Send Invitation</btn.default>
+			</form.inline>
+
+			<form.horizontal>
+				<form.group class="has-warning">
+					<label class="col-sm-2 control-label">Name</label>
+					<col sm="10">
+						<static.form.control>Jane Doe</static.form.control>
+					</col>
+				</form.group>
+				<form.group class="has-success has-feedback">
+					<label class="col-sm-2 control-label">Email address</label>
+					<col sm="10">
+						<input.group>
+							<input.group.addon>@</input.group.addon>
+							<input.form.control type="email" placeholder="Email" size="lg" />
+							<icon symbol="ok" class="form-control-feedback" />
+						</input.group>
+					</col>
+				</form.group>
+				<form.group class="has-error">
+					<label class="col-sm-2 control-label">Password</label>
+					<col sm="10">
+						<input.group>
+							<input.group.addon>$</input.group.addon>
+							<input.form.control type="password" placeholder="Password" size="sm" />
+						</input.group>
+					</col>
+				</form.group>
+				<form.group>
+					<label class="col-sm-2 control-label">File input</label>
+					<col sm="10">
+						<input type="file" />
+						<help.block>Example block-level help text here.</help.block>
+					</col>
+					
+				</form.group>
+				<div class="checkbox">
+					<label>
+						<checkbox /> Check me out
+					</label>
+				</div>
+				<btn.default>Submit</btn.default>
+			</form.horizontal>
+			<clearfix>
+				<btn.default>Default</btn.default>
+				<btn.primary>Primary</btn.primary>
+				<btn.success>Success</btn.success>
+				<btn.info>Info</btn.info>
+				<btn.warning>Warning</btn.warning>
+				<btn.danger>Danger</btn.danger>
+				<btn.link>Link</btn.link>
+			</clearfix>
+			<clearfix>
+				<img.rounded src="http://placehold.it/140x140" />
+				<img.circle src="http://placehold.it/140x140" />
+				<img.thumbnail src="http://placehold.it/140x140" />
+			</clearfix>
+			<clearfix>
+				<text.muted>This line of text is meant to be treated as an addition to the document.</text.muted>
+				<text.primary>This line of text is meant to be treated as an addition to the document.</text.primary>
+				<text.success>This line of text is meant to be treated as an addition to the document.</text.success>
+				<text.info>This line of text is meant to be treated as an addition to the document.</text.info>
+				<text.warning>This line of text is meant to be treated as an addition to the document.</text.warning>
+				<text.danger>This line of text is meant to be treated as an addition to the document.</text.danger>
+			</clearfix>
+			<clearfix>
+				<bg.primary>This line of text is meant to be treated as an addition to the document.</bg.primary>
+				<bg.success>This line of text is meant to be treated as an addition to the document.</bg.success>
+				<bg.info>This line of text is meant to be treated as an addition to the document.</bg.info>
+				<bg.warning>This line of text is meant to be treated as an addition to the document.</bg.warning>
+				<bg.danger>This line of text is meant to be treated as an addition to the document.</bg.danger>
+			</clearfix>
+			<clearfix>
+				<btn.close><span aria-hidden="true">&amp;times;</span></btn.close>
+			</clearfix>
+			<clearfix>
+				<dropup>
+					Up Button <caret />
+				</dropup>
+			</clearfix>
+			<clearfix>
+				<pull.left>Left</pull.left>
+				<pull.right>Right</pull.right>
+			</clearfix>
+			<center.block style="width: 300px; padding: 20px; border: 1px solid black">
+				<h1>Hello</h1>
+			</center.block>
+		</col>
+		<col lg="6">
+			<h1>Hello Right</h1>
+		</col>
+	</container>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha256-ImQvICV38LovIsvla2zykaCTdEh1Z801Y+DSop91wMU=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</root>

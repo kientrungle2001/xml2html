@@ -1,0 +1,74 @@
+<root>
+    <row mb="3" ng-controller="Sper.Service.Detail">
+        <col md="8">
+            <panel ng-repeat="comment in service.listComment">
+                <panel.heading>
+                    <media>
+                        <media.left>
+                            <media.object src="%% comment.avatar || 'http://placehold.it/32x32' %%" class="img-circle" style="width: 32px; height: auto;" />
+                        </media.left>
+                        <media.body>
+                            <media.heading class="fs-14">%%comment.fullname%%</media.heading>
+                            <div class="fs-12 text-light">%%comment.createddate%%</div>
+                        </media.body>
+                    </media>
+                </panel.heading>
+                <panel.body>
+                    <clearfix ng-bind-html="comment.cmtdesc"></clearfix>
+                    <clearfix class="fs-12">
+                        <fas symbol="heart" class="fs-12" /> Thích 
+                        <fas symbol="comment" class="fs-12" /> Thảo luận
+                        <fas symbol="exclamation-triangle" class="fs-12" /> Báo lỗi 
+
+                    </clearfix>
+                </panel.body>
+                <panel.footer style="background: #F9F9F9;">
+                    <media>
+                        <media.left>
+                            <media.object src="https://placehold.it/32x32" class="img-circle" />
+                        </media.left>
+                        <media.body class="w-100-p">
+                            <input.form.control />
+                        </media.body>
+                    </media>
+                    <media.list mt="3">
+                        <media>
+                            <media.left>
+                                <media.object src="https://placehold.it/32x32" class="img-circle" />
+                            </media.left>
+                            <media.body class="w-100-p">
+                                <media.heading class="fs-14"><strong>Thảo Nguyễn</strong> lúc <small>11:30 20/10/2018</small></media.heading>
+                                <clearfix>
+                                    Được đó
+                                </clearfix>
+                            </media.body>
+                        </media>
+                    </media.list>
+                </panel.footer>
+            </panel>
+        </col>
+        <col md="4">
+            <list.group>
+                <list.group.item class="text-left">
+                    <strong>%%service.listComment.length%%</strong> Bình luận đã chia sẻ
+                </list.group.item>
+                <list.group.item class="text-left">
+                    <strong>6</strong> Tuyệt vời <br />
+                    <strong>53</strong> Khá tốt <br />
+                    <strong>8</strong> Trung bình <br />
+                    <strong>4</strong> Kém <br />
+                </list.group.item>
+                <list.group.item class="text-left">
+                    <strong class="fs-18 text-service">%%service.rate_avg%%</strong> Điểm - <strong>Khá tốt</strong>
+                </list.group.item>
+                <list.group.item class="text-left" pd="0">
+                    <btn.success class="btn-block"> <fas symbol="comments" size="1x" /> Viết bình luận</btn.success>
+                </list.group.item>
+            </list.group>
+
+            <clearfix>
+                <img.responsive src="/images/others/ad2.jpeg" />
+            </clearfix>
+        </col>
+    </row>
+</root>

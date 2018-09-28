@@ -1,0 +1,18 @@
+<root>
+    <col lg="3" md="4" sm="2" ng-repeat="item in items">
+        <panel mb="2">
+            <panel.heading pd="0">
+                <embed.responsive size="16by9" style="overflow:hidden;">
+                <img.responsive src="%%getImage(item).path | thumb:640:360%%" />
+                </embed.responsive>
+            </panel.heading>
+            <panel.body>
+                <a href="/service/product?serviceid=%%item.serviceid%%&prodid=%%item.prodid%%" class="service-heading text-service-highlight"><h4>%%item.prodcode%%</h4></a>
+                <p>Giá : <span style="color: red;">%%getPrice(item).price | toCurrency%%đ</span>/%%getPrice(item).unit%%</p>
+                <p>
+                <a href="/service/product?serviceid=%%item.serviceid%%&prodid=%%item.prodid%%" class="text-service"> <fas symbol="chevron-circle-up" class="fs-14" /> Xem chi tiết</a>
+                </p>
+            </panel.body>
+        </panel>
+    </col>
+</root>

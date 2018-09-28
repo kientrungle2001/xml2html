@@ -1,5 +1,34 @@
 <root>
-    <img.responsive src="%%service.serviceimg || 'http://placehold.it/1366x300' %%" />
+    <modal id="previewModal">
+        <modal.dialog context="primary">
+            <modal.content>
+                <modal.header>Xem trước</modal.header>
+                <modal.body>
+                    <img.responsive src="" id="previewImg" />
+                    <input type="hidden" id="base64Img" />
+                </modal.body>
+                <modal.footer>
+                    <clearfix>
+                        <pull.left>
+                            <btn.success ng-click="updateServiceImg()" data-dismiss="modal">Cập nhật</btn.success>
+                        </pull.left>
+                        <pull.right>
+                            <btn.danger data-dismiss="modal">Đóng lại</btn.danger>
+                        </pull.right>
+                    </clearfix>
+                </modal.footer>
+            </modal.content>
+        </modal.dialog>
+    </modal>
+    <div class="relative hover-container" style="height: 200px; overflow: hidden;">
+        <h2 class="text-white text-center absolute w-100-p" style="bottom:15px;z-index: 1;">%%service.servicename%%</h2>
+        <input type="file" id="serviceImg" class="hide" onchange="handleServiceUpload(event)" />
+        <btn.success class="absolute hover-inner" style="bottom: 40%; right: 40%; z-index: 1" onclick="jQuery('#serviceImg').click();">Đổi ảnh đại diện</btn.success>
+        <btn.success tag="a" href="/clientarea/editservice" class="absolute hover-inner" style="bottom: 5px; right: 5px; z-index: 1">Sửa dịch vụ</btn.success>
+        <embed.responsive size="16by9">
+            <img.responsive src="%%service.serviceimg || 'http://placehold.it/1366x700' %%" />
+        </embed.responsive>
+    </div>
     <row mt="3" class="row-pd-5">
         <?php require 'service/item.xml';?>
     </row>

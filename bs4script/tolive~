@@ -1,0 +1,2 @@
+cp ./generated/sper /var/www/html/sper.laravel/resources/views/frontend/ -R
+cp ./sper/style.xml /var/www/html/sper.laravel/resources/views/frontend/sper/style.blade.php

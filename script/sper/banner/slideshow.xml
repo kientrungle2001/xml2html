@@ -10,11 +10,11 @@
         <carousel.inner>
             <carousel.inner.item class="text-center" ng-class="{'active': $index === 0}" ng-repeat="banner in banners">
                 <row class="row-pd-0">
-                    <col xs="6">
+                    <col xs="12" class="text-center">
+                        <a href="%%banner.bannerlink%%">
                         <carousel.inner.item.img src="%%banner.bannerimg%%" />
-                    </col>
-                    <col xs="6">
-                        <carousel.inner.item.img src="%%banner.bannerimg%%" />
+                        <h2 class="mg-1 pd-0 fs-16 text-white" style="line-height: 25px;" ng-bind-html="banner.bannerdesc"></h2>
+                        </a>
                     </col>
                 </row>
             </carousel.inner.item>

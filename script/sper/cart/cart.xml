@@ -6,61 +6,66 @@
         integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=" crossorigin="anonymous" />
     <?php require BASE_DIR . '/sper/style.xml'; ?>
 
-    <container>
+    <container mt="3" mb="3">
         <breadcrumb>
             <breadcrumb.item>
-                <a href="/">Trang chu</a>
+                <a href="/">Trang chủ</a>
             </breadcrumb.item>
             <breadcrumb.item class="active">
-                Gio hang
+                Giỏ hàng
             </breadcrumb.item>
         </breadcrumb>
         <text.center>
-            <h1>Gio hang cua ban</h1>
+            <h1>Giỏ hàng của bạn</h1>
         </text.center>
         
-        <section id="shopping-cart-section">
+        <section id="shopping-cart-section" ng-controller="Sper.Checkout.Cart">
             <table class="table table-hovered">
                 <tr>
-                    <th>San pham</th>
-                    <th>So luong</th>
-                    <th>Don vi</th>
-                    <th>Don gia</th>
-                    <th>Thanh tien</th>
-                    <th>Xoa</th>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Đơn vị</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                    <th>Xóa</th>
                 </tr>
-                <tr>
+                <tr ng-repeat="item in cart_items">
                     <td style="width: 350px;">
                     <media>
                         <media.left>
-                            <media.object src="http://placehold.it/120x90" />
+                            <div style="width: 160px;">
+                                <embed.responsive size="16by9">
+                                    <media.object src="%%getImage(item.product).path | thumb:640:360%%" />
+                                </embed.responsive>
+                            </div>
                         </media.left>
                         <media.body>
                             <media.heading>
-                                San tran thach cao
+                                <div class="text-bold fs-16"><a href="/service/detail?serviceid=%%item.service.serviceid%%">%%item.service.servicename%%</a></div>
+                                 <div class="fs-14"><a href="/service/product?serviceid=%%item.service.serviceid%%&prodid=%%item.product.prodid%%">%%item.product.prodcode%%</a></div>
                             </media.heading>
                         </media.body>
                     </media>
                     </td>
-                    <td><span class="pointer"> - </span>1<span class="pointer"> + </span></td>
-                    <td>Tam</td>
-                    <td>300.000</td>
-                    <td>300.000</td>
-                    <td><icon symbol="trash" /></td>
+                    <td><span class="pointer" ng-click="decreaseQuantity(item)"> - </span>%%item.quantity%%<span class="pointer" ng-click="increaseQuantity(item)"> + </span></td>
+                    <td>%%getPrice(item.product).unit%%</td>
+                    <td>%%getPrice(item.product).price | toCurrency%%đ</td>
+                    <td>%%getPrice(item.product).price * item.quantity | toCurrency%%đ</td>
+                    <td><icon symbol="trash" ng-click="remove($index)" class="pointer" /></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>Tổng tiền</td>
+                    <td>%%calculateTotal() | toCurrency%%đ</td>
                     <td></td>
-                    <td>Tong tien</td>
-                    <td>600.000d</td>
                 </tr>
             </table>
 
             <text.center>
-                <btn.default class="btn-cart-page">Tro lai trang truoc</btn.default>
-                <btn.success class="btn-cart-page">Thanh toan</btn.success>
+                <btn.default class="btn-cart-page">Trở lại trang trước</btn.default>
+                <btn.success class="btn-cart-page">Thanh toán</btn.success>
             </text.center>
         </section>
     </container>
