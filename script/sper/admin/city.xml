@@ -1,0 +1,12 @@
+<root>
+    <row class="row-pd-5">
+        <col md="2">
+            <?php require 'menu.xml'; ?>
+        </col>
+        <col md="10">
+            <?php require 'list/city.xml'; ?>
+            <?php require 'add/city.xml'; ?>
+            <?php require 'edit/city.xml'; ?>
+        </col>
+    </row>
+</root>

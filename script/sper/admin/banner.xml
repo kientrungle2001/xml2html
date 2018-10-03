@@ -1,0 +1,12 @@
+<root>
+    <row class="row-pd-5">
+        <col md="2">
+            <?php require 'menu.xml'; ?>
+        </col>
+        <col md="10">
+            <?php require 'list/banner.xml'; ?>
+            <?php require 'add/banner.xml'; ?>
+            <?php require 'edit/banner.xml'; ?>
+        </col>
+    </row>
+</root>

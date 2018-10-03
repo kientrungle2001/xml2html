@@ -1,0 +1,10 @@
+<root>
+    <row class="row-pd-5">
+        <col md="2">
+            <?php require 'menu.xml'; ?>
+        </col>
+        <col md="10">
+            
+        </col>
+    </row>
+</root>

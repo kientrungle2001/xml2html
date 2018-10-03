@@ -1,0 +1,12 @@
+<root>
+    <row class="row-pd-5">
+        <col md="2">
+            <?php require 'menu.xml'; ?>
+        </col>
+        <col md="10">
+            <?php require 'list/category.xml'; ?>
+            <?php require 'add/category.xml'; ?>
+            <?php require 'edit/category.xml'; ?>
+        </col>
+    </row>
+</root>
