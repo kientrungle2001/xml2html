@@ -1,4 +1,6 @@
+cd $(pwd)
+echo $(pwd)
 while true; do
-    inotifywait -e modify,create,delete -r /home/kienhang/web/xml2html/bs4script/peugeot && \
+    inotifywait -e modify,create,delete -r ./peugeot && \
         ./build
 done
