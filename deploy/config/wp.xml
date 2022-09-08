@@ -1,0 +1,14 @@
+<root>
+    <deploy id="deployer">
+        <deploy.helper type="wordpress" />
+        <deploy.source id="local">
+            <deploy.driver type="file" dir="./src"/>
+            <deploy.database type="mysql" dataType="file" file="./sql/db.sql" />
+        </deploy.source>
+        <deploy.target id="host1" domain="aaa.com">
+            <deploy.driver type="ftp" dir="./src"  host="112.22.221.20" user="aaa" password="123" />
+            <deploy.database type="mysql" dataType="file" file="./sql/db.sql" />
+            <deploy.database.import importer="bigdump" file="./sql/db.sql" host="localhost" user="aaa" password="123" db="aaa" />
+        </deploy.target>
+    </deploy>
+</root>
