@@ -62,8 +62,8 @@ class PzkParser {
 
     /**
      * Parse mot doi tuong tu mot node
-     * @param $node node can parse
-     * @param $parent la parent cua node can parse
+     * @param DOMNode $node node can parse
+     * @param object|false $parent la parent cua node can parse
      */
     public static function parseNode($node, $parent = false) {
         if ($node->nodeType == XML_ELEMENT_NODE) {
